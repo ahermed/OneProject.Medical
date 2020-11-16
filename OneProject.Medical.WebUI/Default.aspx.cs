@@ -46,7 +46,6 @@ namespace OneProject.Medical.WebUI
                 Excel.Worksheet excelWorksheet =
                     (Excel.Worksheet)excelSheets.get_Item(currentSheet);
 
-                excelWorksheet.Range["E14"].Value = txtPrimerApellido.Text;
                 excelWorksheet.PrintOutEx(Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
 
                 excelWorkbook.SaveAs(@"C:\Temp\ecov1.xlsx");
@@ -59,7 +58,6 @@ namespace OneProject.Medical.WebUI
                 errorMessage = String.Concat(errorMessage, theException.Message);
                 errorMessage = String.Concat(errorMessage, " Line: ");
                 errorMessage = String.Concat(errorMessage, theException.Source);
-                lblError.Text = errorMessage;
 
 
             }
