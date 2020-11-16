@@ -7,53 +7,45 @@
         <div class="form-horizontal">
 
             <div class="col-md-12">
-                <h5 class="page-header">ESTUDIO EPIDEMIOLÓGICO DE CASO SOSPECHOSO DE ENFERMEDAD POR 2019-NCOV</h5>
+                <h3><small class="text-muted">ESTUDIO EPIDEMIOLÓGICO DE CASO SOSPECHOSO DE ENFERMEDAD POR 2019-NCOV</small></h3>
             </div>
             <div class="card">
                 <div class="card-header text-info">
                     DATOS DE LA UNIDAD NOTIFICANTE                         
                 </div>
                 <div class="card-body">
-                    <form class="form-validate form-inline" id="unidadNotifica" method="get">
+                    <form class="form-validate" id="unidadNotifica" method="get">
+
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="entidadUnidad" class="control-label">Entidad: <span class="required">*</span></asp:Label>
                                 <asp:TextBox runat="server" class=" form-control" ID="entidadUnidad" name="entidadUnidad" type="text" placeholder="Entidad" />
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="jurisdiccionUnidad" class="control-label">
-                                                    Jurisdicción: <span class="required">*</span>
-                                                </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="jurisdiccionUnidad" name="jurisdiccionUnidad" type="text"
-                                    placeholder="Jurisdicción" />
+                                <asp:Label runat="server" for="jurisdiccionUnidad" class="control-label">Jurisdicción: <span class="required">*</span></asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="jurisdiccionUnidad" name="jurisdiccionUnidad" type="text" placeholder="Jurisdicción" />
                             </div>
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="municipioUnidad" class="control-label ">Municipio: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="municipioUnidad" name="municipioUnidad" type="text"
-                                    placeholder="Municipio" />
+                                <asp:TextBox runat="server" class=" form-control" ID="municipioUnidad" name="municipioUnidad" type="text" placeholder="Municipio" />
                             </div>
-                            <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="nombreUnidad" class="control-label">
-                                                    Nombre de la Unidad Médica: <span class="required">*</span>
-                                                </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="nombreUnidad" name="nombreUnidad" type="text"
-                                    placeholder="Nombre de la Unidad Médica" />
+                            <div class="form-group col-md-5">
+                                <asp:Label runat="server" for="nombreUnidad" class="control-label">Nombre de la Unidad Médica: <span class="required">*</span></asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="nombreUnidad" name="nombreUnidad" type="text" placeholder="Nombre de la Unidad Médica" />
                             </div>
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <asp:Label runat="server" for="institucionUnidad" class="control-label">
-                                                    Institución: <span class="required">*</span>
-                                                </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="institucionUnidad" name="institucionUnidad" type="text"
-                                    placeholder="institucionUnidad" />
+                            <div class="form-group col-md-6">
+                                <asp:Label runat="server" for="institucionUnidad" class="control-label">Institución: <span class="required">*</span></asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="institucionUnidad" name="institucionUnidad" type="text" placeholder="institucionUnidad" />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="clues" class="control-label">CLUES: <span class="required">*</span></asp:Label>
                                 <asp:TextBox runat="server" class=" form-control" ID="clues" name="clues" type="text" placeholder="CLUES" />
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
