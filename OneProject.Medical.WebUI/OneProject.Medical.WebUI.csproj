@@ -469,6 +469,16 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Antecedente.cs" />
+    <Compile Include="Entities\AntecedenteEpidemiologico.cs" />
+    <Compile Include="Entities\Clinico.cs" />
+    <Compile Include="Entities\Contacto.cs" />
+    <Compile Include="Entities\Evolucion.cs" />
+    <Compile Include="Entities\General.cs" />
+    <Compile Include="Entities\Laboratorio.cs" />
+    <Compile Include="Entities\Tratamiento.cs" />
+    <Compile Include="Entities\UnidadMedica.cs" />
+    <Compile Include="Entities\UnidadNotificante.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
