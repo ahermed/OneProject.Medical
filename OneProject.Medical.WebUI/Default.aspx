@@ -9,45 +9,50 @@
             <div class="col-md-12">
                 <h3><small class="text-muted">ESTUDIO EPIDEMIOLÓGICO DE CASO SOSPECHOSO DE ENFERMEDAD POR 2019-NCOV</small></h3>
             </div>
+            <form class="needs-validation" novalidate id="registraDatos"  method="get" action="Register">
             <div class="card">
                 <div class="card-header text-info">
                     DATOS DE LA UNIDAD NOTIFICANTE                         
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Button" />
                 </div>
                 <div class="card-body">
-                    <form class="form-validate" id="unidadNotifica" method="get">
-
+                    
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="entidadUnidad" class="control-label">Entidad: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="entidadUnidad" name="entidadUnidad" type="text" placeholder="Entidad" />
-                            </div>
+                                <asp:Label runat="server" for="entidadUnidad" class="control-label"> <span class="required">*</span>Entidad:</asp:Label>
+                                 <asp:TextBox runat="server" type="text" class="form-control" id="entidadUnidad" name="entidadUnidad" placeholder="Entidad" MaxLength="50" />
+                                      <asp:RequiredFieldValidator ID="rfventidadUnidad" runat="server" ControlToValidate="entidadUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="jurisdiccionUnidad" class="control-label">Jurisdicción: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="jurisdiccionUnidad" name="jurisdiccionUnidad" type="text" placeholder="Jurisdicción" />
+                                <asp:Label runat="server" for="jurisdiccionUnidad" class="control-label"><span class="required">*</span>Jurisdicción: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="jurisdiccionUnidad" name="jurisdiccionUnidad" type="text" placeholder="Jurisdicción" MaxLength="50" />
+                                <asp:RequiredFieldValidator ID="rfvjurisdiccionUnidad" runat="server" ControlToValidate="jurisdiccionUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="municipioUnidad" class="control-label ">Municipio: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="municipioUnidad" name="municipioUnidad" type="text" placeholder="Municipio" />
-                            </div>
+                                <asp:Label runat="server" for="municipioUnidad" class="control-label "><span class="required">*</span>Municipio: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="municipioUnidad" name="municipioUnidad" type="text" placeholder="Municipio" MaxLength="50"/>
+                                 <asp:RequiredFieldValidator ID="rfvmunicipioUnidad" runat="server" ControlToValidate="municipioUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                </div>
                             <div class="form-group col-md-5">
-                                <asp:Label runat="server" for="nombreUnidad" class="control-label">Nombre de la Unidad Médica: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="nombreUnidad" name="nombreUnidad" type="text" placeholder="Nombre de la Unidad Médica" />
-                            </div>
+                                <asp:Label runat="server" for="nombreUnidad" class="control-label"><span class="required">*</span>Nombre de la Unidad Médica: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="nombreUnidad" name="nombreUnidad" type="text" placeholder="Nombre de la Unidad Médica" MaxLength="50"/>
+                               <asp:RequiredFieldValidator ID="rfvnombreUnidad" runat="server" ControlToValidate="nombreUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="institucionUnidad" class="control-label">Institución: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="institucionUnidad" name="institucionUnidad" type="text" placeholder="institucionUnidad" />
+                                <asp:Label runat="server" for="institucionUnidad" class="control-label"><span class="required">*</span>Institución: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="institucionUnidad" name="institucionUnidad" type="text" placeholder="institucionUnidad" MaxLength="50"/>
+                               <asp:RequiredFieldValidator ID="rfvinstitucionUnidad" runat="server" ControlToValidate="institucionUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="clues" class="control-label">CLUES: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="clues" name="clues" type="text" placeholder="CLUES" />
+                                <asp:Label runat="server" for="clues" class="control-label"> <span class="required">*</span>CLUES:</asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="clues" name="clues" type="text" placeholder="CLUES" MaxLength="50"/>
+                                 <asp:RequiredFieldValidator ID="rfvclues" runat="server" ControlToValidate="clues" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+ 
                             </div>
-                        </div>
-
-                    </form>
+                        </div>                                                                     
                 </div>
             </div>
             <br />
@@ -55,32 +60,30 @@
                 <div class="card-header text-info">
                     DATOS GENERALES                          
                 </div>
-                <div class="card-body">
-                    <form class="form-validate " id="datosGenerales" method="get">
+                <div class="card-body">                    
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="fechaIngreso" class="control-label ">
-                                                    Fecha de ingreso a la unidad: <span class="required">*</span> </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="fechaIngreso" name="fechaIngreso" type="text" placeholder="dd/mm/aaaa" />
+                                <asp:Label runat="server" for="fechaIngreso" class="control-label "><span class="required">*</span>Fecha de ingreso a la unidad:  </asp:Label>
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" ID="fechaIngreso" name="fechaIngreso">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="pApellido" class="control-label">
-                                                    Primer Apellido: <span class="required">*</span> </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="pApellido" name="pApellido" type="text" placeholder="Primer Apellido" />
+                                <asp:Label runat="server" for="pApellido" class="control-label"><span class="required">*</span>Primer Apellido:  </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="pApellido" name="pApellido" type="text" placeholder="Primer Apellido" MaxLength="50"/>
+                                <asp:RequiredFieldValidator ID="rfvpApellido" runat="server" ControlToValidate="pApellido" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="sApellido" class="control-label">
-                                                    Segundo Apellido: <span class="required">*</span> </asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="sApellido" name="sApellido" type="text"
-                                    placeholder="Segundo Apellido" />
+                                <asp:Label runat="server" for="sApellido" class="control-label">Segundo Apellido:  </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="sApellido" name="sApellido" type="text" placeholder="Segundo Apellido" MaxLength="50"/>                            
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="nombre" class="control-label">
-                                                    Nombre(s): <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="nombre" name="nombre" type="text" placeholder="Nombre(s)" />
+                                <asp:Label runat="server" for="nombre" class="control-label"><span class="required">*</span>Nombre(s): </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="nombre" name="nombre" type="text" placeholder="Nombre(s)" MaxLength="50"/>
+                                <asp:RequiredFieldValidator ID="rfvnombre" runat="server" ControlToValidate="nombre" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                         </div>
 
@@ -92,269 +95,220 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-1">
-                                <asp:Label runat="server" for="dia" class="control-label ">Día: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="dia" name="dia" type="text" placeholder="Día" />
+                                <asp:Label runat="server" for="ddlDia" class="control-label "><span class="required">*</span>Día: </asp:Label>
+                                <asp:DropDownList runat="server" ID="ddlDia" class="form-control" name="ddlDia" type="text"/>    
+                               <asp:RequiredFieldValidator ID="rfvddlDia" runat="server" ControlToValidate="ddlDia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="mes" class="control-label ">Mes: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="mes" name="mes" type="text" placeholder="Mes" />
+                                <asp:Label runat="server" for="ddlMes" class="control-label "> <span class="required">*</span>Mes:</asp:Label>
+                                <asp:DropDownList runat="server" ID="ddlMes" class="form-control " name="ddlMes" type="text"  />
+                                <asp:RequiredFieldValidator ID="rfcMes" runat="server" ControlToValidate="ddlMes" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
-                            <div class="form-group col-md-1">
-                                <asp:Label runat="server" for="anio" class="control-label ">Año: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="anio" name="anio" type="text" placeholder="Año" />
+                            <div class="form-group col-md-2">
+                                <asp:Label runat="server" for="anio" class="control-label "><span class="required">*</span>Año: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="anio" name="anio" placeholder="Año" type="number" />
+                                <asp:RequiredFieldValidator ID="rfvanio" runat="server" ControlToValidate="anio" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
-                            <div class="form-group col-md-1">
-                                <asp:Label runat="server" for="edad" class="control-label ">Edad: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="edad" name="edad" type="text" placeholder="Edad" />
+                            <div class="form-group col-md-2">
+                                <asp:Label runat="server" for="edad" class="control-label "><span class="required">*</span>Edad: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="edad" name="edad" type="number" placeholder="Edad" />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="edad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
-                            <div class="form-group col-md-7">
-                                <asp:Label runat="server" for="curp" class="control-label ">CURP: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="curp" name="curp" type="text" placeholder="CURP" />
-                            </div>
+                            <div class="form-group col-md-5">
+                                <asp:Label runat="server" for="curp" class="control-label ">CURP:</asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="curp" name="curp" type="text" placeholder="CURP" MaxLength="18"/>
+                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="sexo" class="control-label ">Sexo: <span class="required">*</span></asp:Label>
-
-                                <asp:RadioButtonList ID="sexo" runat="server" CssClass="radioButtonList" RepeatDirection="Horizontal">
+                                <asp:Label runat="server" for="sexo" class="control-label "> <span class="required">*</span>Sexo:</asp:Label>
+                                <asp:RadioButtonList ID="sexo" runat="server" CssClass="radioButtonList" RepeatDirection="Horizontal" >
                                     <asp:ListItem Value="1">Hombre</asp:ListItem>
                                     <asp:ListItem Value="2">Mujer</asp:ListItem>
                                 </asp:RadioButtonList>
+                                 <asp:RequiredFieldValidator ID="rfvsexo" runat="server" ControlToValidate="sexo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">
-                                                    ¿Está embarazada? <span class="required">*</span>
-                                                </asp:Label>
-                                <asp:RadioButtonList ID="embarazada" runat="server" RepeatDirection="Horizontal">
+                                <asp:Label runat="server" for="embarazada" class="control-label ">¿Está embarazada?</asp:Label>
+                                <asp:RadioButtonList ID="embarazada" runat="server" RepeatDirection="Horizontal" >
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="mesesEmbarazo" class="control-label ">
-                                                    Meses de embarazo: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="mesesEmbarazo" name="requiredText" type="text"
-                                    placeholder="Meses" />
+                                <asp:Label runat="server" for="mesesEmbarazo" class="control-label "> Meses de embarazo: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="mesesEmbarazo" name="requiredText" type="number" placeholder="Meses" />
                             </div>
                             <div class="form-group col-md-4">
-                                <asp:Label runat="server" for="periodoPuerperio" class="control-label ">
-                                                    Se encuentra en periodo de puerperio: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:RadioButtonList ID="periodoPuerperio" runat="server" RepeatDirection="Horizontal">
+                                <asp:Label runat="server" for="periodoPuerperio" class="control-label ">Se encuentra en periodo de puerperio:</asp:Label>
+                                <asp:RadioButtonList ID="periodoPuerperio" runat="server" RepeatDirection="Horizontal" >
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="diasPuerperio" class="control-label ">
-                                                    Días de puerperio: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="diasPuerperio" name="diasPuerperio" type="number"
-                                    placeholder="Días" />
+                                <asp:Label runat="server" for="diasPuerperio" class="control-label ">Días de puerperio: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="diasPuerperio" name="diasPuerperio" type="number" placeholder="Días" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="nacionalidad" class="control-label ">Nacionalidad: <span class="required">*</span></asp:Label>
-
+                                <asp:Label runat="server" for="nacionalidad" class="control-label "><span class="required">*</span>Nacionalidad: </asp:Label>
                                 <asp:RadioButtonList ID="nacionalidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Mexicana</asp:ListItem>
                                     <asp:ListItem Value="2">Extranjera</asp:ListItem>
                                 </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvnacionalidad" runat="server" ControlToValidate="nacionalidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
 
                             <div class="form-group col-md-5">
-                                <asp:Label runat="server" for="paisOrigen" class="control-label ">
-                                                    País de origen: <span class="required">*</span>
-                                                </asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="paisOrigen" name="paisOrigen" type="text"
-                                    placeholder="País de origen" />
+                                <asp:Label runat="server" for="paisOrigen" class="control-label ">País de origen:</asp:Label>
+                                <asp:TextBox runat="server" class="form-control" ID="paisOrigen" name="paisOrigen" type="text" placeholder="País de origen" MaxLength="50"/>
                             </div>
 
                             <div class="form-group col-md-4">
-                                <asp:Label runat="server" for="seguroSocial" class="control-label ">
-                                                    No. Expediente o Seguridad Social: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="seguroSocial" name="seguroSocial" type="text"
-                                    placeholder="No. Expediente o Seguridad Social" />
+                                <asp:Label runat="server" for="seguroSocial" class="control-label ">No. Expediente o Seguridad Social: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="seguroSocial" name="seguroSocial" type="text" placeholder="No. Expediente o Seguridad Social" MaxLength="30"/>
                             </div>
 
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="entidadNacimiento" class="control-label ">
-                                                    Entidad de Nacimiento: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <input class="form-control " id="entidadNacimiento" name="entidadNacimiento" type="text"
-                                    placeholder="Entidad de Nacimiento" />
+                                <asp:Label runat="server" for="entidadNacimiento" class="control-label ">Entidad de Nacimiento:</asp:Label>
+                                <input class="form-control " id="entidadNacimiento" name="entidadNacimiento" type="text" placeholder="Entidad de Nacimiento" MaxLength="50"/>
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="entidadResidencia" class="control-label ">
-                                                    Entidad/Delegación de Residencia: <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="entidadResidencia" class="control-label "> <span class="required">*</span>/Delegación de Residencia:</asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="entidadResidencia" name="entidadResidencia" type="text" placeholder="Entidad/Delegación de Residencia" MaxLength="50"/>
+                                <asp:RequiredFieldValidator ID="rfventidadResidencia" runat="server" ControlToValidate="entidadResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                                <asp:TextBox runat="server" class="form-control " ID="entidadResidencia" name="entidadResidencia" type="text"
-                                    placeholder="Entidad/Delegación de Residencia" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="municipioResidencia" class="control-label ">
-                                                    Municipio de residencia: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="municipioResidencia" name="municipioResidencia" type="text"
-                                    placeholder="Municipio de residencia" />
+                                <asp:Label runat="server" for="municipioResidencia" class="control-label "><span class="required">*</span> de residencia: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="municipioResidencia" name="municipioResidencia" type="text" placeholder="Municipio de residencia" MaxLength="50"/>
+                                <asp:RequiredFieldValidator ID="rfvmunicipioResidencia" runat="server" ControlToValidate="municipioResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="localidad" class="control-label ">
-                                                    Localidad: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="localidad" name="localidad" type="text"
-                                    placeholder="Localidad" />
+                                <asp:Label runat="server" for="localidad" class="control-label "> <span class="required">*</span>Localidad:</asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="localidad" name="localidad" type="text" placeholder="Localidad" MaxLength="50"/>
+                              <asp:RequiredFieldValidator ID="rfvlocalidad" runat="server" ControlToValidate="localidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
+  
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-8">
-                                <asp:Label runat="server" for="calle" class="control-label ">
-                                                    Calle: <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="calle" class="control-label "> <span class="required">*</span>Calle: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="calle" name="calle" type="text" placeholder="Calle" MaxLength="50"/>
+                                <asp:RequiredFieldValidator ID="rfvcalle" runat="server" ControlToValidate="calle" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
 
-                                <asp:TextBox runat="server" class="form-control " ID="calle" name="calle" type="text"
-                                    placeholder="Calle" />
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="numeroExterno" class="control-label ">
-                                                    Número externo: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="numeroExterno" name="numeroExterno" type="text"
-                                    placeholder="Número ext." />
+                                <asp:Label runat="server" for="numeroExterno" class="control-label "><span class="required">*</span> Número externo: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="numeroExterno" name="numeroExterno" type="text" placeholder="Número ext." MaxLength="20"/>
+                                  <asp:RequiredFieldValidator ID="rfvnumeroExterno" runat="server" ControlToValidate="numeroExterno" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
+                              
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="numeroInterno" class="control-label ">
-                                                    Número interno: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="numeroInterno" name="numeroInterno" type="text"
-                                    placeholder="Número int." />
+                                <asp:Label runat="server" for="numeroInterno" class="control-label "> Número interno:</asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="numeroInterno" name="numeroInterno" type="text" placeholder="Número int." MaxLength="20"/>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="calle1" class="control-label ">
-                                                    Entre qué calles: <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="calle1" class="control-label "> Entre qué calles: </asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-5">
-                                <asp:TextBox runat="server" class="form-control " ID="calle1" name="calle1" type="text"
-                                    placeholder="Calle 1" />
+                                <asp:TextBox runat="server" class="form-control " ID="calle1" name="calle1" type="text" placeholder="Calle 1" MaxLength="50"/>
                             </div>
                             <div class="form-group col-md-2 text-center">
                                 <asp:Label runat="server" for="confirm_password" class="control-label ">y </asp:Label>
                             </div>
                             <div class="form-group col-md-5">
-                                <asp:TextBox runat="server" class="form-control " ID="calle2" name="calle2" type="text"
-                                    placeholder="Calle 2" />
+                                <asp:TextBox runat="server" class="form-control " ID="calle2" name="calle2" type="text" placeholder="Calle 2" MaxLength="50"/>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-7">
-                                <asp:Label runat="server" for="colonia" class="control-label ">
-                                                    Colonia: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="colonia" name="colonia" type="text"
-                                    placeholder="Colonia" />
+                                <asp:Label runat="server" for="colonia" class="control-label ">  <span class="required">*</span>Colonia:</asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="colonia" name="colonia" type="text" placeholder="Colonia" MaxLength="50"/>
+                                 <asp:RequiredFieldValidator ID="rfvcolonia" runat="server" ControlToValidate="colonia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
+ 
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="cp" class="control-label ">
-                                                    C.P.: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="cp" name="cp" type="number"
-                                    placeholder="C.P." />
+                                <asp:Label runat="server" for="cp" class="control-label "> C.P.: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="cp" name="cp" type="number" placeholder="C.P." />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="telefono" class="control-label ">
-                                                    Teléfono: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="telefono" name="telefono" type="text"
-                                    placeholder="Teléfono" />
+                                <asp:Label runat="server" for="telefono" class="control-label "><span class="required">*</span>  Teléfono: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="telefono" name="telefono" type="text" placeholder="Teléfono" MaxLength="30"/>
+                                <asp:RequiredFieldValidator ID="rfvtelefono" runat="server" ControlToValidate="telefono" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
+ 
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="indigena" class="control-label ">
-                                                    Se reconoce como indígena: <span class="required">*</span>
-                                                </asp:Label>
-
+                                <asp:Label runat="server" for="indigena" class="control-label "> <span class="required">*</span> Se reconoce como indígena:</asp:Label>
                                 <asp:RadioButtonList ID="indigena" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvindigena" runat="server" ControlToValidate="indigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
+
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="lenguaIndigena" class="control-label ">
-                                                    ¿Habla alguna lengua indígena? <span class="required">*</span>
-                                                </asp:Label>
-
+                                <asp:Label runat="server" for="lenguaIndigena" class="control-label ">  <span class="required">*</span>¿Habla alguna lengua indígena?</asp:Label>
                                 <asp:RadioButtonList ID="lenguaIndigena" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvlengua" runat="server" ControlToValidate="lenguaIndigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
+
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="correo" class="control-label ">
-                                                    Correo electrónico: <span class="required">*</span>
-                                                </asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="correo" name="correo" type="email"
-                                    placeholder="Correo electrónico" />
+                                <asp:Label runat="server" for="correo" class="control-label "><span class="required">*</span> electrónico: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="correo" name="correo" type="email" placeholder="Correo electrónico" MaxLength="30"/>
+                                <asp:RequiredFieldValidator ID="rfvcorreo" runat="server" ControlToValidate="correo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-10">
-                                <asp:Label runat="server" for="ocupacion" class="control-label ">
-                                                    Ocupación: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="ocupacion" name="ocupacion" type="text"
-                                    placeholder="Ocupación" />
+                                <asp:Label runat="server" for="ocupacion" class="control-label ">  <span class="required">*</span>Ocupación:</asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="ocupacion" name="ocupacion" type="text" placeholder="Ocupación" MaxLength="50"/>
+                                <asp:RequiredFieldValidator ID="rfvocupacion" runat="server" ControlToValidate="ocupacion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator> 
+        
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="migrante" class="control-label ">
-                                                    ¿Es Migrante? <span class="required">*</span>
-                                                </asp:Label>
-
+                                <asp:Label runat="server" for="migrante" class="control-label "><span class="required">*</span>¿Es Migrante?</asp:Label>
                                 <asp:RadioButtonList ID="migrante" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                               <asp:RequiredFieldValidator ID="rfvmigrante" runat="server" ControlToValidate="migrante" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator> 
+ 
                             </div>
                         </div>
-                    </form>
+                                               
+                    
                 </div>
             </div>
+           
             <br />
             <div class="card">
                 <div class="card-header text-info">
@@ -365,23 +319,23 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-8">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">
+                                <asp:Label runat="server" for="viajeChina" class="control-label ">
                                                     ¿Realizó algún viaje a China en los 14 días
                                                     previos al inicio de signos y síntomas? <span class="required">*</span>
                                                 </asp:Label>
 
-                                <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="viajeChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
 
                             <div class="form-group col-md-4">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">
+                                <asp:Label runat="server" for="origenChino" class="control-label ">
                                                     ¿Usted es residente de China? <span class="required">*</span>
                                                 </asp:Label>
 
-                                <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="origenChino" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -390,7 +344,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="fechaIngreso" class="control-label ">
+                                <asp:Label runat="server" for="fechaViaje" class="control-label ">
                                                     En caso afirmativo, responda lo siguiente:
                                                 </asp:Label>
                             </div>
@@ -665,6 +619,8 @@
                 </div>
 
             </div>
+                 <asp:Button runat="server" id="btnSubmitForm" text="Ok" type="submit" />
+             </form>
             <br />
             <div class="card">
                 <div class="card-header text-info">
@@ -697,28 +653,28 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Fiebre</asp:Label>
+                                <asp:Label runat="server" for="fiebre" class="control-label ">Fiebre</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:RadioButtonList ID="RadioButtonList9" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="fiebre" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Cefalea</asp:Label>
+                                <asp:Label runat="server" for="cefalea" class="control-label ">Cefalea</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:RadioButtonList ID="RadioButtonList10" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="cefalea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Co-morbilidad</asp:Label>
+                                <asp:Label runat="server" for="morbilidad" class="control-label ">Co-morbilidad</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:RadioButtonList ID="RadioButtonList11" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="morbilidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -727,28 +683,28 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Tos</asp:Label>
+                                <asp:Label runat="server" for="tos" class="control-label ">Tos</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:RadioButtonList ID="RadioButtonList12" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="tos" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Irritabilidad</asp:Label>
+                                <asp:Label runat="server" for="irritabilidad" class="control-label ">Irritabilidad</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList13" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="irritabilidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Diabetes</asp:Label>
+                                <asp:Label runat="server" for="diabetes" class="control-label ">Diabetes</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList14" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="diabetes" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -757,28 +713,28 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Dolor torácico</asp:Label>
+                                <asp:Label runat="server" for="dolorToraxico" class="control-label ">Dolor torácico</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:RadioButtonList ID="RadioButtonList15" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="dolorToraxico" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Diarrea</asp:Label>
+                                <asp:Label runat="server" for="diarrea" class="control-label ">Diarrea</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList16" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="diarrea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">EPOC</asp:Label>
+                                <asp:Label runat="server" for="epoc" class="control-label ">EPOC</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList17" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="epoc" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -787,28 +743,28 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Dificultad respiratoria</asp:Label>
+                                <asp:Label runat="server" for="difRespiratoria" class="control-label ">Dificultad respiratoria</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList18" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="difRespiratoria" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Vómito</asp:Label>
+                                <asp:Label runat="server" for="vomito" class="control-label ">Vómito</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList48" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="vomito" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Asma</asp:Label>
+                                <asp:Label runat="server" for="asma" class="control-label ">Asma</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:RadioButtonList ID="RadioButtonList19" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="asma" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -817,40 +773,19 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Calosfríos</asp:Label>
+                                <asp:Label runat="server" for="calosfrios" class="control-label ">Calosfríos</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList20" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="calosfrios" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Inmunosupresión</asp:Label>
+                                <asp:Label runat="server" for="inmunosupresión" class="control-label ">Inmunosupresión</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList21" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Dolor abdominal</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList22" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Hipertensión</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList23" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="inmunosupresión" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -859,40 +794,19 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Mialgias</asp:Label>
+                                <asp:Label runat="server" for="dolorAbdominal" class="control-label ">Dolor abdominal</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList24" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="dolorAbdominal" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">VIH/Sida</asp:Label>
+                                <asp:Label runat="server" for="hipertension" class="control-label ">Hipertensión</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList25" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Artralgias</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList26" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Enfermedad cardiovasvular</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList27" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="hipertension" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -901,40 +815,19 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Ataque al estado general</asp:Label>
+                                <asp:Label runat="server" for="mialgias" class="control-label ">Mialgias</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList28" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="mialgias" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Obesidad</asp:Label>
+                                <asp:Label runat="server" for="sida" class="control-label ">VIH/Sida</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList29" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Rinorrea</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList30" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Insuficiencia renal crónica</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList31" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="sida" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -943,40 +836,19 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Polipnea</asp:Label>
+                                <asp:Label runat="server" for="artralgias" class="control-label ">Artralgias</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList32" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="artralgias" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Insuficiencia hepática crónica</asp:Label>
+                                <asp:Label runat="server" for="enfCardiovascular" class="control-label ">Enfermedad cardiovasvular</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList33" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Odinofagia</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList34" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Tabaquismo</asp:Label>
-                            </div>
-                            <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList35" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="enfCardiovascular" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -985,10 +857,94 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Conjuntivitis</asp:Label>
+                                <asp:Label runat="server" for="ataqueEdoGeneral" class="control-label ">Ataque al estado general</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList36" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="ataqueEdoGeneral" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="obesidad" class="control-label ">Obesidad</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="obesidad" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="rinorrea" class="control-label ">Rinorrea</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="rinorrea" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="insufRenal" class="control-label ">Insuficiencia renal crónica</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="insufRenal" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="polipnea" class="control-label ">Polipnea</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="polipnea" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="insufHepatica" class="control-label ">Insuficiencia hepática crónica</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="insufHepatica" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="odinofagia" class="control-label ">Odinofagia</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="odinofagia" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="tabaquismo" class="control-label ">Tabaquismo</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="tabaquismo" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="conjuntivitis" class="control-label ">Conjuntivitis</asp:Label>
+                            </div>
+                            <div class="form-group col-md-2 ">
+                                <asp:RadioButtonList ID="conjuntivitis" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -1004,10 +960,10 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Cianosis</asp:Label>
+                                <asp:Label runat="server" for="cianosis" class="control-label ">Cianosis</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList37" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="cianosis" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -1016,10 +972,10 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Convulsiones</asp:Label>
+                                <asp:Label runat="server" for="convulsiones" class="control-label ">Convulsiones</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList38" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="convulsiones" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -1057,12 +1013,12 @@
                                     placeholder="Servicio de ingreso" />
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">
+                                <asp:Label runat="server" for="tpoPaciente" class="control-label ">
                                                     Tipo de paciente <span class="required">*</span>
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:RadioButtonList ID="RadioButtonList49" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="tpoPaciente" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Ambulatorio</asp:ListItem>
                                     <asp:ListItem Value="2">Hospitalizado</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -1079,12 +1035,12 @@
                                 <asp:TextBox runat="server" class="form-control " ID="fechaIngresoUnidad" name="fechaIngresoUnidad" type="text" placeholder="dd/mm/aaaa" />
                             </div>
                             <div class="form-group col-md-4" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">
+                                <asp:Label runat="server" for="casoUCI" class="control-label ">
                                                     El caso fue ingresado a la UCI: <span class="required">*</span>
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3 ">
-                                <asp:RadioButtonList ID="RadioButtonList39" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="casoUCI" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -1093,12 +1049,12 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-9" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">
+                                <asp:Label runat="server" for="intubado" class="control-label ">
                                                     El caso fue intubado: <span class="required">*</span>
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3 ">
-                                <asp:RadioButtonList ID="RadioButtonList40" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="intubado" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -1107,12 +1063,12 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-9" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">
+                                <asp:Label runat="server" for="neumonia" class="control-label ">
                                                     El caso tiene diagnóstico de Neumonía: <span class="required">*</span>
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-1" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Clínica:</asp:Label>
+                                <asp:Label runat="server" for="neumonia" class="control-label ">Clínica:</asp:Label>
                             </div>
                             <div class="form-group col-md-1 ">
                                 <asp:RadioButtonList ID="RadioButtonList41" runat="server" RepeatDirection="Horizontal">
@@ -1124,10 +1080,10 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-10" style="text-align: right;">
-                                <asp:Label runat="server" for="embarazada" class="control-label ">Radiológica:</asp:Label>
+                                <asp:Label runat="server" for="radiologica" class="control-label ">Radiológica:</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="RadioButtonList42" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="radiologica" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -1707,13 +1663,14 @@
                         </div>
                         <div class="row" style="margin-top: 10px;">
                             <div class="form-group col-md-12">
-                                <asp:Label for="confirm_password" class="control-label" Style="font-size: small;">* ID = Intradomiciliario, ED=Extradomiciliario (Trabajo, Unidades médicas, Escuelas, Mercado, Sitio de reunión, etc)</asp:Label>
+                                <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">* ID = Intradomiciliario, ED=Extradomiciliario (Trabajo, Unidades médicas, Escuelas, Mercado, Sitio de reunión, etc)</asp:Label>
                             </div>
                             <div class="form-group col-md-12">
-                                <asp:Label for="confirm_password" class="control-label" Style="font-size: small;">Nota: En caso de que algún contacto cumpla con definición operacional de caso sospechoso, realizar el estudio epidemiológico de caso sospechoso</asp:Label>
+                                <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">Nota: En caso de que algún contacto cumpla con definición operacional de caso sospechoso, realizar el estudio epidemiológico de caso sospechoso</asp:Label>
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
