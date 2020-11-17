@@ -7,7 +7,10 @@ namespace OneProject.Medical.WebUI.Entities
 {
     public class General
     {
-        public string FechaIngreso
+
+        public string IdPersona
+        { get; set; }
+        public DateTime FechaIngresoUnidad
         { get; set; }
         public string PrimerApellido
         { get; set; }
@@ -22,17 +25,17 @@ namespace OneProject.Medical.WebUI.Entities
 
         public string NacimientoAnio
         { get; set; }
-        public string Edad
+        public int Edad
         { get; set; }
         public string CURP
         { get; set; }
         public string SEXO
         { get; set; }
-        public string Embarazada
+        public Boolean Embarazada
         { get; set; }
 
 
-        public string MesesEmbarazo
+        public int MesesEmbarazo
         { get; set; }
         public string Puerperio
         { get; set; }

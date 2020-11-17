@@ -36,3 +36,14 @@ input[type="select"] {
         padding: 0;
     }
 }
+
+
+
+
+input:valid:required {
+    border-color: #28a745;
+}
+
+input:invalid:required {
+    border-color: #dc3545;
+}

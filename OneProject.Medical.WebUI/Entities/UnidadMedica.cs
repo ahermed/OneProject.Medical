@@ -7,31 +7,31 @@ namespace OneProject.Medical.WebUI.Entities
 {
     public class UnidadMedica
     {
+        public int IdDatosUnidadMedica
+        { get; set; }
+
+        public int IdPersona
+        { get; set; }
 
         public string ServicioIngreso
         { get; set; }
 
-
         public string TipoPaciente
         { get; set; }
 
-
-        public string FechaIngreso
+        public DateTime FechaIngreso
         { get; set; }
 
-
-        public string UCI
+        public Boolean CasoIngresadoUCI
         { get; set; }
 
-
-        public string Intubado
+        public Boolean CasoIntubado
         { get; set; }
 
-
-        public string Clinica
+        public Boolean CasoDiagnostNeumoniaClinica
         { get; set; }
 
-        public string Radiologica
+        public Boolean CasoDiagnostNeumoniaRadiológica
         { get; set; }
 
     }
