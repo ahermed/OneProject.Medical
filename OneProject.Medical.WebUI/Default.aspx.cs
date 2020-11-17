@@ -7,12 +7,40 @@ using System.Web.UI.WebControls;
 using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 
+
 namespace OneProject.Medical.WebUI
 {
     public partial class _Default : System.Web.UI.Page
     {
+
+
+      
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.ClientScript.RegisterOnSubmitStatement(this.GetType(), "val", "validateAndHighlight();");
+
+
+            for (int i = 1; i <= 31; i++)
+            {
+                ListItem lst = new ListItem();
+                lst.Value = i.ToString();
+                lst.Text = i.ToString();
+                ddlDia.Items.Add(lst);
+            }
+
+
+            for (int mes = DateTime.MinValue.Month; mes <= DateTime.MaxValue.Month; mes++)
+            {
+                ListItem lstmes = new ListItem();
+                string[] mesinyear = { "seleccione", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+                lstmes.Value = mes.ToString();
+                lstmes.Text = mesinyear[mes];
+                ddlMes.Items.Add(lstmes);
+            }
+           
+
 
         }
 

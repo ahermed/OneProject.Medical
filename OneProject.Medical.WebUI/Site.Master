@@ -17,9 +17,28 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/css/bootstrap.min.css" rel="stylesheet">
 
+    <script type="text/javascript">
+        function validateAndHighlight() {
+            for (var i = 0; i < Page_Validators.length; i++) {
+                var val = Page_Validators[i];
+                var ctrl = document.getElementById(val.controltovalidate);
+                if (ctrl != null && ctrl.style != null) {
+                    if (!val.isvalid) {
+                        ctrl.style.borderColor = '#FF0000';
+                        ctrl.style.backgroundColor = '#fdf2cb';
+                    }
+                    else {
+                        ctrl.style.borderColor = '';
+                        ctrl.style.backgroundColor = '';
+                    }
+                }
+            }
+        }
+    </script> 
+
 </head>
 <body class="bg-light">
-    <form runat="server">
+    <form runat="server" >
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -58,6 +77,7 @@
             </footer>
         </div>
     </form>
+
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
