@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EstudioEpidemiologicoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EstudioEpidemiologicoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Antecedentes">
           <Key>
             <PropertyRef Name="IdAntecedentes" />
@@ -92,7 +92,7 @@
           <Property Name="Nombres" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="NacimientoDía" Type="smallint" Nullable="false" />
           <Property Name="NacimientoMes" Type="smallint" Nullable="false" />
-          <Property Name="NacimientoAño" Type="smallint" Nullable="false" />
+          <Property Name="NacimientoAnio" Type="smallint" Nullable="false" />
           <Property Name="Edad" Type="smallint" />
           <Property Name="CURP" Type="varchar" MaxLength="18" />
           <Property Name="Sexo" Type="char" MaxLength="1" />
@@ -431,8 +431,7 @@
             <End Role="Viaje" EntitySet="Viaje" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EstudioEpidemiologicoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -526,7 +525,6 @@
           <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NacimientoDía" Type="Int16" Nullable="false" />
           <Property Name="NacimientoMes" Type="Int16" Nullable="false" />
-          <Property Name="NacimientoAño" Type="Int16" Nullable="false" />
           <Property Name="Edad" Type="Int16" />
           <Property Name="CURP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
           <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
@@ -570,6 +568,7 @@
           <NavigationProperty Name="Laboratorio" Relationship="Self.FK_Laboratorio_DatosGenerales" FromRole="DatosGenerales" ToRole="Laboratorio" />
           <NavigationProperty Name="Tratamiento" Relationship="Self.FK_Tratamiento_DatosGenerales" FromRole="DatosGenerales" ToRole="Tratamiento" />
           <NavigationProperty Name="Viaje" Relationship="Self.FK_Viaje_DatosGenerales" FromRole="DatosGenerales" ToRole="Viaje" />
+          <Property Name="NacimientoAnio" Type="Int16" Nullable="false" />
         </EntityType>
         <EntityType Name="DatosNotificante">
           <Key>
@@ -970,6 +969,7 @@
           <EntitySetMapping Name="DatosGenerales">
             <EntityTypeMapping TypeName="EstudioEpidemiologicoModel.DatosGenerales">
               <MappingFragment StoreEntitySet="DatosGenerales">
+                <ScalarProperty Name="NacimientoAnio" ColumnName="NacimientoAnio" />
                 <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
                 <ScalarProperty Name="FechaIngresoUnidad" ColumnName="FechaIngresoUnidad" />
                 <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
@@ -977,7 +977,6 @@
                 <ScalarProperty Name="Nombres" ColumnName="Nombres" />
                 <ScalarProperty Name="NacimientoDía" ColumnName="NacimientoDía" />
                 <ScalarProperty Name="NacimientoMes" ColumnName="NacimientoMes" />
-                <ScalarProperty Name="NacimientoAño" ColumnName="NacimientoAño" />
                 <ScalarProperty Name="Edad" ColumnName="Edad" />
                 <ScalarProperty Name="CURP" ColumnName="CURP" />
                 <ScalarProperty Name="Sexo" ColumnName="Sexo" />
