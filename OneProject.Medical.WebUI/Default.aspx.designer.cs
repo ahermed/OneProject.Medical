@@ -33,15 +33,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox entidadUnidad;
 
         /// <summary>
-        /// Control rfventidadUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfventidadUnidad;
-
-        /// <summary>
         /// Control jurisdiccionUnidad.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox jurisdiccionUnidad;
-
-        /// <summary>
-        /// Control rfvjurisdiccionUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvjurisdiccionUnidad;
 
         /// <summary>
         /// Control municipioUnidad.
@@ -69,15 +51,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox municipioUnidad;
 
         /// <summary>
-        /// Control rfvmunicipioUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvmunicipioUnidad;
-
-        /// <summary>
         /// Control nombreUnidad.
         /// </summary>
         /// <remarks>
@@ -85,15 +58,6 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nombreUnidad;
-
-        /// <summary>
-        /// Control rfvnombreUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnombreUnidad;
 
         /// <summary>
         /// Control institucionUnidad.
@@ -105,15 +69,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox institucionUnidad;
 
         /// <summary>
-        /// Control rfvinstitucionUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvinstitucionUnidad;
-
-        /// <summary>
         /// Control clues.
         /// </summary>
         /// <remarks>
@@ -123,15 +78,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox clues;
 
         /// <summary>
-        /// Control rfvclues.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvclues;
-
-        /// <summary>
         /// Control fechaIngreso.
         /// </summary>
         /// <remarks>
@@ -139,15 +85,6 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaIngreso;
-
-        /// <summary>
-        /// Control calendar1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendar1;
 
         /// <summary>
         /// Control pApellido.
