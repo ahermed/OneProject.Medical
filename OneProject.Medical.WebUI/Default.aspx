@@ -14,8 +14,7 @@
                 <div class="card-header text-info">
                     DATOS DE LA UNIDAD NOTIFICANTE                         
                 </div>
-                <div class="card-body">
-                    
+                <div class="card-body">          
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="entidadUnidad" class="control-label"> <span class="required">*</span>Entidad:</asp:Label>
@@ -134,7 +133,7 @@
                                 <asp:Label runat="server" for="embarazada" class="control-label ">¿Está embarazada?</asp:Label>
                                 <asp:RadioButtonList ID="embarazada" runat="server" RepeatDirection="Horizontal" >
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2">
@@ -145,7 +144,7 @@
                                 <asp:Label runat="server" for="periodoPuerperio" class="control-label ">Se encuentra en periodo de puerperio:</asp:Label>
                                 <asp:RadioButtonList ID="periodoPuerperio" runat="server" RepeatDirection="Horizontal" >
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2">
@@ -265,7 +264,7 @@
                                 <asp:Label runat="server" for="indigena" class="control-label "> <span class="required">*</span> Se reconoce como indígena:</asp:Label>
                                 <asp:RadioButtonList ID="indigena" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                                 <asp:RequiredFieldValidator ID="rfvindigena" runat="server" ControlToValidate="indigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
 
@@ -274,7 +273,7 @@
                                 <asp:Label runat="server" for="lenguaIndigena" class="control-label ">  <span class="required">*</span>¿Habla alguna lengua indígena?</asp:Label>
                                 <asp:RadioButtonList ID="lenguaIndigena" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                                 <asp:RequiredFieldValidator ID="rfvlengua" runat="server" ControlToValidate="lenguaIndigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
 
@@ -297,7 +296,7 @@
                                 <asp:Label runat="server" for="migrante" class="control-label "><span class="required">*</span>¿Es Migrante?</asp:Label>
                                 <asp:RadioButtonList ID="migrante" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                                <asp:RequiredFieldValidator ID="rfvmigrante" runat="server" ControlToValidate="migrante" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator> 
  
