@@ -25,10 +25,10 @@
                 if (ctrl != null && ctrl.style != null) {
                     if (!val.isvalid) {
                         ctrl.style.borderColor = '#FF0000';
-                        ctrl.style.backgroundColor = '#fdf2cb';
+                        ctrl.style.backgroundColor = '';
                     }
                     else {
-                        ctrl.style.borderColor = '';
+                        ctrl.style.borderColor = '00b347';
                         ctrl.style.backgroundColor = '';
                     }
                 }
