@@ -1500,15 +1500,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox otroSintoma;
 
         /// <summary>
-        /// Control btnSubmitForm.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitForm;
-
-        /// <summary>
         /// Control servicioIngreso.
         /// </summary>
         /// <remarks>
@@ -1516,6 +1507,15 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox servicioIngreso;
+
+        /// <summary>
+        /// Control rfvservicioIngreso.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvservicioIngreso;
 
         /// <summary>
         /// Control tpoPaciente.
@@ -1527,13 +1527,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList tpoPaciente;
 
         /// <summary>
-        /// Control fechaIngresoUnidad.
+        /// Control rfvtpoPaciente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaIngresoUnidad;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtpoPaciente;
 
         /// <summary>
         /// Control casoUCI.
@@ -1545,6 +1545,15 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList casoUCI;
 
         /// <summary>
+        /// Control rfvcasoUCI.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcasoUCI;
+
+        /// <summary>
         /// Control intubado.
         /// </summary>
         /// <remarks>
@@ -1554,13 +1563,31 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList intubado;
 
         /// <summary>
-        /// Control RadioButtonList41.
+        /// Control rfvintubado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList41;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvintubado;
+
+        /// <summary>
+        /// Control rfvneumonia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvneumonia;
+
+        /// <summary>
+        /// Control neumonia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList neumonia;
 
         /// <summary>
         /// Control radiologica.
@@ -1570,6 +1597,15 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radiologica;
+
+        /// <summary>
+        /// Control rfvradiologica.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvradiologica;
 
         /// <summary>
         /// Control RadioButtonList43.
@@ -1885,6 +1921,15 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cefalosporina;
+
+        /// <summary>
+        /// Control btnSubmitForm.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmitForm;
 
         /// <summary>
         /// Control RadioButtonList46.

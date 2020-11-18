@@ -623,7 +623,7 @@
 
             </div>                          
             <br />
-                <div class="card">
+            <div class="card">
                     <div class="card-header text-info">
                         DATOS CLÍNICOS                         
                     </div>
@@ -1050,90 +1050,92 @@
                         </div>
 
                     </div>
-                </div>
-                 <asp:Button runat="server" id="btnSubmitForm" text="Ok" type="submit" />
-             </form>
+                </div>                
             <br />
             <div class="card">
                 <div class="card-header text-info">
                     DATOS DE LA UNIDAD MÉDICA                         
                 </div>
-                <div class="card-body">
-                    <form class="form-validate " id="unidadMedica" method="get">
-
+                <div class="card-body">                   
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="servicioIngreso" class="control-label ">
-                                                    Servicio de ingreso: <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="servicioIngreso" class="control-label "><span class="required">*</span> Servicio de ingreso:  </asp:Label>
                             </div>
                             <div class="form-group col-md-4">
-                                <asp:TextBox runat="server" class="form-control " ID="servicioIngreso" name="servicioIngreso" type="password"
-                                    placeholder="Servicio de ingreso" />
+                                <asp:TextBox runat="server" class="form-control " ID="servicioIngreso" name="servicioIngreso" type="text" placeholder="Servicio de ingreso" MaxLength="50" />
+                              <asp:RequiredFieldValidator ID="rfvservicioIngreso" runat="server" ControlToValidate="servicioIngreso" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+ 
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="tpoPaciente" class="control-label ">
-                                                    Tipo de paciente <span class="required">*</span>
+                                <asp:Label runat="server" for="tpoPaciente" class="control-label "><span class="required">*</span>
+                                                    Tipo de paciente 
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
                                 <asp:RadioButtonList ID="tpoPaciente" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Ambulatorio</asp:ListItem>
-                                    <asp:ListItem Value="2">Hospitalizado</asp:ListItem>
+                                    <asp:ListItem Value="A">Ambulatorio</asp:ListItem>
+                                    <asp:ListItem Value="H">Hospitalizado</asp:ListItem>
                                 </asp:RadioButtonList>
+                    <asp:RequiredFieldValidator ID="rfvtpoPaciente" runat="server" ControlToValidate="tpoPaciente" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+ 
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="fechaIngresoUnidad" class="control-label ">
-                                                    Fecha de ingreso a la unidad: <span class="required">*</span>
+                                <asp:Label runat="server" for="fechaIngresoUnidad" class="control-label "><span class="required">*</span>
+                                                    Fecha de ingreso a la unidad: 
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:TextBox runat="server" class="form-control " ID="fechaIngresoUnidad" name="fechaIngresoUnidad" type="text" placeholder="dd/mm/aaaa" />
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" ID="fechaIngresoUnidad" name="fechaIngresoUnidad">
                             </div>
                             <div class="form-group col-md-4" style="text-align: right;">
-                                <asp:Label runat="server" for="casoUCI" class="control-label ">
-                                                    El caso fue ingresado a la UCI: <span class="required">*</span>
+                                <asp:Label runat="server" for="casoUCI" class="control-label "> <span class="required">*</span>El caso fue ingresado a la UCI:
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3 ">
                                 <asp:RadioButtonList ID="casoUCI" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                   <asp:RequiredFieldValidator ID="rfvcasoUCI" runat="server" ControlToValidate="casoUCI" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+ 
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-9" style="text-align: right;">
-                                <asp:Label runat="server" for="intubado" class="control-label ">
-                                                    El caso fue intubado: <span class="required">*</span>
+                                <asp:Label runat="server" for="intubado" class="control-label "> <span class="required">*</span>
+                                                    El caso fue intubado:
                                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3 ">
                                 <asp:RadioButtonList ID="intubado" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvintubado" runat="server" ControlToValidate="intubado" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-9" style="text-align: right;">
-                                <asp:Label runat="server" for="neumonia" class="control-label ">
-                                                    El caso tiene diagnóstico de Neumonía: <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="neumonia" class="control-label "> <span class="required">*</span>
+                                                    El caso tiene diagnóstico de Neumonía:
+                                                </asp:Label> 
                             </div>
                             <div class="form-group col-md-1" style="text-align: right;">
+                           <asp:RequiredFieldValidator ID="rfvneumonia" runat="server" ControlToValidate="neumonia" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                 <asp:Label runat="server" for="neumonia" class="control-label ">Clínica:</asp:Label>
                             </div>
                             <div class="form-group col-md-1 ">
-                                <asp:RadioButtonList ID="RadioButtonList41" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="neumonia" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+  
                             </div>
                         </div>
 
@@ -1144,21 +1146,20 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="radiologica" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                              <asp:RequiredFieldValidator ID="rfvradiologica" runat="server" ControlToValidate="radiologica" Display="Dynamic" ErrorMessage="Datos obligatorios." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                         </div>
-
-                    </form>
                 </div>
-            </div>
+            </div>           
             <br />
             <div class="card">
                 <div class="card-header text-info">
                     TRATAMIENTO                          
                 </div>
                 <div class="card-body">
-                    <form class="form-validate " id="tratamiento" method="get">
                         <div class="panel-body">
                             <div class="form">
 
@@ -1427,9 +1428,10 @@
 
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
+                      <asp:Button runat="server" id="btnSubmitForm" text="Ok" type="submit" />
+             </form>
             <br />
             <div class="card">
                 <div class="card-header text-info">
