@@ -1932,22 +1932,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox cefalosporina;
 
         /// <summary>
-        /// Control btnSubmitForm.
+        /// Control muestraPaciente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitForm;
-
-        /// <summary>
-        /// Control RadioButtonList46.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList46;
+        protected global::System.Web.UI.WebControls.RadioButtonList muestraPaciente;
 
         /// <summary>
         /// Control exudadoFaringeo.
@@ -1993,6 +1984,15 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox fechaTomaMuestra;
+
+        /// <summary>
+        /// Control btnSubmitForm.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmitForm;
 
         /// <summary>
         /// Control RadioButtonList47.

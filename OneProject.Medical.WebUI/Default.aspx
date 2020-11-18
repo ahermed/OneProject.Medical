@@ -1180,7 +1180,7 @@
                                     <div class="form-group col-md-3">
                                         <asp:Label runat="server" for="fechaTratamientoAnalgesico" class="control-label ">
                                                     Fecha de inicio del tratamiento antipirético/analgésico:
-                                                    <span class="required">*</span>
+                                                    
                                         </asp:Label>
                                     </div>
                                     <div class="form-group col-md-2">
@@ -1191,7 +1191,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <asp:Label runat="server" for="" class="control-label ">
-                                                    *Puede marcar más de una opción de la lista siguiente                                                   
+                                                    Puede marcar más de una opción de la lista siguiente                                                   
                                         </asp:Label>
                                     </div>
                                 </div>
@@ -1250,7 +1250,7 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="tratamientoAntiviral" class="control-label ">
+                                        <asp:Label runat="server" for="tratamientoAntiviral" class="control-label "><span class="required">*</span>
                                                     ¿Recibió tratamiento
                                                     antiviral?
                                         </asp:Label><br>
@@ -1268,7 +1268,7 @@
                                     <div class="form-group col-md-3">
                                         <asp:Label runat="server" for="fechaTratamientoAntiviral" class="control-label ">
                                                     Fecha de inicio del tratamiento antiviral:
-                                                    <span class="required">*</span>
+                                                   
                                         </asp:Label>
                                     </div>
                                     <div class="form-group col-md-2">
@@ -1277,10 +1277,10 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-12">
                                         <asp:Label runat="server" for="" class="control-label ">
-                                                    *Puede marcar más de una opción de la lista siguiente
-                                                    <span class="required">*</span>
+                                                    Puede marcar más de una opción de la lista siguiente
+                                                   
                                         </asp:Label>
                                     </div>
                                 </div>
@@ -1324,7 +1324,7 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="tratamientoAntibiotico" class="control-label ">
+                                        <asp:Label runat="server" for="tratamientoAntibiotico" class="control-label "><span class="required">*</span>
                                                     ¿Recibió tratamiento
                                                     antibiótico?
                                         </asp:Label><br>
@@ -1342,7 +1342,7 @@
                                     <div class="form-group col-md-3">
                                         <asp:Label runat="server" for="fechaTratamientoAntibiotico" class="control-label ">
                                                     Fecha de inicio del tratamiento antibiótico:
-                                                    <span class="required">*</span>
+                                                   
                                         </asp:Label>
                                     </div>
                                     <div class="form-group col-md-2">
@@ -1354,8 +1354,8 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <asp:Label runat="server" for="dia" class="control-label ">
-                                                    *Puede marcar más de una opción de la lista siguiente
-                                                    <span class="required">*</span>
+                                                    Puede marcar más de una opción de la lista siguiente
+                                                   
                                         </asp:Label>
                                     </div>
                                 </div>
@@ -1432,134 +1432,128 @@
 
                     </div>
                 </div>
-                <asp:Button runat="server" ID="btnSubmitForm" Text="Ok" type="submit" />
-            </form>
+   
             <br />
-            <div class="card">
-                <div class="card-header text-info">
-                    LABORATORIO                          
-                </div>
-                <div class="card-body">
-                    <form class="form-validate " id="laboratorio" method="get">
-                        <div class="panel-body">
-                            <div class="form">
+                <div class="card">
+                    <div class="card-header text-info">
+                        LABORATORIO                          
+                    </div>
+                    <div class="card-body">
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="sApellido" class="control-label ">¿Se le tomó muestra al paciente?</asp:Label><br>
-                                    </div>
-                                    <div class="form-group col-md-1 ">
-                                        <asp:RadioButtonList ID="RadioButtonList46" runat="server" RepeatDirection="Horizontal">
-                                            <asp:ListItem Value="1">Si</asp:ListItem>
-                                            <asp:ListItem Value="2">No</asp:ListItem>
-                                        </asp:RadioButtonList>
-
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="labDiagnostico" class="control-label ">
-                                                    Laboratorio de diagnóstico:
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-5">
-                                        <input class="form-control " id="labDiagnostico" name="labDiagnostico" type="text" placeholder="Laboratorio de diagnóstico" />
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Tipo de muestra
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                        <asp:Label runat="server" for="dia" class="control-label ">
-                                                    *Puede marcar más de una opción de la lista siguiente
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="exudadoFaringeo" runat="server"
-                                            Text="Exudado faríngeo" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="lavadoBronquial" runat="server"
-                                            Text="Lavado bronquial" />
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="exudadoNasoferingeo" runat="server"
-                                            Text="Lavado bronquial" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="biopsiaPulmon" runat="server"
-                                            Text="Biopsia de pulmón" />
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <asp:Label runat="server" for="fechaTomaMuestra" class="control-label ">
-                                                    Fecha de toma de muestra:
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <asp:TextBox runat="server" class="form-control " ID="fechaTomaMuestra" name="fechaTomaMuestra" type="text" placeholder="dd/mm/aaaa" />
-                                    </div>
-
-                                    <div class="form-group col-md-2" style="text-align: right;">
-                                        <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Fecha de envío de la muestra:
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Fecha de recepción de muestra:
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
-                                    </div>
-
-                                    <div class="form-group col-md-2" style="text-align: right;">
-                                        <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Fecha de resultado:
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
-                                    </div>
-                                    <div class="form-group col-md-2" style="text-align: right;">
-                                        <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Resultado:
-                                                    <span class="required">*</span>
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <input class="form-control " id="dia" name="dia" type="text" placeholder="Resultado" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="muestraPaciente" class="control-label ">¿Se le tomó muestra al paciente?</asp:Label><br>
+                            </div>
+                            <div class="form-group col-md-1 ">
+                                <asp:RadioButtonList ID="muestraPaciente" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="1">Si</asp:ListItem>
+                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                </asp:RadioButtonList>
 
                             </div>
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="labDiagnostico" class="control-label ">
+                                                    Laboratorio de diagnóstico:
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <input class="form-control " id="labDiagnostico" name="labDiagnostico" type="text" placeholder="Laboratorio de diagnóstico" />
+                            </div>
                         </div>
-                    </form>
-                </div>
 
-            </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="dia" class="control-label ">
+                                                    Tipo de muestra
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                                <asp:Label runat="server" for="dia" class="control-label ">
+                                                    *Puede marcar más de una opción de la lista siguiente
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="exudadoFaringeo" runat="server"
+                                    Text="Exudado faríngeo" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="lavadoBronquial" runat="server"
+                                    Text="Lavado bronquial" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="exudadoNasoferingeo" runat="server"
+                                    Text="Lavado bronquial" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="biopsiaPulmon" runat="server"
+                                    Text="Biopsia de pulmón" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <asp:Label runat="server" for="fechaTomaMuestra" class="control-label ">
+                                                    Fecha de toma de muestra:
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <asp:TextBox runat="server" class="form-control " ID="fechaTomaMuestra" name="fechaTomaMuestra" type="text" placeholder="dd/mm/aaaa" />
+                            </div>
+
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="dia" class="control-label ">
+                                                    Fecha de envío de la muestra:
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <asp:Label runat="server" for="dia" class="control-label ">
+                                                    Fecha de recepción de muestra:
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                            </div>
+
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="dia" class="control-label ">
+                                                    Fecha de resultado:
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                            </div>
+                            <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:Label runat="server" for="dia" class="control-label ">
+                                                    Resultado:
+                                                    <span class="required">*</span>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input class="form-control " id="dia" name="dia" type="text" placeholder="Resultado" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                             <asp:Button runat="server" ID="btnSubmitForm" Text="Ok" type="submit" />
+            </form>
             <br />
             <div class="card">
                 <div class="card-header text-info">
