@@ -306,8 +306,7 @@
                                                
                     
                 </div>
-            </div>
-           
+            </div>           
             <br />
             <div class="card">
                 <div class="card-header text-info">
@@ -434,7 +433,7 @@
                                 <asp:RequiredFieldValidator ID="rfvvisitaMercado" runat="server" ControlToValidate="visitaMercado" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
 
-                            <div class="form-group col-md-1">
+                            <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="visitaMercado" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
@@ -561,7 +560,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="contactoPersonaSospecha" class="control-label "> ¿En los últimos 14 días, ha tenido contacto cercano con una persona con sospecha de 2019-nCoV? <span class="required">*</span> </asp:Label>
+                                <asp:Label runat="server" for="contactoPersonaSospecha" class="control-label "> <span class="required">*</span>  ¿En los últimos 14 días, ha tenido contacto cercano con una persona con sospecha de 2019-nCoV?</asp:Label>
                               <asp:RequiredFieldValidator ID="rfvcontactoPersonaSospecha" runat="server" ControlToValidate="contactoPersonaSospecha" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                             </div>
@@ -576,7 +575,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="contactoPersonaConfirmada" class="control-label "> ¿En los últimos 14 días, ha tenido contacto  cercano con una persona confirmada por laboratorio para 2019-nCoV? <span class="required">*</span> </asp:Label>
+                                <asp:Label runat="server" for="contactoPersonaConfirmada" class="control-label ">  <span class="required">*</span>¿En los últimos 14 días, ha tenido contacto  cercano con una persona confirmada por laboratorio para 2019-nCoV? </asp:Label>
                                <asp:RequiredFieldValidator ID="rfvcontactoPersonaConfirmada" runat="server" ControlToValidate="contactoPersonaConfirmada" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-1 ">
@@ -590,7 +589,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="contactoPersonaChina" class="control-label "> ¿Tuvo contacto con otras personas ofamiliares que hayan viajado a China, en los 14 días previos al inicio de síntomas? <span class="required">*</span> </asp:Label>
+                                <asp:Label runat="server" for="contactoPersonaChina" class="control-label "> <span class="required">*</span>¿Tuvo contacto con otras personas ofamiliares que hayan viajado a China, en los 14 días previos al inicio de síntomas?  </asp:Label>
                                 <asp:RequiredFieldValidator ID="rfvcontactoPersonaChina" runat="server" ControlToValidate="contactoPersonaChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                             </div>
@@ -622,382 +621,438 @@
                     </form>
                 </div>
 
-            </div>
-                 <asp:Button runat="server" id="btnSubmitForm" text="Ok" type="submit" />
-             </form>
+            </div>                          
             <br />
-            <div class="card">
-                <div class="card-header text-info">
-                    DATOS CLÍNICOS
-                          
-                </div>
-                <div class="card-body">
-                    <form class="form-validate " id="datosClinicos" method="get">
+                <div class="card">
+                    <div class="card-header text-info">
+                        DATOS CLÍNICOS                         
+                    </div>
+                    <div class="card-body">
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="fechaSintomas" class="control-label ">
-                                                    Fecha de inicio de síntomas: <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="fechaSintomas" class="control-label "> Fecha de inicio de síntomas:   </asp:Label>
                             </div>
-                            <div class="form-group col-md-4">
-                                <asp:TextBox runat="server" class="form-control " ID="fechaSintomas" name="fechaSintomas" type="password"
-                                    placeholder="dd/mm/aaaa" />
+                            <div class="form-group col-md-3">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaSintomas" name="fechaVisitaMercado">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="confirm_password" class="control-label ">
+                                <asp:Label runat="server" for="" class="control-label ">
                                                     ¿En los últimos 14 días ha presentado los
                                                     siguientes signos y síntomas?
-                                                </asp:Label>
+                                </asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvfiebre" runat="server" ControlToValidate="fiebre" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                 <asp:Label runat="server" for="fiebre" class="control-label ">Fiebre</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="fiebre" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvcefalea" runat="server" ControlToValidate="cefalea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="cefalea" class="control-label ">Cefalea</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="cefalea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvmorbilidad" runat="server" ControlToValidate="morbilidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="morbilidad" class="control-label ">Co-morbilidad</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="morbilidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvtos" runat="server" ControlToValidate="tos" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="tos" class="control-label ">Tos</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="tos" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvirritabilidad" runat="server" ControlToValidate="irritabilidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="irritabilidad" class="control-label ">Irritabilidad</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="irritabilidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvdiabetes" runat="server" ControlToValidate="diabetes" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="diabetes" class="control-label ">Diabetes</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="diabetes" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvdolorToraxico" runat="server" ControlToValidate="dolorToraxico" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="dolorToraxico" class="control-label ">Dolor torácico</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="dolorToraxico" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvdiarrea" runat="server" ControlToValidate="diarrea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="diarrea" class="control-label ">Diarrea</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="diarrea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvepoc" runat="server" ControlToValidate="epoc" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                 <asp:Label runat="server" for="epoc" class="control-label ">EPOC</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="epoc" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvdifRespiratoria" runat="server" ControlToValidate="difRespiratoria" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="difRespiratoria" class="control-label ">Dificultad respiratoria</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="difRespiratoria" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvvomito" runat="server" ControlToValidate="vomito" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="vomito" class="control-label ">Vómito</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="vomito" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvasma" runat="server" ControlToValidate="asma" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="asma" class="control-label ">Asma</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="asma" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvcalosfrios" runat="server" ControlToValidate="calosfrios" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="calosfrios" class="control-label ">Calosfríos</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="calosfrios" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="inmunosupresión" class="control-label ">Inmunosupresión</asp:Label>
+                                <asp:RequiredFieldValidator ID="rfvinmunosupresion" runat="server" ControlToValidate="inmunosupresion" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
+                                <asp:Label runat="server" for="inmunosupresion" class="control-label ">Inmunosupresión</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
-                                <asp:RadioButtonList ID="inmunosupresión" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="inmunosupresion" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvdolorAbdominal" runat="server" ControlToValidate="dolorAbdominal" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="dolorAbdominal" class="control-label ">Dolor abdominal</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="dolorAbdominal" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvhipertension" runat="server" ControlToValidate="hipertension" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="hipertension" class="control-label ">Hipertensión</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="hipertension" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvmialgias" runat="server" ControlToValidate="mialgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="mialgias" class="control-label ">Mialgias</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="mialgias" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvsida" runat="server" ControlToValidate="sida" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="sida" class="control-label ">VIH/Sida</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="sida" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvartralgias" runat="server" ControlToValidate="artralgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="artralgias" class="control-label ">Artralgias</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="artralgias" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvenfCardiovascular" runat="server" ControlToValidate="enfCardiovascular" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="enfCardiovascular" class="control-label ">Enfermedad cardiovasvular</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="enfCardiovascular" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvataqueEdoGeneral" runat="server" ControlToValidate="ataqueEdoGeneral" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="ataqueEdoGeneral" class="control-label ">Ataque al estado general</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="ataqueEdoGeneral" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvobesidad" runat="server" ControlToValidate="obesidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="obesidad" class="control-label ">Obesidad</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="obesidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvrinorrea" runat="server" ControlToValidate="rinorrea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="rinorrea" class="control-label ">Rinorrea</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="rinorrea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvinsufRenal" runat="server" ControlToValidate="insufRenal" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="insufRenal" class="control-label ">Insuficiencia renal crónica</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="insufRenal" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvpolipnea" runat="server" ControlToValidate="polipnea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="polipnea" class="control-label ">Polipnea</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="polipnea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvinsufHepatica" runat="server" ControlToValidate="insufHepatica" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="insufHepatica" class="control-label ">Insuficiencia hepática crónica</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="insufHepatica" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvodinofagia" runat="server" ControlToValidate="odinofagia" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="odinofagia" class="control-label ">Odinofagia</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="odinofagia" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvtabaquismo" runat="server" ControlToValidate="tabaquismo" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="tabaquismo" class="control-label ">Tabaquismo</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="tabaquismo" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvconjuntivitis" runat="server" ControlToValidate="conjuntivitis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="conjuntivitis" class="control-label ">Conjuntivitis</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="conjuntivitis" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="otro" class="control-label ">Otro</asp:Label>
+
+                                <asp:Label runat="server" for="otroDatoClinico" class="control-label ">Otro</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:TextBox runat="server" class="form-control " ID="otro" name="otro" type="password"
-                                    placeholder="otro" />
+                                <asp:TextBox runat="server" class="form-control " ID="otroDatoClinico" name="otroDatoClinico" type="text" placeholder="otro" MaxLength="50" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvcianosis" runat="server" ControlToValidate="cianosis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="cianosis" class="control-label ">Cianosis</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="cianosis" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
+                                <asp:RequiredFieldValidator ID="rfvconvulsiones" runat="server" ControlToValidate="convulsiones" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 <asp:Label runat="server" for="convulsiones" class="control-label ">Convulsiones</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="convulsiones" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="otro1" class="control-label ">Otro</asp:Label>
+                                <asp:Label runat="server" for="otroSintoma" class="control-label ">Otro</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:TextBox runat="server" class="form-control " ID="otro1" name="otro1" type="password"
-                                    placeholder="otro" />
+                                <asp:TextBox runat="server" class="form-control " ID="otroSintoma" name="otroSintoma" type="text"
+                                    placeholder="otro" MaxLength="50" />
                             </div>
                         </div>
-                    </form>
+
+                    </div>
                 </div>
-            </div>
+                 <asp:Button runat="server" id="btnSubmitForm" text="Ok" type="submit" />
+             </form>
             <br />
             <div class="card">
                 <div class="card-header text-info">
