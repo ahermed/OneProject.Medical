@@ -318,11 +318,8 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-8">
-                                <asp:Label runat="server" for="viajeChina" class="control-label ">
-                                                    ¿Realizó algún viaje a China en los 14 días
-                                                    previos al inicio de signos y síntomas? <span class="required">*</span>
-                                                </asp:Label>
-
+                                <asp:Label runat="server" for="viajeChina" class="control-label "> ¿Realizó algún viaje a China en los 14 días
+                                                    previos al inicio de signos y síntomas? <span class="required">*</span></asp:Label>
                                 <asp:RadioButtonList ID="viajeChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
@@ -330,11 +327,9 @@
                             </div>
 
                             <div class="form-group col-md-4">
-                                <asp:Label runat="server" for="origenChino" class="control-label ">
-                                                    ¿Usted es residente de China? <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:RadioButtonList ID="origenChino" runat="server" RepeatDirection="Horizontal">
+                                <asp:Label runat="server" for="residenteChina" class="control-label ">
+                                                    ¿Usted es residente de China? <span class="required">*</span></asp:Label>
+                                <asp:RadioButtonList ID="residenteChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="2">No</asp:ListItem>
                                 </asp:RadioButtonList>
@@ -343,54 +338,34 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="fechaViaje" class="control-label ">
-                                                    En caso afirmativo, responda lo siguiente:
-                                                </asp:Label>
+                                <asp:Label runat="server" for="fechaViaje" class="control-label ">En caso afirmativo, responda lo siguiente:</asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="fechaViaje" class="control-label ">
-                                                    Fecha de viaje a China: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="fechaViaje" name="fechaViaje" type="password"
-                                    placeholder="dd/mm/aaaa" />
+                                <asp:Label runat="server" for="fechaViaje" class="control-label ">Fecha de viaje a China: <span class="required">*</span></asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="fechaViaje" name="fechaViaje" type="password" placeholder="dd/mm/aaaa" />
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="vuelo" class="control-label ">
-                                                    Aerolinea/vuelo de llegada a México: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="vuelo" name="vuelo" type="text"
-                                    placeholder="Aerolinea/vuelo de llegada a México" />
+                                <asp:Label runat="server" for="vuelo" class="control-label "> Aerolinea/vuelo de llegada a México: <span class="required">*</span></asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="vuelo" name="vuelo" type="text" placeholder="Aerolinea/vuelo de llegada a México" />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="confirm_password" class="control-label ">
-                                                    Fecha de llegada a México: <span class="required">*</span>
-                                                </asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control " ID="confirm_password" name="confirm_password" type="password"
-                                    placeholder="dd/mm/aaaa" />
+                                <asp:Label runat="server" for="confirm_password" class="control-label "> Fecha de llegada a México: <span class="required">*</span></asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="confirm_password" name="confirm_password" type="password" placeholder="dd/mm/aaaa" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="sApellido" class="control-label ">
-                                                    Durante las 2 semanas previas al inicio de los
-                                                    síntomas:
-                                                </asp:Label>
+                                <asp:Label runat="server" for="sApellido" class="control-label "> Durante las 2 semanas previas al inicio de los síntomas:</asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="sApellido" class="control-label ">
-                                                    ¿Tuvo contacto con alguna persona con
-                                                    sintomatología respiratoria?
-                                        </asp:Label>
+                                <asp:Label runat="server" for="sApellido" class="control-label ">¿Tuvo contacto con alguna persona con sintomatología respiratoria?</asp:Label>
                             </div>
                             <div class="form-group col-md-6">
                                 <asp:RadioButtonList ID="RadioButtonList3" runat="server" RepeatDirection="Horizontal">
@@ -403,26 +378,19 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="lugarContacto" class="control-label ">
-                                                    Lugar de contacto: <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="lugarContacto" class="control-label ">Lugar de contacto: <span class="required">*</span></asp:Label>
                             </div>
                             <div class="form-group col-md-3">
                                 <asp:TextBox runat="server" class="form-control " ID="lugarContacto" name="lugarContacto" type="text" placeholder="Lugar de contacto" />
                             </div>
                             <div class="form-group col-md-7">
-                                <asp:Label runat="server" for="mes" class="control-label ">
-                                                    1=Hogar 2=Área de trabajo 3=Área de entretenimiento
-                                                    social 4=Unidad médica
-                                                </asp:Label>
+                                <asp:Label runat="server" for="mes" class="control-label "> 1=Hogar 2=Área de trabajo 3=Área de entretenimientosocial 4=Unidad médica </asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="sexo" class="control-label ">
-                                                    ¿Tuvo contacto con animales? <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="sexo" class="control-label "> ¿Tuvo contacto con animales? <span class="required">*</span></asp:Label>
                             </div>
                             <div class="form-group col-md-1">
                                 <asp:RadioButtonList ID="RadioButtonList4" runat="server" RepeatDirection="Horizontal">
@@ -440,28 +408,19 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="tpoContacto" class="control-label ">
-                                                    ¿Qué tipo de contacto tuvo? <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="tpoContacto" class="control-label "> ¿Qué tipo de contacto tuvo? <span class="required">*</span></asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:TextBox runat="server" class="form-control " ID="tpoContacto" name="tpoContacto" type="text"
-                                    placeholder="Tipo contacto" />
+                                <asp:TextBox runat="server" class="form-control " ID="tpoContacto" name="tpoContacto" type="text" placeholder="Tipo contacto" />
                             </div>
                             <div class="form-group col-md-7">
-                                <asp:Label runat="server" for="mes" class="control-label ">
-                                                    1=Animales vivos 2=Animales muertos 3=Sangre 4=Heces
-                                                    5=Huevo 6=Vísceras
-                                                </asp:Label>
+                                <asp:Label runat="server" for="mes" class="control-label "> 1=Animales vivos 2=Animales muertos 3=Sangre 4=Heces 5=Huevo 6=Vísceras </asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="sexo" class="control-label ">
-                                                    ¿Visitó algún mercado, donde hubiera venta de animales?
-                                                    <span class="required">*</span>
-                                                </asp:Label>
+                                <asp:Label runat="server" for="sexo" class="control-label "> ¿Visitó algún mercado, donde hubiera venta de animales?<span class="required">*</span></asp:Label>
                             </div>
                             <div class="form-group col-md-1">
                                 <asp:RadioButtonList ID="RadioButtonList5" runat="server" RepeatDirection="Horizontal">

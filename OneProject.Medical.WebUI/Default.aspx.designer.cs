@@ -600,13 +600,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList viajeChina;
 
         /// <summary>
-        /// Control origenChino.
+        /// Control residenteChina.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList origenChino;
+        protected global::System.Web.UI.WebControls.RadioButtonList residenteChina;
 
         /// <summary>
         /// Control fechaViaje.
