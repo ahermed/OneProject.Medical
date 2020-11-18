@@ -14,7 +14,7 @@ namespace OneProject.Medical.WebUI
     {
 
 
-      
+
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace OneProject.Medical.WebUI
                 lstmes.Text = mesinyear[mes];
                 ddlMes.Items.Add(lstmes);
             }
-           
+
 
 
         }
@@ -108,7 +108,7 @@ namespace OneProject.Medical.WebUI
                             PrimerApellido = pApellido.Text,
                             SegundoApellido = sApellido.Text,
                             Nombres = nombre.Text,
-                            NacimientoDía =short.Parse( ddlDia.SelectedValue),
+                            NacimientoDía = short.Parse(ddlDia.SelectedValue),
                             NacimientoMes = short.Parse(ddlMes.SelectedValue),
                             NacimientoAnio = short.Parse(anio.Text),
                             Edad = short.Parse(edad.Text),
@@ -116,12 +116,12 @@ namespace OneProject.Medical.WebUI
                             Sexo = sexo.SelectedValue,
                             Embarazada = ConvertBool(embarazada.SelectedValue),
                             MesesEmbarazo = short.Parse(mesesEmbarazo.Text),
-                            EnPeriodoPuerperio = false,
-                            DiasPuerperio = 0,
+                            EnPeriodoPuerperio = ConvertBool(periodoPuerperio.SelectedValue),
+                            DiasPuerperio = short.Parse(diasPuerperio.Text),
                             Nacionalidad = nacionalidad.SelectedValue,
                             PaisOrigen = paisOrigen.Text,
                             NoExpedienteSeguridadSocial = seguroSocial.Text,
-                            EntidadNacimiento = entidadNacimiento.Text,
+                            EntidadNacimiento = "d",
                             EntidadDelegacionResidencia = entidadResidencia.Text,
                             MunicipioResidencia = municipioResidencia.Text,
                             Localidad = localidad.Text,
@@ -153,27 +153,48 @@ namespace OneProject.Medical.WebUI
                         Models.Antecedentes antecedentes = new Models.Antecedentes()
                         {
 
+
                             IdPersona = generales.IdPersona,
-                            ViajoChina14dPrevInicioSintomas =ConvertBool( viajeChina.SelectedValue),
-                            ResidenteChina = ConvertBool(origenChino.SelectedValue),
-                            FechaViajeChina = DateTime.Parse(fechaViaje.Text),
+                            ViajoChina14dPrevInicioSintomas = ConvertBool(viajeChina.SelectedValue),
+                            ResidenteChina = ConvertBool(residenteChina.SelectedValue),
+                            FechaViajeChina = DateTime.Parse(fechaViaje.Value),
                             AerolineaVueloLlegadaMexico = vuelo.Text,
                             FechaLlegadaMexico = DateTime.Now,
-                            ContactoPersonaSintomasRespiratorios = "I",
+                            ContactoPersonaSintomasRespiratorios = contactoPersona.SelectedValue,
                             LugarContactoPersonas = 1,
-                            ContactoAnimales = true,
-                            CualAnimal = "d",
+                            ContactoAnimales = ConvertBool(contactoAnimal.SelectedValue),
+                            CualAnimal = tipoAnimal.Text,
                             TipoContactoAnimal = 1,
-                            VisitoMercadoVentaAnimales = true,
+                            VisitoMercadoVentaAnimales = ConvertBool(visitaMercado.SelectedValue),
+                            LugarMercadoVentaAnimales = lugarMercado.Text,
                             FechaVisitaMercado = DateTime.Now,
-                            Ult14dContacCercanoPersSospCoV = true,
-                            Ult14dContacCercanoPersCorfiLabCoV = true,
-                            ContacPersViajChina14dPrevIniSintomas = true
+                            Ult14dContacCercanoPersSospCoV = ConvertBool(contactoPersonaSospecha.SelectedValue),
+                            Ult14dContacCercanoPersCorfiLabCoV = ConvertBool(contactoPersonaConfirmada.SelectedValue),
+                            ContacPersViajChina14dPrevIniSintomas = ConvertBool(contactoPersonaChina.SelectedValue)
 
                         };
 
 
                         context.Antecedentes.Add(antecedentes);
+                        context.SaveChanges();
+
+
+                        Models.Viaje viaje = new Models.Viaje()
+                        {
+
+
+                            IdPersona = generales.IdPersona,
+                            Pais = paisViaje.Text,
+                            Ciudad = ciudadViaje.Text,
+                            FechaLlegada = DateTime.Now,
+                            FechaSalida = DateTime.Now,
+                            AerolineaVuelo = aerolineaViaje.Text
+
+
+                        };
+
+
+                        context.Viaje.Add(viaje);
                         context.SaveChanges();
 
 
@@ -183,37 +204,38 @@ namespace OneProject.Medical.WebUI
 
                             IdPersona = generales.IdPersona,
                             FechaInicioSintomas = DateTime.Now,
-                            Fiebre = true,
-                            Tos = true,
-                            DolorToracico = true,
-                            DificultadRespiratoria = true,
-                            Cefalea = true,
-                            Irritabilidad = true,
-                            Diarrea = true,
-                            Vomito = true,
-                            Calosfrios = true,
-                            DolorAbdominal = true,
-                            Mialgias = true,
-                            Artralgias = true,
-                            AtaqueAlEdoGral = true,
-                            Rinorrea = true,
-                            Polipnea = true,
-                            Odinofagia = true,
-                            Conjuntivitis = true,
-                            Cianosis = true,
-                            Convulsiones = true,
-                            OtroSintoma = "otrt",
-                            Diabetes = true,
-                            EPOC = true,
-                            Asma = true,
-                            Inmunosupresion = true,
-                            Hipertension = true,
-                            VihSida = true,
-                            EnfermedadCardio = true,
-                            Obesidad = true,
-                            InsuficienciaRenalCronica = true,
-                            InsuficienciaHepaticaCronica = true,
-                            Tabaquismo = true,
+                            Fiebre = ConvertBool(fiebre.SelectedValue),
+                            Tos = ConvertBool(tos.SelectedValue),
+                            //Dolor Toraxico no toracico
+                            DolorToracico = ConvertBool(dolorToraxico.SelectedValue),
+                            DificultadRespiratoria = ConvertBool(difRespiratoria.SelectedValue),
+                            Cefalea = ConvertBool(cefalea.SelectedValue),
+                            Irritabilidad = ConvertBool(irritabilidad.SelectedValue),
+                            Diarrea = ConvertBool(diarrea.SelectedValue),
+                            Vomito = ConvertBool(vomito.SelectedValue),
+                            Calosfrios = ConvertBool(calosfrios.SelectedValue),
+                            DolorAbdominal = ConvertBool(dolorAbdominal.SelectedValue),
+                            Mialgias = ConvertBool(mialgias.SelectedValue),
+                            Artralgias = ConvertBool(artralgias.SelectedValue),
+                            AtaqueAlEdoGral = ConvertBool(ataqueEdoGeneral.SelectedValue),
+                            Rinorrea = ConvertBool(rinorrea.SelectedValue),
+                            Polipnea = ConvertBool(polipnea.SelectedValue),
+                            Odinofagia = ConvertBool(odinofagia.SelectedValue),
+                            Conjuntivitis = ConvertBool(conjuntivitis.SelectedValue),
+                            Cianosis = ConvertBool(cianosis.SelectedValue),
+                            Convulsiones = ConvertBool(convulsiones.SelectedValue),
+                            OtroSintoma = otroSintoma.Text,
+                            Diabetes = ConvertBool(diabetes.SelectedValue),
+                            EPOC = ConvertBool(epoc.SelectedValue),
+                            Asma = ConvertBool(asma.SelectedValue),
+                            Inmunosupresion = ConvertBool(inmunosupresion.SelectedValue),
+                            Hipertension = ConvertBool(hipertension.SelectedValue),
+                            VihSida = ConvertBool(sida.SelectedValue),
+                            EnfermedadCardio = ConvertBool(enfCardiovascular.SelectedValue),
+                            Obesidad = ConvertBool(obesidad.SelectedValue),
+                            InsuficienciaRenalCronica = ConvertBool(insufRenal.SelectedValue),
+                            InsuficienciaHepaticaCronica = ConvertBool(insufHepatica.SelectedValue),
+                            Tabaquismo = ConvertBool(tabaquismo.SelectedValue),
                             OtroCoMorbilidad = "otrt"
 
                         };
@@ -222,21 +244,17 @@ namespace OneProject.Medical.WebUI
                         context.SaveChanges();
 
 
-                    
-
-
-
                         Models.DatosUnidadMedica unidadMedica = new Models.DatosUnidadMedica()
                         {
 
                             IdPersona = generales.IdPersona,
-                            ServicioIngreso = "1",
-                            TipPaciente = "A",
+                            ServicioIngreso = servicioIngreso.Text,
+                            TipPaciente = tpoPaciente.SelectedValue,
                             FechaIngresoUnidad = DateTime.Now,
-                            CasoIngresadoUCI = true,
-                            CasoIntubado = true,
-                            CasoDiagnostNeumoniaClinica = true,
-                            CasoDiagnostNeumoniaRadiológica = true
+                            CasoIngresadoUCI = ConvertBool(casoUCI.SelectedValue),
+                            CasoIntubado = ConvertBool(intubado.SelectedValue),
+                            CasoDiagnostNeumoniaClinica = ConvertBool(neumonia.SelectedValue),
+                            CasoDiagnostNeumoniaRadiológica = ConvertBool(radiologica.SelectedValue)
                         };
                         context.DatosUnidadMedica.Add(unidadMedica);
                         context.SaveChanges();
@@ -245,41 +263,41 @@ namespace OneProject.Medical.WebUI
                         {
 
                             IdPersona = generales.IdPersona,
-                            RecibioTrataAntipireticoAnalgesico = "I",
+                            RecibioTrataAntipireticoAnalgesico = tratamientoAnalgesico.SelectedValue,
                             FechaInicioTrataAntipireticoAnalgesico = DateTime.Now,
-                            Paracetamol = true,
-                            Ibuprofeno = true,
-                            AcidoAcetilsalicilico = true,
-                            ClonixinatoLisina = true,
-                            Naproxeno = true,
-                            Proxicam = true,
-                            MetamizolSodico = true,
-                            Diclofenaco = true,
-                            Ketorolaco = true,
+                            Paracetamol = paracetamol.Checked,
+                            Ibuprofeno = ibuprofeno.Checked,
+                            AcidoAcetilsalicilico = acetilsalicilico.Checked,
+                            ClonixinatoLisina = lisina.Checked,
+                            Naproxeno = naproxeno.Checked,
+                            Proxicam = proxicam.Checked,
+                            MetamizolSodico = metamizol.Checked,
+                            Diclofenaco = diclofenaco.Checked,
+                            Ketorolaco = ketorolaco.Checked,
                             OtroAntipireticoAnalgesico = true,
-                            RecibioTrataAntiviral = "I",
+                            RecibioTrataAntiviral = tratamientoAntiviral.SelectedValue,
                             FechaInicioTrataAntiviral = DateTime.Now,
-                            Amantadina = true,
-                            Rimantadina = true,
-                            Oseltamivir = true,
-                            Zanamivir = true,
-                            Peramivir = true,
-                            Ribavirina = true,
+                            Amantadina = amantadina.Checked,
+                            Rimantadina = rimantadina.Checked,
+                            Oseltamivir = oseltamivir.Checked,
+                            Zanamivir = zanamivir.Checked,
+                            Peramivir = paramivir.Checked,
+                            Ribavirina = ribavirina.Checked,
                             OtroAntiviral = "asdasd",
-                            RecibioTrataAntibiotico = "I",
+                            RecibioTrataAntibiotico = tratamientoAntibiotico.SelectedValue,
                             FechaInicioTrataAntibiotico = DateTime.Now,
-                            Penicilina = true,
-                            Dicloxacilina = true,
-                            Ampicilina = true,
-                            Amikacina = true,
-                            Doxiciclina = true,
-                            Cefalosporina = true,
-                            Clindamicina = true,
-                            Claritromicina = true,
-                            Ciprofloxacino = true,
-                            Meropenem = true,
-                            Vancomicina = true,
-                            AmoxicilinaAcClauvulanico = true,
+                            Penicilina = penicilina.Checked,
+                            Dicloxacilina = dicloxacilina.Checked,
+                            Ampicilina = ampicilina.Checked,
+                            Amikacina = amikacina.Checked,
+                            Doxiciclina = doxiciclina.Checked,
+                            Cefalosporina = cefalosporina.Checked,
+                            Clindamicina = clindamicina.Checked,
+                            Claritromicina = claritromicina.Checked,
+                            Ciprofloxacino = ciprofloxacino.Checked,
+                            Meropenem = meropenem.Checked,
+                            Vancomicina = vancomicina.Checked,
+                            AmoxicilinaAcClauvulanico = amoxicilina.Checked,
                             OtrosAntibioticos = true
                         };
                         context.Tratamiento.Add(tratamiento);
@@ -290,30 +308,29 @@ namespace OneProject.Medical.WebUI
                         {
 
                             IdPersona = generales.IdPersona,
-                            SeTomoMuestraPaciente = true,
-                            LaboratorioDiagnostico = "ssd",
-                            ExudadoFaringeo = true,
-                            ExudadoNasofaringeo = true,
-                            LavadoBronquial = true,
-                            BiopsiaPulmon = true,
+                            SeTomoMuestraPaciente = ConvertBool(muestraPaciente.SelectedValue),
+                            LaboratorioDiagnostico = labDiagnostico.Text,
+                            ExudadoFaringeo = exudadoFaringeo.Checked,
+                            ExudadoNasofaringeo = exudadoNasoferingeo.Checked,
+                            LavadoBronquial = lavadoBronquial.Checked,
+                            BiopsiaPulmon = biopsiaPulmon.Checked,
                             FechaTomaMuestra = DateTime.Now,
                             FechaEnvioMuestra = DateTime.Now,
                             FechaRecepcionMuestra = DateTime.Now,
                             FechaResultado = DateTime.Now,
-                            Resultado = "ssd"
+                            Resultado = resultado.Text
                         };
                         context.Laboratorio.Add(laboratorio);
                         context.SaveChanges();
 
                         Models.Evolucion evolucion = new Models.Evolucion()
                         {
-
                             IdPersona = generales.IdPersona,
                             Evolucion1 = 1,
                             FechaEgreso = DateTime.Now,
                             FechaDefunción = DateTime.Now,
-                            FolioCertificadoDefunción = "asdasd",
-                            Defuncion2019nCoV = false
+                            FolioCertificadoDefunción = folioCertificado.Text,
+                            Defuncion2019nCoV = ConvertBool(defuncionCOVID.SelectedValue)
                         };
 
                         context.Evolucion.Add(evolucion);
@@ -326,8 +343,8 @@ namespace OneProject.Medical.WebUI
 
             }
             catch (Exception ex)
-            { 
-            
+            {
+
             }
         }
 
