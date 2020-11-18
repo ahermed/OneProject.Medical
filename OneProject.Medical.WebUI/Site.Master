@@ -28,7 +28,7 @@
                         ctrl.style.backgroundColor = '';
                     }
                     else {
-                        ctrl.style.borderColor = '';
+                        ctrl.style.borderColor = '00b347';
                         ctrl.style.backgroundColor = '';
                     }
                 }

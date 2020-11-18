@@ -321,7 +321,7 @@
                                                     previos al inicio de signos y síntomas? <span class="required">*</span></asp:Label>
                                 <asp:RadioButtonList ID="viajeChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
 
@@ -330,7 +330,7 @@
                                                     ¿Usted es residente de China? <span class="required">*</span></asp:Label>
                                 <asp:RadioButtonList ID="residenteChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
