@@ -64,6 +64,23 @@
                             <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="fechaIngreso" class="control-label "><span class="required">*</span>Fecha de ingreso a la unidad:  </asp:Label>
                                 <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaIngreso" name="fechaIngreso" runat="server">
+                                  <asp:Calendar id="calendar1" runat="server">
+
+           <OtherMonthDayStyle ForeColor="LightGray">
+           </OtherMonthDayStyle>
+
+           <TitleStyle BackColor="Blue"
+                       ForeColor="White">
+           </TitleStyle>
+
+           <DayStyle BackColor="gray">
+           </DayStyle>
+
+           <SelectedDayStyle BackColor="LightGray"
+                             Font-Bold="True">
+           </SelectedDayStyle>
+
+      </asp:Calendar>
                             </div>
                         </div>
 
@@ -1230,13 +1247,13 @@
                                 <asp:CheckBox ID="acetilsalicilico" runat="server"
                                     Text="Ácido acetilsalicílico" />
                             </div>
-                            <div class="form-group col-md-3">
+                           <div class="form-group col-md-3">
                                 <asp:CheckBox ID="metamizol" runat="server"
                                     Text="Metamizol sódico" />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:CheckBox ID="otro2" runat="server"
-                                    Text="otro" />
+                                <asp:CheckBox ID="otroanalgesico" runat="server"
+                                    Text="Otro" />
                             </div>
                         </div>
 
@@ -1308,9 +1325,8 @@
                                 <asp:CheckBox ID="paramivir" runat="server"
                                     Text="Paramivir" />
                             </div>
-                            <div class="form-group col-md-3">
-                                <asp:CheckBox ID="otro4" runat="server"
-                                    Text="Otro" />
+                             <div class="form-group col-md-3">
+                             <asp:TextBox runat="server" class="form-control " ID="otroAntiviral" name="otroAntiviral" type="text" placeholder="Otro" MaxLength="50" />
                             </div>
                         </div>
 
@@ -1383,7 +1399,7 @@
                                     Text="Claritrimicina" />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:CheckBox ID="otros" runat="server"
+                                <asp:CheckBox ID="otroAntibiotico" runat="server"
                                     Text="Otros" />
                             </div>
                         </div>

@@ -141,6 +141,15 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl fechaIngreso;
 
         /// <summary>
+        /// Control calendar1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar calendar1;
+
+        /// <summary>
         /// Control pApellido.
         /// </summary>
         /// <remarks>
@@ -1887,13 +1896,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox metamizol;
 
         /// <summary>
-        /// Control otro2.
+        /// Control otroanalgesico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox otro2;
+        protected global::System.Web.UI.WebControls.CheckBox otroanalgesico;
 
         /// <summary>
         /// Control lisina.
@@ -1977,13 +1986,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox paramivir;
 
         /// <summary>
-        /// Control otro4.
+        /// Control otroAntiviral.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox otro4;
+        protected global::System.Web.UI.WebControls.TextBox otroAntiviral;
 
         /// <summary>
         /// Control oseltamivir.
@@ -2067,13 +2076,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox claritromicina;
 
         /// <summary>
-        /// Control otros.
+        /// Control otroAntibiotico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox otros;
+        protected global::System.Web.UI.WebControls.CheckBox otroAntibiotico;
 
         /// <summary>
         /// Control ampicilina.
