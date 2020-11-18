@@ -64,9 +64,9 @@ namespace OneProject.Medical.WebUI
             ddlListaContactoAnimal.Items.Add(j);
             j = new ListItem("Heces", "4");
             ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Huevo", "4");
+            j = new ListItem("Huevo", "5");
             ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Víseras", "4");
+            j = new ListItem("Víseras", "6");
             ddlListaContactoAnimal.Items.Add(j);
 
 
