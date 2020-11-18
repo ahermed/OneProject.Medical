@@ -1877,7 +1877,6 @@
 
                         </div>
                     </div>
-
                     <div class="form-row" style="margin-top: 10px;">
                         <div class="form-group col-md-12">
                             <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">* ID = Intradomiciliario, ED=Extradomiciliario (Trabajo, Unidades médicas, Escuelas, Mercado, Sitio de reunión, etc)</asp:Label>
