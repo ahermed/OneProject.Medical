@@ -1191,7 +1191,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <asp:Label runat="server" for="" class="control-label ">
-                                                    Puede marcar más de una opción de la lista siguiente                                                   
+                                                    *Puede marcar más de una opción de la lista siguiente                                                   
                                         </asp:Label>
                                     </div>
                                 </div>
@@ -1279,7 +1279,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <asp:Label runat="server" for="" class="control-label ">
-                                                    Puede marcar más de una opción de la lista siguiente
+                                                    *Puede marcar más de una opción de la lista siguiente
                                                    
                                         </asp:Label>
                                     </div>
@@ -1331,9 +1331,9 @@
                                     </div>
                                     <div class="form-group col-md-3 form-check-inline">
                                         <asp:RadioButtonList ID="tratamientoAntibiotico" runat="server" RepeatDirection="Horizontal">
-                                            <asp:ListItem Value="1">Si</asp:ListItem>
-                                            <asp:ListItem Value="2">No</asp:ListItem>
-                                            <asp:ListItem Value="2">Se ignora</asp:ListItem>
+                                            <asp:ListItem Value="S">Si</asp:ListItem>
+                                            <asp:ListItem Value="N">No</asp:ListItem>
+                                            <asp:ListItem Value="I">Se ignora</asp:ListItem>
                                         </asp:RadioButtonList>
                      <asp:RequiredFieldValidator ID="rfvtratamientoAntibiotico" runat="server" ControlToValidate="tratamientoAntibiotico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
@@ -1354,7 +1354,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Puede marcar más de una opción de la lista siguiente
+                                                    *Puede marcar más de una opción de la lista siguiente
                                                    
                                         </asp:Label>
                                     </div>
@@ -1431,8 +1431,7 @@
                                 </div>
 
                     </div>
-                </div>
-   
+                </div>  
             <br />
                 <div class="card">
                     <div class="card-header text-info">
@@ -1442,36 +1441,32 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="muestraPaciente" class="control-label ">¿Se le tomó muestra al paciente?</asp:Label><br>
+                                <asp:Label runat="server" for="muestraPaciente" class="control-label "> <span class="required">*</span>¿Se le tomó muestra al paciente?</asp:Label>
+                                <asp:RequiredFieldValidator ID="rfvmuestraPaciente" runat="server" ControlToValidate="muestraPaciente" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-1 ">
                                 <asp:RadioButtonList ID="muestraPaciente" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+
 
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="labDiagnostico" class="control-label ">
-                                                    Laboratorio de diagnóstico:
-                                                    <span class="required">*</span>
-                                </asp:Label>
+                                <asp:Label runat="server" for="labDiagnostico" class="control-label ">  Laboratorio de diagnóstico:</asp:Label>
+
                             </div>
                             <div class="form-group col-md-5">
-                                <input class="form-control " id="labDiagnostico" name="labDiagnostico" type="text" placeholder="Laboratorio de diagnóstico" />
+                                <asp:TextBox runat="server" class="form-control" ID="labDiagnostico" name="labDiagnostico" type="text" placeholder=" Laboratorio de diagnóstico" MaxLength="50" />
+
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Tipo de muestra
-                                                    <span class="required">*</span>
-                                </asp:Label>
-                                <asp:Label runat="server" for="dia" class="control-label ">
-                                                    *Puede marcar más de una opción de la lista siguiente
-                                                    <span class="required">*</span>
-                                </asp:Label>
+                                <asp:Label runat="server" for="dia" class="control-label "> Tipo de muestra</asp:Label><br />
+                                <asp:Label runat="server" for="dia" class="control-label "> *Puede marcar más de una opción de la lista siguiente </asp:Label>
                             </div>
                         </div>
 
@@ -1489,7 +1484,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <asp:CheckBox ID="exudadoNasoferingeo" runat="server"
-                                    Text="Lavado bronquial" />
+                                    Text="Exudado nasofaringeo" />
                             </div>
                             <div class="form-group col-md-3">
                                 <asp:CheckBox ID="biopsiaPulmon" runat="server"
@@ -1501,75 +1496,74 @@
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="fechaTomaMuestra" class="control-label ">
                                                     Fecha de toma de muestra:
-                                                    <span class="required">*</span>
+                                                  
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:TextBox runat="server" class="form-control " ID="fechaTomaMuestra" name="fechaTomaMuestra" type="text" placeholder="dd/mm/aaaa" />
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaTomaMuestra" name="fechaTomaMuestra">
                             </div>
 
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Fecha de envío de la muestra:
-                                                    <span class="required">*</span>
-                                </asp:Label>
+                                <asp:Label runat="server" for="fechaEnvioMuestra" class="control-label ">
+                                                    Fecha de envío de la muestra: </asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaEnvioMuestra" name="fechaEnvioMuestra">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="dia" class="control-label ">
+                                <asp:Label runat="server" for="fechaRecepMuestra" class="control-label ">
                                                     Fecha de recepción de muestra:
-                                                    <span class="required">*</span>
+                                                   
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaRecepMuestra" name="fechaRecepMuestra">
                             </div>
 
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="dia" class="control-label ">
+                                <asp:Label runat="server" for="fechaResultado" class="control-label ">
                                                     Fecha de resultado:
-                                                    <span class="required">*</span>
+                                                   
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaResultado" name="fechaResultado">
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:Label runat="server" for="dia" class="control-label ">
+                                <asp:Label runat="server" for="resultado" class="control-label ">
                                                     Resultado:
-                                                    <span class="required">*</span>
+                                                   
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="Resultado" />
+                                <asp:TextBox runat="server" class="form-control" ID="resultado" name="resultado" type="text" placeholder=" Resultado" MaxLength="50" />
                             </div>
                         </div>
+
                     </div>
 
                 </div>
-                             <asp:Button runat="server" ID="btnSubmitForm" Text="Ok" type="submit" />
-            </form>
-            <br />
+                <br />
             <div class="card">
                 <div class="card-header text-info">
                     EVOLUCIÓN                           
                 </div>
                 <div class="card-body">
-                    <form class="form-validate " id="evolucion" method="get">
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="dia" class="control-label ">
-                                                    Evolución: <span class="required">*</span>
+                                <asp:Label runat="server" for="evolucion" class="control-label "> <span class="required">*</span>
+                                                    Evolución:
                                 </asp:Label>
+                  <asp:RequiredFieldValidator ID="rfvevolucion" runat="server" ControlToValidate="evolucion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-3">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="Evolución" />
+                           <asp:TextBox runat="server" class=" form-control" ID="evolucion" name="evolucion" type="number" placeholder="Evolución "  />
+   
                             </div>
                             <div class="form-group col-md-7">
                                 <asp:Label runat="server" for="mes" class="control-label ">
@@ -1581,45 +1575,47 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="dia" class="control-label ">
+                                <asp:Label runat="server" for="fechaEgreso" class="control-label ">
                                                     Fecha de egreso:
-                                                    <span class="required">*</span>
+                                                   
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                            <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaEgreso" name="fechaEgreso">   
+   
                             </div>
                         </div>
 
                         <div class="form-row" style="margin-top: 10px;">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="dia" class="control-label ">
+                                <asp:Label runat="server" for="fechaDefuncion" class="control-label ">
                                                     Fecha de defunción:
-                                                    <span class="required">*</span>
+                                                   
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="dd/mm/aaaa" />
+                                  <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaDefuncion" name="fechaDefuncion">   
+   
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="dia" class="control-label ">
+                                <asp:Label runat="server" for="folioCertificado" class="control-label ">
                                                     Folio de certificado de defunción:
-                                                    <span class="required">*</span>
+                                                   
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <input class="form-control " id="dia" name="dia" type="text" placeholder="Folio de certificado" />
+                            <asp:TextBox runat="server" class=" form-control" ID="folioCertificado" name="folioCertificado" type="text" placeholder=" Folio de certificado"  MaxLength="50" />
                             </div>
                             <div class="form-group col-md-3" style="text-align: right;">
-                                <asp:Label runat="server" for="sApellido" class="control-label ">*Defunción por 2019-nCoV</asp:Label><br>
+                                <asp:Label runat="server" for="defuncionCOVID" class="control-label ">*Defunción por 2019-nCoV</asp:Label><br>
                             </div>
                             <div class="form-group col-md-3 ">
-                                <asp:RadioButtonList ID="RadioButtonList47" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="defuncionCOVID" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
 
                             </div>
@@ -1627,97 +1623,54 @@
 
                         <div class="form-row" style="margin-top: 10px;">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">*Anexar copia digitalizada de certificado de defunción si cumple con definición operacional de defunción por 2019-nCoV</asp:Label>
+                                <asp:Label runat="server" for="" class="control-label" Style="font-size: small;">*Anexar copia digitalizada de certificado de defunción si cumple con definición operacional de defunción por 2019-nCoV</asp:Label>
                             </div>
                         </div>
 
-                    </form>
                 </div>
             </div>
             <br />
             <div class="card">
                 <div class="card-header text-info">
-                    CONTACTOS
-                           
+                    CONTACTOS                           
                 </div>
                 <div class="card-body">
-                    <form class="form-validate " id="contactos" method="get">
                         <div class="row">
+                             <div class="form-row">
 
 
-                            <div class="form-group col-md-12">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th style="text-align: center;">Nombre</th>
-                                            <th style="text-align: center;">Sexo</th>
-                                            <th style="text-align: center;">Edad</th>
-                                            <th style="text-align: center;">Tipo de contacto</th>
-                                            <th style="text-align: center;">Correo electrónico</th>
-                                            <th style="text-align: center;">Presenta signos y síntomas</th>
-                                            <th style="text-align: center;">Observaciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="form-group col-md-2">
+                                    <asp:Label runat="server" for="paisViaje" class="control-label"><b>Nombre</b></asp:Label>
+                                    <asp:TextBox runat="server" type="text" class="form-control" ID="TextBox1" name="paisViaje" placeholder="País" MaxLength="50" />
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <asp:Label runat="server" for="ciudadViaje" class="control-label"><b>Sexo</b> </asp:Label>
+                                    <asp:TextBox runat="server" class=" form-control" ID="TextBox2" name="ciudadViaje" type="text" placeholder="Ciudad" MaxLength="50" />
+                                </div>
+                                <div class="form-group col-md-1">
+                                    <asp:Label runat="server" for="fechaLlegadaViaje" class="control-label "><b>Edad</b> </asp:Label>
+                                 <asp:TextBox runat="server" class=" form-control" ID="TextBox4" name="ciudadViaje" type="text" placeholder="Ciudad" MaxLength="50" />
+                                   </div>
+                                <div class="form-group col-md-2">
+                                    <asp:Label runat="server" for="fechaSalidaViaje" class="control-label"><b>Tipo de contacto</b></asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="TextBox5" name="ciudadViaje" type="text" placeholder="Ciudad" MaxLength="50" />
+                                   </div>
+                                <div class="form-group col-md-2">
+                                    <asp:Label runat="server" for="aerolineaViaje" class="control-label"><b>Correo electrónico </b></asp:Label>
+                                    <asp:TextBox runat="server" class=" form-control" ID="TextBox3" name="aerolineaViaje" type="text" placeholder="Aerolínea/vuelo" MaxLength="50" />
+                                </div>
+                                   <div class="form-group col-md-2">
+                                    <asp:Label runat="server" for="aerolineaViaje" class="control-label"><b>Presenta signos y síntomas </b></asp:Label>
+                                    <asp:TextBox runat="server" class=" form-control" ID="TextBox7" name="aerolineaViaje" type="text" placeholder="Aerolínea/vuelo" MaxLength="50" />
+                                </div>
+                                     <div class="form-group col-md-2">
+                                    <asp:Label runat="server" for="aerolineaViaje" class="control-label"><b>Observaciones </b></asp:Label>
+                                    <asp:TextBox runat="server" class=" form-control" ID="TextBox8" name="aerolineaViaje" type="text" placeholder="Aerolínea/vuelo" MaxLength="50" />
+                                </div>
                             </div>
-
+            
                         </div>
+
                         <div class="row" style="margin-top: 10px;">
                             <div class="form-group col-md-12">
                                 <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">* ID = Intradomiciliario, ED=Extradomiciliario (Trabajo, Unidades médicas, Escuelas, Mercado, Sitio de reunión, etc)</asp:Label>
@@ -1726,10 +1679,10 @@
                                 <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">Nota: En caso de que algún contacto cumpla con definición operacional de caso sospechoso, realizar el estudio epidemiológico de caso sospechoso</asp:Label>
                             </div>
                         </div>
-                    </form>
-
                 </div>
             </div>
+              <asp:Button runat="server" ID="btnSubmitForm" Text="Ok" type="submit" />
+            </form>
         </div>
     </div>
 </asp:Content>
