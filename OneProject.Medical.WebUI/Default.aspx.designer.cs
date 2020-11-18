@@ -708,13 +708,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList contactoPersona;
 
         /// <summary>
-        /// Control lugarContactoPersona.
+        /// Control ddlListaContactoPersona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lugarContactoPersona;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaContactoPersona;
+
+        /// <summary>
+        /// Control rfvddlListaContactoPersona.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlListaContactoPersona;
 
         /// <summary>
         /// Control rfvcontactoAnimal.
@@ -744,13 +753,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox tipoAnimal;
 
         /// <summary>
-        /// Control tpoContactoAnimal.
+        /// Control ddlListaContactoAnimal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContactoAnimal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaContactoAnimal;
+
+        /// <summary>
+        /// Control rfvddlListaContactoAnimal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlListaContactoAnimal;
 
         /// <summary>
         /// Control rfvvisitaMercado.

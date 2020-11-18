@@ -2,8 +2,8 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="container">
+  
+   <div class="container">
         <div class="form-horizontal">
 
             <div class="col-md-12">
@@ -385,14 +385,14 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-2">
-                                    <asp:Label runat="server" for="lugarContactoPersona" class="control-label ">Lugar de contacto: </asp:Label>
+                                    <asp:Label runat="server" for="ddlListaContactoPersona" class="control-label ">Lugar de contacto: </asp:Label>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <asp:TextBox runat="server" class="form-control " ID="lugarContactoPersona" name="lugarContactoPersona" type="number" placeholder="Lugar de contacto" />
+                                 <asp:DropDownList runat="server" ID="ddlListaContactoPersona" class="form-control" name="ddlListaContactoPersona" />  
+                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoPersona" runat="server" ControlToValidate="ddlListaContactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 </div>
-                                <div class="form-group col-md-7">
-                                    <asp:Label runat="server" for="mes" class="control-label "> 1=Hogar 2=Área de trabajo 3=Área de entretenimientosocial 4=Unidad médica </asp:Label>
-                                </div>
+
                             </div>
 
                             <div class="form-row">
@@ -418,13 +418,11 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-2">
-                                    <asp:Label runat="server" for="tpoContactoAnimal" class="control-label "> ¿Qué tipo de contacto tuvo?</asp:Label>
+                                    <asp:Label runat="server" for="ddlListaContactoAnimal" class="control-label "> ¿Qué tipo de contacto tuvo?</asp:Label>
                                 </div>
                                 <div class="form-group col-md-3">
-                                    <asp:TextBox runat="server" class="form-control " ID="tpoContactoAnimal" name="tpoContactoAnimal" type="number" placeholder="Tipo contacto" />
-                                </div>
-                                <div class="form-group col-md-7">
-                                    <asp:Label runat="server" for="mes" class="control-label "> 1=Animales vivos 2=Animales muertos 3=Sangre 4=Heces 5=Huevo 6=Vísceras </asp:Label>
+                              <asp:DropDownList runat="server" ID="ddlListaContactoAnimal" class="form-control" name="ddlListaContactoAnimal" />  
+                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoAnimal" runat="server" ControlToValidate="ddlListaContactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -1864,13 +1862,13 @@
                             </div>
                         </div>
                         <div class="form-row justify-content-center">
-                            <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="submit" ID="btnSubmitForm" />
+                            <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="" ID="btnSubmitForm" OnClick="guardar_Click" />
+
                         </div>
                     </div>
-                </div>
-
-
-            </form>
+                </div>                   
+            </form>         
         </div>
-    </div>
+
+    </div>    
 </asp:Content>
