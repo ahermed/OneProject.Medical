@@ -384,10 +384,10 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-3">
                                     <asp:Label runat="server" for="ddlListaContactoPersona" class="control-label ">Lugar de contacto: </asp:Label>
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-4">
                                  <asp:DropDownList runat="server" ID="ddlListaContactoPersona" class="form-control" name="ddlListaContactoPersona" />  
                                  <asp:RequiredFieldValidator ID="rfvddlListaContactoPersona" runat="server" ControlToValidate="ddlListaContactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
@@ -417,10 +417,10 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-2">
+                                <div class="form-group col-md-3">
                                     <asp:Label runat="server" for="ddlListaContactoAnimal" class="control-label "> ¿Qué tipo de contacto tuvo?</asp:Label>
                                 </div>
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-4">
                               <asp:DropDownList runat="server" ID="ddlListaContactoAnimal" class="form-control" name="ddlListaContactoAnimal" />  
                                  <asp:RequiredFieldValidator ID="rfvddlListaContactoAnimal" runat="server" ControlToValidate="ddlListaContactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                 </div>
