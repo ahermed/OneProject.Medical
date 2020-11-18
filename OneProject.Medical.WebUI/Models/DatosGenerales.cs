@@ -35,7 +35,6 @@ namespace OneProject.Medical.WebUI.Models
         public string Nombres { get; set; }
         public short NacimientoDía { get; set; }
         public short NacimientoMes { get; set; }
-        public short NacimientoAño { get; set; }
         public Nullable<short> Edad { get; set; }
         public string CURP { get; set; }
         public string Sexo { get; set; }
@@ -69,6 +68,7 @@ namespace OneProject.Medical.WebUI.Models
         public Nullable<System.DateTime> FechaPrueba { get; set; }
         public int IdUnidadNotificante { get; set; }
         public System.DateTime FechaRegistro { get; set; }
+        public short NacimientoAnio { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Antecedentes> Antecedentes { get; set; }

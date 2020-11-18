@@ -37,12 +37,25 @@ input[type="select"] {
     }
 }
 
-
+.required {
+    color: #dc3545;
+}
 
 
 input:valid:required {
     border-color: #28a745;
 }
+
+input:focus:valid {
+    border-color: #28a745;
+    /*box-shadow: 0 0 5px 1px #28a745*/
+}
+
+input:focus:invalid {
+    border-color: #dc3545;
+    /*box-shadow: 0 0 5px 1px red*/
+}
+
 
 input:invalid:required {
     border-color: #dc3545;

@@ -105,49 +105,75 @@ namespace OneProject.Medical.WebUI
                         {
 
                             FechaIngresoUnidad = DateTime.Now,
-                            PrimerApellido = "SDF",
-                            SegundoApellido = "SDF",
-                            Nombres = "SDF",
-                            NacimientoDía = 1,
-                            NacimientoMes = 1,
-                            NacimientoAño = 1,
-                            Edad = 1,
-                            CURP = "SDF",
-                            Sexo = "H",
-                            Embarazada = true,
-                            MesesEmbarazo = 0,
+                            PrimerApellido = pApellido.Text,
+                            SegundoApellido = sApellido.Text,
+                            Nombres = nombre.Text,
+                            NacimientoDía =short.Parse( ddlDia.SelectedValue),
+                            NacimientoMes = short.Parse(ddlMes.SelectedValue),
+                            NacimientoAnio = short.Parse(anio.Text),
+                            Edad = short.Parse(edad.Text),
+                            CURP = curp.Text,
+                            Sexo = sexo.SelectedValue,
+                            Embarazada = ConvertBool(embarazada.SelectedValue),
+                            MesesEmbarazo = short.Parse(mesesEmbarazo.Text),
                             EnPeriodoPuerperio = false,
                             DiasPuerperio = 0,
-                            Nacionalidad = "M",
-                            PaisOrigen = "SDF",
-                            NoExpedienteSeguridadSocial = "SDF",
-                            EntidadNacimiento = "SDF",
-                            EntidadDelegacionResidencia = "SDF",
-                            MunicipioResidencia = "SDF",
-                            Localidad = "SDF",
-                            Calle = "SDF",
-                            NoExterno = "SDF",
-                            NoInterno = "SDF",
-                            EntreCalles = "SDF",
-                            YCalle = "SDF",
-                            Colonia = "SDF",
-                            CP = "SDF",
-                            Telefono = "SDF",
-                            CorreoElectronico = "SDF",
-                            SeReconoceIndigena = false,
-                            HablaAlgunaLenguaIndigena = false,
-                            Ocupacion = "SDF",
-                            EsMigrante = false,
-                            PagoRealizado = true,
-                            FechaPago = DateTime.Now,
-                            FechaImpresion = DateTime.Now,
-                            FechaPrueba = DateTime.Now,
+                            Nacionalidad = nacionalidad.SelectedValue,
+                            PaisOrigen = paisOrigen.Text,
+                            NoExpedienteSeguridadSocial = seguroSocial.Text,
+                            EntidadNacimiento = entidadNacimiento.Text,
+                            EntidadDelegacionResidencia = entidadResidencia.Text,
+                            MunicipioResidencia = municipioResidencia.Text,
+                            Localidad = localidad.Text,
+                            Calle = calle.Text,
+                            NoExterno = numeroExterno.Text,
+                            NoInterno = numeroInterno.Text,
+                            EntreCalles = calle1.Text,
+                            YCalle = calle2.Text,
+                            Colonia = colonia.Text,
+                            CP = cp.Text,
+                            Telefono = telefono.Text,
+                            CorreoElectronico = correo.Text,
+                            SeReconoceIndigena = ConvertBool(indigena.SelectedValue),
+                            HablaAlgunaLenguaIndigena = ConvertBool(lenguaIndigena.SelectedValue),
+                            Ocupacion = ocupacion.Text,
+                            EsMigrante = ConvertBool(migrante.SelectedValue),
+                            PagoRealizado = false,
+                            FechaPago = null,
+                            FechaImpresion = null,
+                            FechaPrueba = null,
                             IdUnidadNotificante = 1,
                             FechaRegistro = DateTime.Now
 
                         };
 
                         context.DatosGenerales.Add(generales);
+                        context.SaveChanges();
+
+                        Models.Antecedentes antecedentes = new Models.Antecedentes()
+                        {
+
+                            IdPersona = generales.IdPersona,
+                            ViajoChina14dPrevInicioSintomas =ConvertBool( viajeChina.SelectedValue),
+                            ResidenteChina = ConvertBool(origenChino.SelectedValue),
+                            FechaViajeChina = DateTime.Parse(fechaViaje.Text),
+                            AerolineaVueloLlegadaMexico = vuelo.Text,
+                            FechaLlegadaMexico = DateTime.Now,
+                            ContactoPersonaSintomasRespiratorios = "I",
+                            LugarContactoPersonas = 1,
+                            ContactoAnimales = true,
+                            CualAnimal = "d",
+                            TipoContactoAnimal = 1,
+                            VisitoMercadoVentaAnimales = true,
+                            FechaVisitaMercado = DateTime.Now,
+                            Ult14dContacCercanoPersSospCoV = true,
+                            Ult14dContacCercanoPersCorfiLabCoV = true,
+                            ContacPersViajChina14dPrevIniSintomas = true
+
+                        };
+
+
+                        context.Antecedentes.Add(antecedentes);
                         context.SaveChanges();
 
 
@@ -196,31 +222,7 @@ namespace OneProject.Medical.WebUI
                         context.SaveChanges();
 
 
-                        Models.Antecedentes antecedentes = new Models.Antecedentes()
-                        {
-
-                            IdPersona = generales.IdPersona,
-                            ViajoChina14dPrevInicioSintomas = true,
-                            ResidenteChina = true,
-                            FechaViajeChina = DateTime.Now,
-                            AerolineaVueloLlegadaMexico = "asdf",
-                            FechaLlegadaMexico = DateTime.Now,
-                            ContactoPersonaSintomasRespiratorios = "I",
-                            LugarContactoPersonas = 1,
-                            ContactoAnimales = true,
-                            CualAnimal = "d",
-                            TipoContactoAnimal = 1,
-                            VisitoMercadoVentaAnimales = true,
-                            FechaVisitaMercado = DateTime.Now,
-                            Ult14dContacCercanoPersSospCoV = true,
-                            Ult14dContacCercanoPersCorfiLabCoV = true,
-                            ContacPersViajChina14dPrevIniSintomas = true
-
-                        };
-
-
-                        context.Antecedentes.Add(antecedentes);
-                        context.SaveChanges();
+                    
 
 
 
@@ -328,5 +330,18 @@ namespace OneProject.Medical.WebUI
             
             }
         }
+
+
+        protected bool ConvertBool(string cadena)
+        {
+            bool convert = false;
+
+            if (cadena == "1")
+                convert = true;
+
+            return convert;
+        }
+
+
     }
 }
