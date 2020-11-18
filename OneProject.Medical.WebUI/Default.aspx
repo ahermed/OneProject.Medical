@@ -124,8 +124,8 @@
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="sexo" class="control-label "> <span class="required">*</span>Sexo:</asp:Label>
                                 <asp:RadioButtonList ID="sexo" runat="server" CssClass="radioButtonList" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Hombre</asp:ListItem>
-                                    <asp:ListItem Value="2">Mujer</asp:ListItem>
+                                    <asp:ListItem Value="H">Hombre</asp:ListItem>
+                                    <asp:ListItem Value="M">Mujer</asp:ListItem>
                                 </asp:RadioButtonList>
                                 <asp:RequiredFieldValidator ID="rfvsexo" runat="server" ControlToValidate="sexo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
@@ -158,8 +158,8 @@
                             <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="nacionalidad" class="control-label "><span class="required">*</span>Nacionalidad: </asp:Label>
                                 <asp:RadioButtonList ID="nacionalidad" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Mexicana</asp:ListItem>
-                                    <asp:ListItem Value="2">Extranjera</asp:ListItem>
+                                    <asp:ListItem Value="M">Mexicana</asp:ListItem>
+                                    <asp:ListItem Value="E">Extranjera</asp:ListItem>
                                 </asp:RadioButtonList>
                                 <asp:RequiredFieldValidator ID="rfvnacionalidad" runat="server" ControlToValidate="nacionalidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
@@ -180,9 +180,9 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="entidadNacimiento" class="control-label ">Entidad de Nacimiento:</asp:Label>
-                               <asp:TextBox runat="server" class="form-control " ID="entidadNacimiento" name="entidadNacimiento" type="text" placeholder="Entidad de Nacimiento" MaxLength="50" />
+                                <asp:TextBox runat="server" class="form-control " ID="entidadNacimiento" name="entidadNacimiento" type="text" placeholder="Entidad de Nacimiento" MaxLength="50" />
                                 <asp:RequiredFieldValidator ID="rfventidadNacimiento" runat="server" ControlToValidate="entidadNacimiento" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                           </div>
+                            </div>
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="entidadResidencia" class="control-label "> <span class="required">*</span>Delegación de Residencia:</asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="entidadResidencia" name="entidadResidencia" type="text" placeholder="Entidad/Delegación de Residencia" MaxLength="50" />
@@ -468,23 +468,23 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-2  text-center"" >
+                                <div class="form-group col-md-2  text-center">
                                     <asp:Label runat="server" for="paisViaje" class="control-label"><b>País al que viajó</b></asp:Label>
                                     <asp:TextBox runat="server" type="text" class="form-control" ID="paisViaje" name="paisViaje" placeholder="País" MaxLength="50" />
                                 </div>
-                                <div class="form-group col-md-3  text-center"">
+                                <div class="form-group col-md-3  text-center">
                                     <asp:Label runat="server" for="ciudadViaje" class="control-label"><b>Ciudad del país al que viajó</b> </asp:Label>
                                     <asp:TextBox runat="server" class=" form-control" ID="ciudadViaje" name="ciudadViaje" type="text" placeholder="Ciudad" MaxLength="50" />
                                 </div>
-                                <div class="form-group col-md-2  text-center"">
+                                <div class="form-group col-md-2  text-center">
                                     <asp:Label runat="server" for="fechaLlegadaViaje" class="control-label "><b>Fecha llegada</b> </asp:Label>
                                     <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaLlegadaViaje" name="fechaLlegadaViaje" runat="server">
                                 </div>
-                                <div class="form-group col-md-2  text-center"">
+                                <div class="form-group col-md-2  text-center">
                                     <asp:Label runat="server" for="fechaSalidaViaje" class="control-label"><b>Fecha de salida </b></asp:Label>
                                     <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaSalidaViaje" name="fechaSalidaViaje" runat="server">
                                 </div>
-                                <div class="form-group col-md-3  text-center"">
+                                <div class="form-group col-md-3  text-center">
                                     <asp:Label runat="server" for="aerolineaViaje" class="control-label"><b>Aerolínea/vuelo </b></asp:Label>
                                     <asp:TextBox runat="server" class=" form-control" ID="aerolineaViaje" name="aerolineaViaje" type="text" placeholder="Aerolínea/vuelo" MaxLength="50" />
                                 </div>
@@ -1162,278 +1162,277 @@
                     </div>
                     <div class="card-body">
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="tratamientoAnalgesico" class="control-label "><span class="required">*</span>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="tratamientoAnalgesico" class="control-label "><span class="required">*</span>
                                                     ¿Recibió tratamiento
                                                     antipirético/analgésico?
-                                        </asp:Label><br>
-                                    </div>
-                                    <div class="form-group col-md-3 form-check-inline">
-                                        <asp:RadioButtonList ID="tratamientoAnalgesico" runat="server" RepeatDirection="Horizontal">
-                                            <asp:ListItem Value="S">Si</asp:ListItem>
-                                            <asp:ListItem Value="N">No</asp:ListItem>
-                                            <asp:ListItem Value="I">Se ignora</asp:ListItem>
-                                        </asp:RadioButtonList>
-                               <asp:RequiredFieldValidator ID="rfvtratamientoAnalgesico" runat="server" ControlToValidate="tratamientoAnalgesico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                </asp:Label><br>
+                            </div>
+                            <div class="form-group col-md-3 form-check-inline">
+                                <asp:RadioButtonList ID="tratamientoAnalgesico" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="S">Si</asp:ListItem>
+                                    <asp:ListItem Value="N">No</asp:ListItem>
+                                    <asp:ListItem Value="I">Se ignora</asp:ListItem>
+                                </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvtratamientoAnalgesico" runat="server" ControlToValidate="tratamientoAnalgesico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="fechaTratamientoAnalgesico" class="control-label ">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="fechaTratamientoAnalgesico" class="control-label ">
                                                     Fecha de inicio del tratamiento antipirético/analgésico:
                                                     
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                     <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaTratamientoAnalgesico" name="fechaTratamientoAnalgesico" runat="server">                                 
-                                    </div>
-                                </div>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaTratamientoAnalgesico" name="fechaTratamientoAnalgesico" runat="server">
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <asp:Label runat="server" for="" class="control-label ">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="" class="control-label ">
                                                     *Puede marcar más de una opción de la lista siguiente                                                   
-                                        </asp:Label>
-                                    </div>
-                                </div>
+                                </asp:Label>
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="paracetamol" runat="server"
-                                            Text="Paracetamol" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                         <asp:CheckBox ID="naproxeno" runat="server"
-                                            Text="Naproxeno" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="diclofenaco" runat="server"
-                                            Text="Diclofenaco" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="paracetamol" runat="server"
+                                    Text="Paracetamol" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="naproxeno" runat="server"
+                                    Text="Naproxeno" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="diclofenaco" runat="server"
+                                    Text="Diclofenaco" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3 ">
-                                        <asp:CheckBox ID="ibuprofeno" runat="server"
-                                            Text="Ibuprofeno" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="proxicam" runat="server"
-                                            Text="Proxicam" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="ketorolaco" runat="server"
-                                            Text="Ketorolaco" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3 ">
+                                <asp:CheckBox ID="ibuprofeno" runat="server"
+                                    Text="Ibuprofeno" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="proxicam" runat="server"
+                                    Text="Proxicam" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="ketorolaco" runat="server"
+                                    Text="Ketorolaco" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="acetilsalicilico" runat="server"
-                                            Text="Ácido acetilsalicílico" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="metamizol" runat="server"
-                                            Text="Metamizol sódico" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="otro2" runat="server"
-                                            Text="otro" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="acetilsalicilico" runat="server"
+                                    Text="Ácido acetilsalicílico" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="metamizol" runat="server"
+                                    Text="Metamizol sódico" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="otro2" runat="server"
+                                    Text="otro" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="lisina" runat="server"
-                                            Text="Clonixinato de lisina" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="lisina" runat="server"
+                                    Text="Clonixinato de lisina" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="tratamientoAntiviral" class="control-label "><span class="required">*</span>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="tratamientoAntiviral" class="control-label "><span class="required">*</span>
                                                     ¿Recibió tratamiento
                                                     antiviral?
-                                        </asp:Label><br>
-                                    </div>
-                                    <div class="form-group col-md-3 form-check-inline">
-                                        <asp:RadioButtonList ID="tratamientoAntiviral" runat="server" RepeatDirection="Horizontal">
-                                            <asp:ListItem Value="S">Si</asp:ListItem>
-                                            <asp:ListItem Value="N">No</asp:ListItem>
-                                            <asp:ListItem Value="I">Se ignora</asp:ListItem>
-                                        </asp:RadioButtonList>
-                              <asp:RequiredFieldValidator ID="rfvtratamientoAntiviral" runat="server" ControlToValidate="tratamientoAntiviral" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                </asp:Label><br>
+                            </div>
+                            <div class="form-group col-md-3 form-check-inline">
+                                <asp:RadioButtonList ID="tratamientoAntiviral" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="S">Si</asp:ListItem>
+                                    <asp:ListItem Value="N">No</asp:ListItem>
+                                    <asp:ListItem Value="I">Se ignora</asp:ListItem>
+                                </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvtratamientoAntiviral" runat="server" ControlToValidate="tratamientoAntiviral" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                                    </div>
+                            </div>
 
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="fechaTratamientoAntiviral" class="control-label ">
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="fechaTratamientoAntiviral" class="control-label ">
                                                     Fecha de inicio del tratamiento antiviral:
                                                    
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                          <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaTratamientoAntiviral" name="fechaTratamientoAntiviral" runat="server">   
-                                    </div>
-                                </div>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaTratamientoAntiviral" name="fechaTratamientoAntiviral" runat="server">
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <asp:Label runat="server" for="" class="control-label ">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="" class="control-label ">
                                                     *Puede marcar más de una opción de la lista siguiente
                                                    
-                                        </asp:Label>
-                                    </div>
-                                </div>
+                                </asp:Label>
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="amantadina" runat="server"
-                                            Text="Amantadina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="zanamivir" runat="server"
-                                            Text="Zanamivir" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="ribavirina" runat="server"
-                                            Text="Ribavirina" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="amantadina" runat="server"
+                                    Text="Amantadina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="zanamivir" runat="server"
+                                    Text="Zanamivir" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="ribavirina" runat="server"
+                                    Text="Ribavirina" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="rimantadina" runat="server"
-                                            Text="Rimantadina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="paramivir" runat="server"
-                                            Text="Paramivir" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="otro4" runat="server"
-                                            Text="Otro" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="rimantadina" runat="server"
+                                    Text="Rimantadina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="paramivir" runat="server"
+                                    Text="Paramivir" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="otro4" runat="server"
+                                    Text="Otro" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="oseltamivir" runat="server"
-                                            Text="Oseltamivir" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="oseltamivir" runat="server"
+                                    Text="Oseltamivir" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="tratamientoAntibiotico" class="control-label "><span class="required">*</span>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="tratamientoAntibiotico" class="control-label "><span class="required">*</span>
                                                     ¿Recibió tratamiento
                                                     antibiótico?
-                                        </asp:Label><br>
-                                    </div>
-                                    <div class="form-group col-md-3 form-check-inline">
-                                        <asp:RadioButtonList ID="tratamientoAntibiotico" runat="server" RepeatDirection="Horizontal">
-                                            <asp:ListItem Value="S">Si</asp:ListItem>
-                                            <asp:ListItem Value="N">No</asp:ListItem>
-                                            <asp:ListItem Value="I">Se ignora</asp:ListItem>
-                                        </asp:RadioButtonList>
-                     <asp:RequiredFieldValidator ID="rfvtratamientoAntibiotico" runat="server" ControlToValidate="tratamientoAntibiotico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                </asp:Label><br>
+                            </div>
+                            <div class="form-group col-md-3 form-check-inline">
+                                <asp:RadioButtonList ID="tratamientoAntibiotico" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="S">Si</asp:ListItem>
+                                    <asp:ListItem Value="N">No</asp:ListItem>
+                                    <asp:ListItem Value="I">Se ignora</asp:ListItem>
+                                </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvtratamientoAntibiotico" runat="server" ControlToValidate="tratamientoAntibiotico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                                    </div>
+                            </div>
 
-                                    <div class="form-group col-md-3">
-                                        <asp:Label runat="server" for="fechaTratamientoAntibiotico" class="control-label ">
+                            <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="fechaTratamientoAntibiotico" class="control-label ">
                                                     Fecha de inicio del tratamiento antibiótico:
                                                    
-                                        </asp:Label>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                    <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaTratamientoAntibiotico" name="fechaTratamientoAntibiotico" runat="server">   
-   
-                                    </div>
-                                </div>
+                                </asp:Label>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaTratamientoAntibiotico" name="fechaTratamientoAntibiotico" runat="server">
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <asp:Label runat="server" for="dia" class="control-label ">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="dia" class="control-label ">
                                                     *Puede marcar más de una opción de la lista siguiente
                                                    
-                                        </asp:Label>
-                                    </div>
-                                </div>
+                                </asp:Label>
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="penicilina" runat="server"
-                                            Text="Penicilina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="clindamicina" runat="server"
-                                            Text="Clindamicina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="amoxicilina" runat="server"
-                                            Text="Amoxicilina c/s clauvulánico" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="penicilina" runat="server"
+                                    Text="Penicilina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="clindamicina" runat="server"
+                                    Text="Clindamicina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="amoxicilina" runat="server"
+                                    Text="Amoxicilina c/s clauvulánico" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="dicloxacilina" runat="server"
-                                            Text="Dicloxacilina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="claritromicina" runat="server"
-                                            Text="Claritrimicina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="otros" runat="server"
-                                            Text="Otros" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="dicloxacilina" runat="server"
+                                    Text="Dicloxacilina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="claritromicina" runat="server"
+                                    Text="Claritrimicina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="otros" runat="server"
+                                    Text="Otros" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="ampicilina" runat="server"
-                                            Text="Ampicilina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="ciprofloxacino" runat="server"
-                                            Text="Ciprofloxacino" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="ampicilina" runat="server"
+                                    Text="Ampicilina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="ciprofloxacino" runat="server"
+                                    Text="Ciprofloxacino" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="amikacina" runat="server"
-                                            Text="Amikacina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="meropenem" runat="server"
-                                            Text="Meropenem" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="amikacina" runat="server"
+                                    Text="Amikacina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="meropenem" runat="server"
+                                    Text="Meropenem" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="doxiciclina" runat="server"
-                                            Text="Doxiciclina" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="vancomicina" runat="server"
-                                            Text="Vancomicina" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="doxiciclina" runat="server"
+                                    Text="Doxiciclina" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="vancomicina" runat="server"
+                                    Text="Vancomicina" />
+                            </div>
+                        </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <asp:CheckBox ID="cefalosporina" runat="server"
-                                            Text="Cefalosporina" />
-                                    </div>
-                                </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <asp:CheckBox ID="cefalosporina" runat="server"
+                                    Text="Cefalosporina" />
+                            </div>
+                        </div>
 
                     </div>
-                </div>  
-            <br />
+                </div>
+                <br />
                 <div class="card">
                     <div class="card-header text-info">
                         LABORATORIO                          
@@ -1548,23 +1547,23 @@
 
                 </div>
                 <br />
-            <div class="card">
-                <div class="card-header text-info">
-                    EVOLUCIÓN                           
-                </div>
-                <div class="card-body">
+                <div class="card">
+                    <div class="card-header text-info">
+                        EVOLUCIÓN                           
+                    </div>
+                    <div class="card-body">
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="evolucion" class="control-label "> <span class="required">*</span>
                                                     Evolución:
                                 </asp:Label>
-                  <asp:RequiredFieldValidator ID="rfvevolucion" runat="server" ControlToValidate="evolucion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvevolucion" runat="server" ControlToValidate="evolucion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-3">
-                           <asp:TextBox runat="server" class=" form-control" ID="evolucion" name="evolucion" type="number" placeholder="Evolución "  />
-   
+                                <asp:TextBox runat="server" class=" form-control" ID="evolucion" name="evolucion" type="number" placeholder="Evolución " />
+
                             </div>
                             <div class="form-group col-md-7">
                                 <asp:Label runat="server" for="mes" class="control-label ">
@@ -1582,8 +1581,7 @@
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                            <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaEgreso" name="fechaEgreso" runat="server">   
-   
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaEgreso" name="fechaEgreso" runat="server">
                             </div>
                         </div>
 
@@ -1595,8 +1593,7 @@
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                  <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaDefuncion" name="fechaDefuncion" runat="server">   
-   
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaDefuncion" name="fechaDefuncion" runat="server">
                             </div>
                         </div>
 
@@ -1608,7 +1605,7 @@
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                            <asp:TextBox runat="server" class=" form-control" ID="folioCertificado" name="folioCertificado" type="text" placeholder=" Folio de certificado"  MaxLength="50" />
+                                <asp:TextBox runat="server" class=" form-control" ID="folioCertificado" name="folioCertificado" type="text" placeholder=" Folio de certificado" MaxLength="50" />
                             </div>
                             <div class="form-group col-md-3" style="text-align: right;">
                                 <asp:Label runat="server" for="defuncionCOVID" class="control-label ">*Defunción por 2019-nCoV</asp:Label><br>
@@ -1628,266 +1625,251 @@
                             </div>
                         </div>
 
+                    </div>
                 </div>
-            </div>
-            <br />
-            <div class="card">
-                <div class="card-header text-info">
-                    CONTACTOS                           
-                </div>
-                <div class="card-body">
-
-
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
-                            <asp:RequiredFieldValidator ID="rfvnombreContacto" runat="server" ControlToValidate="nombreContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto" name="nombreContacto" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
-                        </div>
-
-                        <div class="form-group col-md-4">
-                            <asp:RequiredFieldValidator ID="rfvsexoContacto" runat="server" ControlToValidate="sexoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:RadioButtonList ID="sexoContacto" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem Value="F">Femenino</asp:ListItem>
-                                <asp:ListItem Value="M">Masculino</asp:ListItem>
-                            </asp:RadioButtonList>
-
-                        </div>
-                        <div class="form-group col-md-1 ">
-                            <asp:RequiredFieldValidator ID="rfvedadContacto" runat="server" ControlToValidate="edadContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="edadContacto" name="edadContacto" type="number" placeholder="Edad" />
-
-                        </div>
-                        <div class="form-group col-md-2">
-                            <asp:RequiredFieldValidator ID="rfvtpoContacto" runat="server" ControlToValidate="tpoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class="form-control" ID="tpoContacto" name="tpoContacto" type="text" placeholder="ID o ED" MaxLength="2" />
-
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvcorreoContacto" runat="server" ControlToValidate="correoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="correoContacto" name="correoContacto" type="text" placeholder="Correo electrónico" MaxLength="50" />
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvsintomasContacto" runat="server" ControlToValidate="sintomasContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto" name="sintomasContacto" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
-
-                        </div>
-                        <div class="form-group col-md-3">
-                            <asp:RequiredFieldValidator ID="rfvobservacionesContacto" runat="server" ControlToValidate="observacionesContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto" name="observacionesContacto" type="text" placeholder="Observaciones" MaxLength="50" />
-
-                        </div>
+                <br />
+                <div class="card">
+                    <div class="card-header text-info">
+                        CONTACTOS                           
                     </div>
+                    <div class="card-body">
 
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
-                            <asp:RequiredFieldValidator ID="rfvnombreContacto1" runat="server" ControlToValidate="nombreContacto1" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <h6>Contacto 1</h6>
+                        <hr />
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <asp:RequiredFieldValidator ID="rfvnombreContacto" runat="server" ControlToValidate="nombreContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
-                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto1" name="nombreContacto1" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
+                                <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto" name="nombreContacto" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
+                            </div>
 
+                            <div class="form-group col-md-4">
+                                <asp:RequiredFieldValidator ID="rfvsexoContacto" runat="server" ControlToValidate="sexoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
+                                <asp:RadioButtonList ID="sexoContacto" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="F">Femenino</asp:ListItem>
+                                    <asp:ListItem Value="M">Masculino</asp:ListItem>
+                                </asp:RadioButtonList>
+
+                            </div>
+                            <div class="form-group col-md-1 ">
+                                <asp:RequiredFieldValidator ID="rfvedadContacto" runat="server" ControlToValidate="edadContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
+                                <asp:TextBox runat="server" class=" form-control" ID="edadContacto" name="edadContacto" type="number" placeholder="Edad" />
+
+                            </div>
+                            <div class="form-group col-md-2">
+                                <asp:RequiredFieldValidator ID="rfvtpoContacto" runat="server" ControlToValidate="tpoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
+                                <asp:TextBox runat="server" class="form-control" ID="tpoContacto" name="tpoContacto" type="text" placeholder="ID o ED" MaxLength="2" />
+
+                            </div>
+                            <div class="form-group col-md-3 ">
+                                <asp:RequiredFieldValidator ID="rfvcorreoContacto" runat="server" ControlToValidate="correoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto" name="correoContacto" type="text" placeholder="Correo electrónico" MaxLength="50" />
+                            </div>
+                            <div class="form-group col-md-3 ">
+                                <asp:RequiredFieldValidator ID="rfvsintomasContacto" runat="server" ControlToValidate="sintomasContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
+                                <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto" name="sintomasContacto" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
+
+                            </div>
+                            <div class="form-group col-md-3">
+                                <asp:RequiredFieldValidator ID="rfvobservacionesContacto" runat="server" ControlToValidate="observacionesContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
+                                <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto" name="observacionesContacto" type="text" placeholder="Observaciones" MaxLength="50" />
+
+                            </div>
                         </div>
 
-                        <div class="form-group col-md-4">
-                            <asp:RequiredFieldValidator ID="rfvsexoContacto1" runat="server" ControlToValidate="sexoContacto1" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <h6>Contacto 2</h6>
+                        <hr />
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
 
-                            <asp:RadioButtonList ID="sexoContacto1" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem Value="F">Femenino</asp:ListItem>
-                                <asp:ListItem Value="M">Masculino</asp:ListItem>
-                            </asp:RadioButtonList>
+                                <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto1" name="nombreContacto1" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
 
+                            </div>
+
+                            <div class="form-group col-md-4">
+
+                                <asp:RadioButtonList ID="sexoContacto1" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="F">Femenino</asp:ListItem>
+                                    <asp:ListItem Value="M">Masculino</asp:ListItem>
+                                </asp:RadioButtonList>
+
+                            </div>
+                            <div class="form-group col-md-1 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="edadContacto1" name="edadContacto" type="number" placeholder="Edad" />
+
+                            </div>
+                            <div class="form-group col-md-2">
+
+                                <asp:TextBox runat="server" class="form-control" ID="tpoContacto1" name="tpoContacto1" type="text" placeholder="ID o ED" MaxLength="2" />
+
+                            </div>
+                            <div class="form-group col-md-3 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto1" name="correoContacto1" type="text" placeholder="Correo electrónico" MaxLength="50" />
+
+                            </div>
+                            <div class="form-group col-md-3 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto1" name="sintomasContacto1" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
+
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto1" name="observacionesContacto1" type="text" placeholder="Observaciones" MaxLength="50" />
+
+                            </div>
                         </div>
-                        <div class="form-group col-md-1 ">
-                            <asp:RequiredFieldValidator ID="rfvedadContacto1" runat="server" ControlToValidate="edadContacto1" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <h6>Contacto 3</h6>
+                        <hr />
 
-                            <asp:TextBox runat="server" class=" form-control" ID="edadContacto1" name="edadContacto" type="number" placeholder="Edad" />
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
 
+                                <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto2" name="nombreContacto2" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
+
+                            </div>
+
+                            <div class="form-group col-md-4">
+
+                                <asp:RadioButtonList ID="sexoContacto2" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="F">Femenino</asp:ListItem>
+                                    <asp:ListItem Value="M">Masculino</asp:ListItem>
+                                </asp:RadioButtonList>
+
+                            </div>
+                            <div class="form-group col-md-1 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="edadContacto2" name="edadContacto2" type="number" placeholder="Edad" />
+
+                            </div>
+                            <div class="form-group col-md-2">
+
+                                <asp:TextBox runat="server" class="form-control" ID="tpoContacto2" name="tpoContacto2" type="text" placeholder="ID o ED" MaxLength="2" />
+
+                            </div>
+                            <div class="form-group col-md-3 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto2" name="correoContacto2" type="text" placeholder="Correo electrónico" MaxLength="50" />
+
+                            </div>
+                            <div class="form-group col-md-3 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto2" name="sintomasContacto2" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
+
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto2" name="observacionesContacto2" type="text" placeholder="Observaciones" MaxLength="50" />
+
+                            </div>
                         </div>
-                        <div class="form-group col-md-2">
-                            <asp:RequiredFieldValidator ID="rfvtpoContacto1" runat="server" ControlToValidate="tpoContacto1" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <h6>Contacto 4</h6>
+                        <hr />
 
-                            <asp:TextBox runat="server" class="form-control" ID="tpoContacto1" name="tpoContacto1" type="text" placeholder="ID o ED" MaxLength="2" />
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
 
+                                <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto3" name="nombreContacto3" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
+
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <asp:RadioButtonList ID="sexoContacto3" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="F">Femenino</asp:ListItem>
+                                    <asp:ListItem Value="M">Masculino</asp:ListItem>
+                                </asp:RadioButtonList>
+
+                            </div>
+                            <div class="form-group col-md-1 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="edadContacto3" name="edadContacto3" type="number" placeholder="Edad" />
+
+                            </div>
+                            <div class="form-group col-md-2">
+
+                                <asp:TextBox runat="server" class="form-control" ID="tpoContacto3" name="tpoContacto3" type="text" placeholder="ID o ED" MaxLength="2" />
+                            </div>
+                            <div class="form-group col-md-3 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto3" name="correoContacto3" type="text" placeholder="Correo electrónico" MaxLength="50" />
+
+                            </div>
+                            <div class="form-group col-md-3 ">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto3" name="sintomasContacto3" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
+
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto3" name="observacionesContacto3" type="text" placeholder="Observaciones" MaxLength="50" />
+
+                            </div>
                         </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvcorreoContacto1" runat="server" ControlToValidate="correoContacto1" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                        <h6>Contacto 5</h6>
+                        <hr />
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
 
-                            <asp:TextBox runat="server" class=" form-control" ID="correoContacto1" name="correoContacto1" type="text" placeholder="Correo electrónico" MaxLength="50" />
+                                <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto4" name="nombreContacto4" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
 
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvsintomasContacto1" runat="server" ControlToValidate="sintomasContacto1" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            </div>
 
-                            <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto1" name="sintomasContacto1" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
+                            <div class="form-group col-md-4">
 
-                        </div>
-                        <div class="form-group col-md-3">
-                            <asp:RequiredFieldValidator ID="rfvobservacionesContacto1" runat="server" ControlToValidate="observacionesContacto1" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RadioButtonList ID="sexoContacto4" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="F">Femenino</asp:ListItem>
+                                    <asp:ListItem Value="M">Masculino</asp:ListItem>
+                                </asp:RadioButtonList>
 
-                            <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto1" name="observacionesContacto1" type="text" placeholder="Observaciones" MaxLength="50" />
+                            </div>
+                            <div class="form-group col-md-1 ">
 
-                        </div>
-                    </div>
+                                <asp:TextBox runat="server" class=" form-control" ID="edadContacto4" name="edadContacto4" type="number" placeholder="Edad" />
 
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
-                            <asp:RequiredFieldValidator ID="rfvnombreContacto2" runat="server" ControlToValidate="nombreContacto2" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="form-group col-md-2">
 
-                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto2" name="nombreContacto2" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
+                                <asp:TextBox runat="server" class="form-control" ID="tpoContacto4" name="tpoContacto4" type="text" placeholder="ID o ED" MaxLength="2" />
+                            </div>
+                            <div class="form-group col-md-3 ">
 
-                        </div>
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto4" name="correoContacto4" type="text" placeholder="Correo electrónico" MaxLength="50" />
 
-                        <div class="form-group col-md-4">
-                            <asp:RequiredFieldValidator ID="rfvsexoContacto2" runat="server" ControlToValidate="sexoContacto2" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="form-group col-md-3 ">
 
-                            <asp:RadioButtonList ID="sexoContacto2" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem Value="F">Femenino</asp:ListItem>
-                                <asp:ListItem Value="M">Masculino</asp:ListItem>
-                            </asp:RadioButtonList>
+                                <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto4" name="sintomasContacto4" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
 
-                        </div>
-                        <div class="form-group col-md-1 ">
-                            <asp:RequiredFieldValidator ID="rfvedadContacto2" runat="server" ControlToValidate="edadContacto2" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="form-group col-md-3">
 
-                            <asp:TextBox runat="server" class=" form-control" ID="edadContacto2" name="edadContacto2" type="number" placeholder="Edad" />
+                                <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto4" name="observacionesContacto4" type="text" placeholder="Observaciones" MaxLength="50" />
 
-                        </div>
-                        <div class="form-group col-md-2">
-                            <asp:RequiredFieldValidator ID="rfvtpoContacto2" runat="server" ControlToValidate="tpoContacto2" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class="form-control" ID="tpoContacto2" name="tpoContacto2" type="text" placeholder="ID o ED" MaxLength="2" />
-
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvcorreoContacto2" runat="server" ControlToValidate="correoContacto2" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="correoContacto2" name="correoContacto2" type="text" placeholder="Correo electrónico" MaxLength="50" />
-
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvsintomasContacto2" runat="server" ControlToValidate="sintomasContacto2" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto2" name="sintomasContacto2" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
-
-                        </div>
-                        <div class="form-group col-md-3">
-                            <asp:RequiredFieldValidator ID="rfvobservacionesContacto2" runat="server" ControlToValidate="observacionesContacto2" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto2" name="observacionesContacto2" type="text" placeholder="Observaciones" MaxLength="50" />
-
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
-                            <asp:RequiredFieldValidator ID="rfvnombreContacto3" runat="server" ControlToValidate="nombreContacto3" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto3" name="nombreContacto3" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
-
-                        </div>
-
-                        <div class="form-group col-md-4">
-                            <asp:RequiredFieldValidator ID="rfvsexoContacto3" runat="server" ControlToValidate="sexoContacto3" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            <asp:RadioButtonList ID="sexoContacto3" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem Value="F">Femenino</asp:ListItem>
-                                <asp:ListItem Value="M">Masculino</asp:ListItem>
-                            </asp:RadioButtonList>
-
-                        </div>
-                        <div class="form-group col-md-1 ">
-                            <asp:RequiredFieldValidator ID="rfvedadContacto3" runat="server" ControlToValidate="edadContacto3" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="edadContacto3" name="edadContacto3" type="number" placeholder="Edad" />
-
-                        </div>
-                        <div class="form-group col-md-2">
-                            <asp:RequiredFieldValidator ID="rfvtpoContacto3" runat="server" ControlToValidate="tpoContacto3" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class="form-control" ID="tpoContacto3" name="tpoContacto3" type="text" placeholder="ID o ED" MaxLength="2" />
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvcorreoContacto3" runat="server" ControlToValidate="correoContacto3" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="correoContacto3" name="correoContacto3" type="text" placeholder="Correo electrónico" MaxLength="50" />
-
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvsintomasContacto3" runat="server" ControlToValidate="sintomasContacto3" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto3" name="sintomasContacto3" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
-
-                        </div>
-                        <div class="form-group col-md-3">
-                            <asp:RequiredFieldValidator ID="rfvobservacionesContacto3" runat="server" ControlToValidate="observacionesContacto3" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto3" name="observacionesContacto3" type="text" placeholder="Observaciones" MaxLength="50" />
-
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
-                            <asp:RequiredFieldValidator ID="rfvnombreContacto4" runat="server" ControlToValidate="nombreContacto4" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto4" name="nombreContacto4" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
-
+                            </div>
                         </div>
 
-                        <div class="form-group col-md-4">
-                            <asp:RequiredFieldValidator ID="rfvsexoContacto4" runat="server" ControlToValidate="sexoContacto4" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:RadioButtonList ID="sexoContacto4" runat="server" RepeatDirection="Horizontal">
-                                <asp:ListItem Value="F">Femenino</asp:ListItem>
-                                <asp:ListItem Value="M">Masculino</asp:ListItem>
-                            </asp:RadioButtonList>
-
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">* ID = Intradomiciliario, ED=Extradomiciliario (Trabajo, Unidades médicas, Escuelas, Mercado, Sitio de reunión, etc)</asp:Label>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">Nota: En caso de que algún contacto cumpla con definición operacional de caso sospechoso, realizar el estudio epidemiológico de caso sospechoso</asp:Label>
+                            </div>
                         </div>
-                        <div class="form-group col-md-1 ">
-                            <asp:RequiredFieldValidator ID="rfvedadContacto4" runat="server" ControlToValidate="edadContacto4" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="edadContacto4" name="edadContacto4" type="number" placeholder="Edad" />
-
-                        </div>
-                        <div class="form-group col-md-2">
-                            <asp:RequiredFieldValidator ID="rfvtpoContacto4" runat="server" ControlToValidate="tpoContacto4" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class="form-control" ID="tpoContacto4" name="tpoContacto4" type="text" placeholder="ID o ED" MaxLength="2" />
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvcorreoContacto4" runat="server" ControlToValidate="correoContacto4" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="correoContacto4" name="correoContacto4" type="text" placeholder="Correo electrónico" MaxLength="50" />
-
-                        </div>
-                        <div class="form-group col-md-3 ">
-                            <asp:RequiredFieldValidator ID="rfvsintomasContacto4" runat="server" ControlToValidate="sintomasContacto4" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto4" name="sintomasContacto4" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
-
-                        </div>
-                        <div class="form-group col-md-3">
-                            <asp:RequiredFieldValidator ID="rfvobservacionesContacto4" runat="server" ControlToValidate="observacionesContacto4" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
-                            <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto4" name="observacionesContacto4" type="text" placeholder="Observaciones" MaxLength="50" />
-
-                        </div>
-                    </div>
-                    <div class="form-row" style="margin-top: 10px;">
-                        <div class="form-group col-md-12">
-                            <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">* ID = Intradomiciliario, ED=Extradomiciliario (Trabajo, Unidades médicas, Escuelas, Mercado, Sitio de reunión, etc)</asp:Label>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">Nota: En caso de que algún contacto cumpla con definición operacional de caso sospechoso, realizar el estudio epidemiológico de caso sospechoso</asp:Label>
+                        <div class="form-row justify-content-center">
+                            <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="submit" ID="btnSubmitForm" />
                         </div>
                     </div>
                 </div>
-            </div>
-              <asp:Button runat="server" ID="btnSubmitForm" Text="Ok" type="submit" />
+
+
             </form>
         </div>
     </div>
