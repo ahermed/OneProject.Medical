@@ -344,15 +344,15 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="fechaViaje" class="control-label ">Fecha de viaje a China: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="fechaViaje" name="fechaViaje" type="password" placeholder="dd/mm/aaaa" />
+                               <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" ID="fechaViaje" name="fechaViaje">
                             </div>
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="vuelo" class="control-label "> Aerolinea/vuelo de llegada a México: <span class="required">*</span></asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="vuelo" name="vuelo" type="text" placeholder="Aerolinea/vuelo de llegada a México" />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="confirm_password" class="control-label "> Fecha de llegada a México: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="confirm_password" name="confirm_password" type="password" placeholder="dd/mm/aaaa" />
+                                <asp:Label runat="server" for="fechallegada" class="control-label "> Fecha de llegada a México: <span class="required">*</span></asp:Label>
+                             <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" ID="fechallegada" name="fechallegada">
                             </div>
                         </div>
 
