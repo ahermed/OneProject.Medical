@@ -1608,22 +1608,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvradiologica;
 
         /// <summary>
-        /// Control RadioButtonList43.
+        /// Control tratamientoAnalgesico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList43;
+        protected global::System.Web.UI.WebControls.RadioButtonList tratamientoAnalgesico;
 
         /// <summary>
-        /// Control fechaInicioTratamiento.
+        /// Control rfvtratamientoAnalgesico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaInicioTratamiento;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtratamientoAnalgesico;
 
         /// <summary>
         /// Control paracetamol.
@@ -1716,22 +1716,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox lisina;
 
         /// <summary>
-        /// Control RadioButtonList44.
+        /// Control tratamientoAntiviral.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList44;
+        protected global::System.Web.UI.WebControls.RadioButtonList tratamientoAntiviral;
 
         /// <summary>
-        /// Control fechaIniTratamientoAntiviral.
+        /// Control rfvtratamientoAntiviral.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaIniTratamientoAntiviral;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtratamientoAntiviral;
 
         /// <summary>
         /// Control amantadina.
@@ -1797,13 +1797,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox oseltamivir;
 
         /// <summary>
-        /// Control RadioButtonList45.
+        /// Control tratamientoAntibiotico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList45;
+        protected global::System.Web.UI.WebControls.RadioButtonList tratamientoAntibiotico;
+
+        /// <summary>
+        /// Control rfvtratamientoAntibiotico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtratamientoAntibiotico;
 
         /// <summary>
         /// Control penicilina.
