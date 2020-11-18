@@ -609,6 +609,15 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList viajeChina;
 
         /// <summary>
+        /// Control rfvviajeChina.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvviajeChina;
+
+        /// <summary>
         /// Control residenteChina.
         /// </summary>
         /// <remarks>
@@ -616,6 +625,15 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList residenteChina;
+
+        /// <summary>
+        /// Control rfvresidenteChina.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvresidenteChina;
 
         /// <summary>
         /// Control vuelo.
@@ -627,103 +645,283 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox vuelo;
 
         /// <summary>
-        /// Control RadioButtonList3.
+        /// Control rfvcontactoPersona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcontactoPersona;
 
         /// <summary>
-        /// Control lugarContacto.
+        /// Control contactoPersona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lugarContacto;
+        protected global::System.Web.UI.WebControls.RadioButtonList contactoPersona;
 
         /// <summary>
-        /// Control RadioButtonList4.
+        /// Control lugarContactoPersona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList4;
+        protected global::System.Web.UI.WebControls.TextBox lugarContactoPersona;
 
         /// <summary>
-        /// Control requiredText.
+        /// Control rfvcontactoAnimal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox requiredText;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcontactoAnimal;
 
         /// <summary>
-        /// Control tpoContacto.
+        /// Control contactoAnimal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContacto;
+        protected global::System.Web.UI.WebControls.RadioButtonList contactoAnimal;
 
         /// <summary>
-        /// Control RadioButtonList5.
+        /// Control tipoAnimal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList5;
+        protected global::System.Web.UI.WebControls.TextBox tipoAnimal;
 
         /// <summary>
-        /// Control lugar.
+        /// Control tpoContactoAnimal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lugar;
+        protected global::System.Web.UI.WebControls.TextBox tpoContactoAnimal;
 
         /// <summary>
-        /// Control fecha.
+        /// Control rfvvisitaMercado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fecha;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvvisitaMercado;
 
         /// <summary>
-        /// Control RadioButtonList6.
+        /// Control visitaMercado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList6;
+        protected global::System.Web.UI.WebControls.RadioButtonList visitaMercado;
 
         /// <summary>
-        /// Control RadioButtonList7.
+        /// Control lugarMercado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList7;
+        protected global::System.Web.UI.WebControls.TextBox lugarMercado;
 
         /// <summary>
-        /// Control RadioButtonList8.
+        /// Control paisViaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList8;
+        protected global::System.Web.UI.WebControls.TextBox paisViaje;
+
+        /// <summary>
+        /// Control ciudadViaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ciudadViaje;
+
+        /// <summary>
+        /// Control aerolineaViaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox aerolineaViaje;
+
+        /// <summary>
+        /// Control paisViaje1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox paisViaje1;
+
+        /// <summary>
+        /// Control ciudadViaje1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ciudadViaje1;
+
+        /// <summary>
+        /// Control aerolineaViaje1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox aerolineaViaje1;
+
+        /// <summary>
+        /// Control paisViaje2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox paisViaje2;
+
+        /// <summary>
+        /// Control ciudadViaje2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ciudadViaje2;
+
+        /// <summary>
+        /// Control aerolineaViaje2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox aerolineaViaje2;
+
+        /// <summary>
+        /// Control paisViaje3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox paisViaje3;
+
+        /// <summary>
+        /// Control ciudadViaje3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ciudadViaje3;
+
+        /// <summary>
+        /// Control aerolineaViaje3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox aerolineaViaje3;
+
+        /// <summary>
+        /// Control paisViaje4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox paisViaje4;
+
+        /// <summary>
+        /// Control ciudadViaje4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ciudadViaje4;
+
+        /// <summary>
+        /// Control aerolineaViaje4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox aerolineaViaje4;
+
+        /// <summary>
+        /// Control rfvcontactoPersonaSospecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcontactoPersonaSospecha;
+
+        /// <summary>
+        /// Control contactoPersonaSospecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList contactoPersonaSospecha;
+
+        /// <summary>
+        /// Control rfvcontactoPersonaConfirmada.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcontactoPersonaConfirmada;
+
+        /// <summary>
+        /// Control contactoPersonaConfirmada.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList contactoPersonaConfirmada;
+
+        /// <summary>
+        /// Control rfvcontactoPersonaChina.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcontactoPersonaChina;
+
+        /// <summary>
+        /// Control contactoPersonaChina.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList contactoPersonaChina;
 
         /// <summary>
         /// Control btnSubmitForm.

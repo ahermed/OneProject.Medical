@@ -183,7 +183,7 @@
                                 <input class="form-control " id="entidadNacimiento" name="entidadNacimiento" type="text" placeholder="Entidad de Nacimiento" MaxLength="50"/>
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="entidadResidencia" class="control-label "> <span class="required">*</span>/Delegación de Residencia:</asp:Label>
+                                <asp:Label runat="server" for="entidadResidencia" class="control-label "> <span class="required">*</span>Delegación de Residencia:</asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="entidadResidencia" name="entidadResidencia" type="text" placeholder="Entidad/Delegación de Residencia" MaxLength="50"/>
                                 <asp:RequiredFieldValidator ID="rfventidadResidencia" runat="server" ControlToValidate="entidadResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
@@ -192,7 +192,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="municipioResidencia" class="control-label "><span class="required">*</span> de residencia: </asp:Label>
+                                <asp:Label runat="server" for="municipioResidencia" class="control-label "><span class="required">*</span>Municipio de residencia: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="municipioResidencia" name="municipioResidencia" type="text" placeholder="Municipio de residencia" MaxLength="50"/>
                                 <asp:RequiredFieldValidator ID="rfvmunicipioResidencia" runat="server" ControlToValidate="municipioResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>                           
                             </div>
@@ -280,7 +280,7 @@
 
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="correo" class="control-label "><span class="required">*</span> electrónico: </asp:Label>
+                                <asp:Label runat="server" for="correo" class="control-label "><span class="required">*</span>Correo electrónico: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="correo" name="correo" type="email" placeholder="Correo electrónico" MaxLength="30"/>
                                 <asp:RequiredFieldValidator ID="rfvcorreo" runat="server" ControlToValidate="correo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator> 
                             </div>
@@ -318,70 +318,77 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-8">
-                                <asp:Label runat="server" for="viajeChina" class="control-label "> ¿Realizó algún viaje a China en los 14 días
-                                                    previos al inicio de signos y síntomas? <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="viajeChina" class="control-label "><span class="required">*</span> ¿Realizó algún viaje a China en los 14 días
+                                                    previos al inicio de signos y síntomas? </asp:Label>
                                 <asp:RadioButtonList ID="viajeChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvviajeChina" runat="server" ControlToValidate="viajeChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
 
                             <div class="form-group col-md-4">
-                                <asp:Label runat="server" for="residenteChina" class="control-label ">
-                                                    ¿Usted es residente de China? <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="residenteChina" class="control-label "> <span class="required">*</span>
+                                                    ¿Usted es residente de China?</asp:Label>
                                 <asp:RadioButtonList ID="residenteChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="rfvresidenteChina" runat="server" ControlToValidate="residenteChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="fechaViaje" class="control-label ">En caso afirmativo, responda lo siguiente:</asp:Label>
+                                <asp:Label runat="server" for="" class="control-label ">En caso afirmativo, responda lo siguiente:</asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="fechaViaje" class="control-label ">Fecha de viaje a China: <span class="required">*</span></asp:Label>
-                               <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" ID="fechaViaje" name="fechaViaje">
+                                <asp:Label runat="server" for="fechaViaje" class="control-label ">Fecha de viaje a China:</asp:Label>
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaViaje" name="fechaViaje">
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="vuelo" class="control-label "> Aerolinea/vuelo de llegada a México: <span class="required">*</span></asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="vuelo" name="vuelo" type="text" placeholder="Aerolinea/vuelo de llegada a México" />
+                                <asp:Label runat="server" for="vuelo" class="control-label "> Aerolinea/vuelo de llegada a México: </asp:Label>
+                                <asp:TextBox runat="server" class="form-control " ID="vuelo" name="vuelo" type="text" placeholder="Aerolinea/vuelo de llegada a México" MaxLength="50" />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="fechallegada" class="control-label "> Fecha de llegada a México: <span class="required">*</span></asp:Label>
-                             <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" ID="fechallegada" name="fechallegada">
+                                <asp:Label runat="server" for="fechallegada" class="control-label "> Fecha de llegada a México: </asp:Label>
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechallegada" name="fechallegada">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="sApellido" class="control-label "> Durante las 2 semanas previas al inicio de los síntomas:</asp:Label>
+                                <asp:Label runat="server" for="" class="control-label "> Durante las 2 semanas previas al inicio de los síntomas:</asp:Label>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="sApellido" class="control-label ">¿Tuvo contacto con alguna persona con sintomatología respiratoria?</asp:Label>
+                                <asp:Label runat="server" for="contactoPersona" class="control-label "> <span class="required">*</span>¿Tuvo contacto con alguna persona con sintomatología respiratoria?</asp:Label>
+                                <asp:RequiredFieldValidator ID="rfvcontactoPersona" runat="server" ControlToValidate="contactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-6">
-                                <asp:RadioButtonList ID="RadioButtonList3" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
-                                    <asp:ListItem Value="2">Se ignora</asp:ListItem>
+                                <asp:RadioButtonList ID="contactoPersona" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Value="S">Si</asp:ListItem>
+                                    <asp:ListItem Value="N">No</asp:ListItem>
+                                    <asp:ListItem Value="I">Se ignora</asp:ListItem>
                                 </asp:RadioButtonList>
+
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="lugarContacto" class="control-label ">Lugar de contacto: <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="lugarContactoPersona" class="control-label ">Lugar de contacto: </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:TextBox runat="server" class="form-control " ID="lugarContacto" name="lugarContacto" type="text" placeholder="Lugar de contacto" />
+                                <asp:TextBox runat="server" class="form-control " ID="lugarContactoPersona" name="lugarContactoPersona" type="number" placeholder="Lugar de contacto" />
                             </div>
                             <div class="form-group col-md-7">
                                 <asp:Label runat="server" for="mes" class="control-label "> 1=Hogar 2=Área de trabajo 3=Área de entretenimientosocial 4=Unidad médica </asp:Label>
@@ -390,28 +397,31 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="sexo" class="control-label "> ¿Tuvo contacto con animales? <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="contactoAnimal" class="control-label "> <span class="required">*</span> ¿Tuvo contacto con animales?</asp:Label>
+                                <asp:RequiredFieldValidator ID="rfvcontactoAnimal" runat="server" ControlToValidate="contactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-1">
-                                <asp:RadioButtonList ID="RadioButtonList4" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="contactoAnimal" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+
                             </div>
                             <div class="form-group col-md-1">
-                                <asp:Label runat="server" for="requiredText" class="control-label ">Cuál: <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="tipoAnimal" class="control-label ">Cuál:</asp:Label>
                             </div>
                             <div class="form-group col-md-7">
-                                <asp:TextBox runat="server" class="form-control " ID="requiredText" name="requiredText" type="text" placeholder="Cuál" />
+                                <asp:TextBox runat="server" class="form-control " ID="tipoAnimal" name="tipoAnimal" type="text" placeholder="Cuál" MaxLength="50" />
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="tpoContacto" class="control-label "> ¿Qué tipo de contacto tuvo? <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="tpoContactoAnimal" class="control-label "> ¿Qué tipo de contacto tuvo?</asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:TextBox runat="server" class="form-control " ID="tpoContacto" name="tpoContacto" type="text" placeholder="Tipo contacto" />
+                                <asp:TextBox runat="server" class="form-control " ID="tpoContactoAnimal" name="tpoContactoAnimal" type="number" placeholder="Tipo contacto" />
                             </div>
                             <div class="form-group col-md-7">
                                 <asp:Label runat="server" for="mes" class="control-label "> 1=Animales vivos 2=Animales muertos 3=Sangre 4=Heces 5=Huevo 6=Vísceras </asp:Label>
@@ -420,146 +430,182 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="sexo" class="control-label "> ¿Visitó algún mercado, donde hubiera venta de animales?<span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="visitaMercado" class="control-label "><span class="required">*</span> ¿Visitó algún mercado, donde hubiera venta de animales?</asp:Label>
+                                <asp:RequiredFieldValidator ID="rfvvisitaMercado" runat="server" ControlToValidate="visitaMercado" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
+
                             <div class="form-group col-md-1">
-                                <asp:RadioButtonList ID="RadioButtonList5" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="visitaMercado" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+
                             </div>
                             <div class="form-group col-md-1" style="text-align: right;">
-                                <asp:Label runat="server" for="lugar" class="control-label ">Lugar: <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="lugarMercado" class="control-label ">Lugar: </asp:Label>
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:TextBox runat="server" class="form-control " ID="lugar" name="lugar" type="text"
-                                    placeholder="Lugar" />
+                                <asp:TextBox runat="server" class="form-control " ID="lugarMercado" name="lugarMercado" type="text" placeholder="Lugar" MaxLength="50" />
                             </div>
                             <div class="form-group col-md-1" style="text-align: right;">
-                                <asp:Label runat="server" for="fecha" class="control-label ">Fecha: <span class="required">*</span></asp:Label>
+                                <asp:Label runat="server" for="fechaVisitaMercado" class="control-label ">Fecha:</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:TextBox runat="server" class="form-control " ID="fecha" name="fecha" type="text"
-                                    placeholder="dd/mm/aaaa" />
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaVisitaMercado" name="fechaVisitaMercado">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="email" class="control-label ">
-                                                    Antecedentes de viajes internacionales y nacionales:
-                                                    <span class="required">*</span>
-                                                </asp:Label><br>
+                                <asp:Label runat="server" for="" class="control-label ">  Antecedentes de viajes internacionales y nacionales:  </asp:Label><br>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="" class="control-label "> En caso afirmativo informe los países o ciudades visitados </asp:Label>
                             </div>
                         </div>
 
-                        <div class="form-row">
+                         <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <asp:Label runat="server" for="paisViaje" class="control-label"><b>País al que viajó</b></asp:Label>
+                                 <asp:TextBox runat="server" type="text" class="form-control" id="paisViaje" name="paisViaje" placeholder="País" MaxLength="50" />
+                                 </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="sApellido" class="control-label ">
-                                                    En caso afirmativo informe los países o ciudades
-                                                    visitados
-                                                </asp:Label>
+                                <asp:Label runat="server" for="ciudadViaje" class="control-label"><b>Ciudad del país al que viajó</b> </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="ciudadViaje" name="ciudadViaje" type="text" placeholder="Ciudad" MaxLength="50" />
                             </div>
-                            <div class="form-group col-md-9">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th style="text-align: center;">País al que viajó</th>
-                                            <th style="text-align: center;">Ciudad del país al que viajó</th>
-                                            <th style="text-align: center;">Fecha llegada</th>
-                                            <th style="text-align: center;">Fecha de salida</th>
-                                            <th style="text-align: center;">Aerolínea/vuelo</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                            <td style="height: 30px;"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="form-group col-md-2">
+                                <asp:Label runat="server" for="fechaLlegadaViaje" class="control-label "><b>Fecha llegada</b> </asp:Label>
+                                 <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaLlegadaViaje" name="fechaLlegadaViaje">
+                                </div>
+                            <div class="form-group col-md-2">
+                                <asp:Label runat="server" for="fechaSalidaViaje" class="control-label"><b>Fecha de salida </b></asp:Label>
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaSalidaViaje" name="fechaSalidaViaje">
+                                </div>
+                              <div class="form-group col-md-3">
+                                <asp:Label runat="server" for="aerolineaViaje" class="control-label"><b>Aerolínea/vuelo </b></asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="aerolineaViaje" name="aerolineaViaje" type="text" placeholder="Aerolínea/vuelo" MaxLength="50"/>
+                                </div>
+                        </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-2">
+                                 <asp:TextBox runat="server" type="text" class="form-control" id="paisViaje1" name="paisViaje1" placeholder="País" MaxLength="50" />
+                                 </div>
+                            <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="ciudadViaje1" name="ciudadViaje1" type="text" placeholder="Ciudad" MaxLength="50" />
                             </div>
+                            <div class="form-group col-md-2">
+                                 <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaLlegadaViaje1" name="fechaLlegadaViaje1">
+                                </div>
+                            <div class="form-group col-md-2">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaSalidaViaje1" name="fechaSalidaViaje1">
+                                </div>
+                              <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="aerolineaViaje1" name="aerolineaViaje1" type="text" placeholder="Aerolínea/vuelo" MaxLength="50"/>
+                                </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="form-group col-md-2">
+                                 <asp:TextBox runat="server" type="text" class="form-control" id="paisViaje2" name="paisViaje2" placeholder="País" MaxLength="50" />
+                                 </div>
+                            <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="ciudadViaje2" name="ciudadViaje2" type="text" placeholder="Ciudad" MaxLength="50" />
+                            </div>
+                            <div class="form-group col-md-2">
+                                 <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaLlegadaViaje2" name="fechaLlegadaViaje2">
+                                </div>
+                            <div class="form-group col-md-2">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaSalidaViaje2" name="fechaSalidaViaje2">
+                                </div>
+                              <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="aerolineaViaje2" name="aerolineaViaje2" type="text" placeholder="Aerolínea/vuelo" MaxLength="50"/>
+                                </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="form-group col-md-2">
+                                 <asp:TextBox runat="server" type="text" class="form-control" id="paisViaje3" name="paisViaje3" placeholder="País" MaxLength="50" />
+                                 </div>
+                            <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="ciudadViaje3" name="ciudadViaje3" type="text" placeholder="Ciudad" MaxLength="50" />
+                            </div>
+                            <div class="form-group col-md-2">
+                                 <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaLlegadaViaje3" name="fechaLlegadaViaje3">
+                                </div>
+                            <div class="form-group col-md-2">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaSalidaViaje3" name="fechaSalidaViaje3">
+                                </div>
+                              <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="aerolineaViaje3" name="aerolineaViaje3" type="text" placeholder="Aerolínea/vuelo" MaxLength="50"/>
+                                </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="form-group col-md-2">
+                                 <asp:TextBox runat="server" type="text" class="form-control" id="paisViaje4" name="paisViaje4" placeholder="País" MaxLength="50" />
+                                 </div>
+                            <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="ciudadViaje4" name="ciudadViaje4" type="text" placeholder="Ciudad" MaxLength="50" />
+                            </div>
+                            <div class="form-group col-md-2">
+                                 <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaLlegadaViaje4" name="fechaLlegadaViaje4">
+                                </div>
+                            <div class="form-group col-md-2">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaSalidaViaje4" name="fechaSalidaViaje4">
+                                </div>
+                              <div class="form-group col-md-3">
+                                <asp:TextBox runat="server" class=" form-control" ID="aerolineaViaje4" name="aerolineaViaje4" type="text" placeholder="Aerolínea/vuelo" MaxLength="50"/>
+                                </div>
                         </div>
 
+
                         <div class="form-row">
-                            <div class="form-group col-md-11">
-                                <asp:Label runat="server" for="confirm_password" class="control-label ">
-                                                    ¿En los últimos 14 días, ha tenido contacto
-                                                    cercano con una persona con sospecha de 2019-nCoV? <span class="required">*</span>
-                                                </asp:Label>
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="contactoPersonaSospecha" class="control-label "> ¿En los últimos 14 días, ha tenido contacto cercano con una persona con sospecha de 2019-nCoV? <span class="required">*</span> </asp:Label>
+                              <asp:RequiredFieldValidator ID="rfvcontactoPersonaSospecha" runat="server" ControlToValidate="contactoPersonaSospecha" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-1">
-                                <asp:RadioButtonList ID="RadioButtonList6" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="contactoPersonaSospecha" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
 
+
                         <div class="form-row">
-                            <div class="form-group col-md-11">
-                                <asp:Label runat="server" for="confirm_password" class="control-label ">
-                                                    ¿En los últimos 14 días, ha tenido contacto
-                                                    cercano con una persona confirmada por laboratorio para 2019-nCoV? <span class="required">*</span>
-                                                </asp:Label>
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="contactoPersonaConfirmada" class="control-label "> ¿En los últimos 14 días, ha tenido contacto  cercano con una persona confirmada por laboratorio para 2019-nCoV? <span class="required">*</span> </asp:Label>
+                               <asp:RequiredFieldValidator ID="rfvcontactoPersonaConfirmada" runat="server" ControlToValidate="contactoPersonaConfirmada" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-1 ">
-                                <asp:RadioButtonList ID="RadioButtonList7" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="contactoPersonaConfirmada" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+
                             </div>
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-11">
-                                <asp:Label runat="server" for="confirm_password" class="control-label ">
-                                                    ¿Tuvo contacto con otras personas o
-                                                    familiares que hayan viajado a China, en los 14 días previos al inicio de síntomas? <span class="required">*</span>
-                                                </asp:Label>
+                            <div class="form-group col-md-12">
+                                <asp:Label runat="server" for="contactoPersonaChina" class="control-label "> ¿Tuvo contacto con otras personas ofamiliares que hayan viajado a China, en los 14 días previos al inicio de síntomas? <span class="required">*</span> </asp:Label>
+                                <asp:RequiredFieldValidator ID="rfvcontactoPersonaChina" runat="server" ControlToValidate="contactoPersonaChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                             </div>
                             <div class="form-group col-md-1 ">
-                                <asp:RadioButtonList ID="RadioButtonList8" runat="server" RepeatDirection="Horizontal">
+                                <asp:RadioButtonList ID="contactoPersonaChina" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="2">No</asp:ListItem>
+                                    <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
+
                             </div>
                         </div>
 
                         <div class="form-row" style="margin-top: 10px;">
                             <div class="form-group col-md-12">
-                                <asp:Label runat="server" for="confirm_password" class="control-label" Style="font-size: small;">
+                                <asp:Label runat="server" for="" class="control-label" Style="font-size: small;">
                                                     <b>
                                                         *Contacto
                                                         cercano:&nbsp;
@@ -569,7 +615,7 @@
                                                     respirador desechable N95 y protección ocular); puede incluir cuidar, vivir, visitar o
                                                     compartir un área o sala
                                                     de espera médica
-                                                </asp:Label>
+                                </asp:Label>
                             </div>
                         </div>
 
