@@ -3,6 +3,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <asp:Label runat="server" ID="mensaje" class="control-label" Text="mensaje" ></asp:Label>
+ 
+
   <script type="text/javascript">
       function OpenDialog(dialogTitle, message) {
           $("#dialog").dialog({
@@ -1935,26 +1938,40 @@
     </div>
   </div>-->
 
-       <!-- Modal content-->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
     
-    
-      <div class="modal-content">
-        <div class="modal-header text-center">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+
+     <!-- Central Modal Medium Success -->
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog modal-notify modal-success" role="document">
+     <!--Content-->
+     <div class="modal-content">
+       <!--Header-->
+       <div class="modal-header">
+         <p class="heading lead">Operación exitosa!</p>
+
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true" class="white-text">&times;</span>
+         </button>
+       </div>
+
+       <!--Body-->
+       <div class="modal-body">
+         <div class="text-center">
+           <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
+           <p>Todos la información se registró de forma correcta,<br /> favor de confirmar pago.</p>
+         </div>
+       </div>
+
+       <!--Footer-->
+       <div class="modal-footer justify-content-center">
+         <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Cerrar</a>
+       </div>
+     </div>
+     <!--/.Content-->
+   </div>
+ </div>
+ <!-- Central Modal Medium Success-->
 
 
 </asp:Content>

@@ -422,7 +422,7 @@ namespace OneProject.Medical.WebUI
             }
             catch (Exception ex)
             {
-
+                mensaje.Text = ex.Message;
             }
         }
 
