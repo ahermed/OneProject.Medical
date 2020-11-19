@@ -12,11 +12,8 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/css/bootstrap.min.css" rel="stylesheet">
-
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <script type="text/javascript">
         function validateAndHighlight() {
@@ -35,8 +32,30 @@
                 }
             }
         }
-    </script> 
 
+ 
+    </script> 
+       <script>
+       
+
+
+
+
+ function OpenDialog(dialogTitle, message) {
+        $(function () {
+            $("#dialog").html(message);
+            $("#dialog").dialog({
+                title: "jQuery Dialog Popup",
+                buttons: {
+                    Close: function () {
+                        $(this).dialog('close');
+                    }
+                },
+                modal: true
+            });
+        });
+    };
+       </script> 
         
 </head>
 <body class="bg-light">   
@@ -75,13 +94,11 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> -</p>
             </footer>
         </div>        
     </form>
 
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+
 </body>
 </html>

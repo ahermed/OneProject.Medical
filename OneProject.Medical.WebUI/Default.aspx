@@ -3,19 +3,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-  <script type="text/javascript">
-      function OpenDialog(dialogTitle, message) {
-          $("#dialog").dialog({
-              autoOpen: false,
-              modal: true,
-              title: dialogTitle,
-              hide: { effect: "explode", duration: 500 },
-              show: { effect: "bounce", duration: 500 }
-          });
-          $("#dialog").html(message);
-          $("#dialog").dialog("open");
-      }
-  </script>
+ 
   
    <div class="container">
         <div class="form-horizontal">
@@ -1918,4 +1906,27 @@
         </div>
 
     </div>    
+
+          <!-- Modal content-->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
 </asp:Content>

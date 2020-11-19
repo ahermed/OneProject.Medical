@@ -411,7 +411,7 @@ namespace OneProject.Medical.WebUI
 
                         string msgTitle = "Operación exitosa!!";
                         string message = "Todos la información se guardó de forma correcta";
-                        ScriptManager.RegisterClientScriptBlock(this, typeof(string), "msgDialog", "OpenDialog('" + msgTitle + "','" + message + "')", true);
+                        ScriptManager.RegisterStartupScript(this, typeof(string), "msgDialog", "$('#myModal').modal()", true);
 
                     }
                 }
