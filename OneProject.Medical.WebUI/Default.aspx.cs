@@ -21,6 +21,7 @@ namespace OneProject.Medical.WebUI
             ListItem j;
             ListItem evolucion;
 
+
             if (!Page.IsPostBack)
             {
 
@@ -96,6 +97,20 @@ namespace OneProject.Medical.WebUI
             ddlListaEvolucion.Items.Add(evolucion);
 
 
+            ListItem lstTipos = new ListItem();
+            string[] tipos = { "ID", "ED" };
+
+            for (int tpo = 0; tpo < tipos.Count(); tpo++) {
+                lstTipos = new ListItem(tipos[tpo], tipos[tpo]);
+                ddlListaTpoContacto.Items.Add(lstTipos);
+                ddlListaTpoContacto1.Items.Add(lstTipos);
+                ddlListaTpoContacto2.Items.Add(lstTipos);
+                ddlListaTpoContacto3.Items.Add(lstTipos);
+                ddlListaTpoContacto4.Items.Add(lstTipos);
+                ddlListaTpoContacto5.Items.Add(lstTipos);
+
+
+            }              
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -477,7 +492,7 @@ namespace OneProject.Medical.WebUI
                     contacto.NombreCompleto = nombreContacto.Text;
                     contacto.Sexo = sexoContacto.SelectedValue;
                     contacto.Edad = edadContacto.Text == String.Empty ? (short?)null : short.Parse(edadContacto.Text);
-                    contacto.TipoContactoIDoED = tpoContacto.Text;
+                    contacto.TipoContactoIDoED = ddlListaTpoContacto.SelectedValue;
                     contacto.CorreoElectronico = correoContacto.Text;
                     contacto.SignosSintomas = sintomasContacto.Text;
                     contacto.Observaciones = observacionesContacto.Text;
@@ -489,7 +504,7 @@ namespace OneProject.Medical.WebUI
                     contacto.NombreCompleto = nombreContacto1.Text;
                     contacto.Sexo = sexoContacto1.SelectedValue;
                     contacto.Edad = edadContacto1.Text == String.Empty ? (short?)null : short.Parse(edadContacto1.Text);
-                    contacto.TipoContactoIDoED = tpoContacto1.Text;
+                    contacto.TipoContactoIDoED = ddlListaTpoContacto1.SelectedValue;
                     contacto.CorreoElectronico = correoContacto1.Text;
                     contacto.SignosSintomas = sintomasContacto1.Text;
                     contacto.Observaciones = observacionesContacto1.Text;
@@ -499,7 +514,7 @@ namespace OneProject.Medical.WebUI
                     contacto.NombreCompleto = nombreContacto2.Text;
                     contacto.Sexo = sexoContacto2.SelectedValue;
                     contacto.Edad = edadContacto2.Text == String.Empty ? (short?)null : short.Parse(edadContacto2.Text);
-                    contacto.TipoContactoIDoED = tpoContacto2.Text;
+                    contacto.TipoContactoIDoED = ddlListaTpoContacto2.SelectedValue;
                     contacto.CorreoElectronico = correoContacto2.Text;
                     contacto.SignosSintomas = sintomasContacto2.Text;
                     contacto.Observaciones = observacionesContacto2.Text;
@@ -508,7 +523,7 @@ namespace OneProject.Medical.WebUI
                     contacto.NombreCompleto = nombreContacto3.Text;
                     contacto.Sexo = sexoContacto3.SelectedValue;
                     contacto.Edad = edadContacto3.Text == String.Empty ? (short?)null : short.Parse(edadContacto3.Text);
-                    contacto.TipoContactoIDoED = tpoContacto3.Text;
+                    contacto.TipoContactoIDoED = ddlListaTpoContacto3.SelectedValue;
                     contacto.CorreoElectronico = correoContacto3.Text;
                     contacto.SignosSintomas = sintomasContacto3.Text;
                     contacto.Observaciones = observacionesContacto3.Text;
@@ -517,19 +532,19 @@ namespace OneProject.Medical.WebUI
                     contacto.NombreCompleto = nombreContacto4.Text;
                     contacto.Sexo = sexoContacto4.SelectedValue;
                     contacto.Edad = edadContacto4.Text == String.Empty ? (short?)null : short.Parse(edadContacto4.Text);
-                    contacto.TipoContactoIDoED = tpoContacto4.Text;
+                    contacto.TipoContactoIDoED = ddlListaTpoContacto4.SelectedValue;
                     contacto.CorreoElectronico = correoContacto4.Text;
                     contacto.SignosSintomas = sintomasContacto4.Text;
                     contacto.Observaciones = observacionesContacto4.Text;
                     break;
                 case 6:
-                 /*   contacto.NombreCompleto = nombreContacto5.Text;
+                    contacto.NombreCompleto = nombreContacto5.Text;
                     contacto.Sexo = sexoContacto.SelectedValue;
                     contacto.Edad = edadContacto.Text == String.Empty ? (short?)null : short.Parse(edadContacto.Text);
-                    contacto.TipoContactoIDoED = tpoContacto.Text;
+                    contacto.TipoContactoIDoED = ddlListaTpoContacto5.SelectedValue;
                     contacto.CorreoElectronico = correoContacto.Text;
                     contacto.SignosSintomas = sintomasContacto.Text;
-                    contacto.Observaciones = observacionesContacto.Text;*/
+                    contacto.Observaciones = observacionesContacto.Text;
                     break;
             }
             return contacto;

@@ -2292,22 +2292,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox edadContacto;
 
         /// <summary>
-        /// Control rfvtpoContacto.
+        /// Control rfvddlListaTpoContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtpoContacto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlListaTpoContacto;
 
         /// <summary>
-        /// Control tpoContacto.
+        /// Control ddlListaTpoContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContacto;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaTpoContacto;
 
         /// <summary>
         /// Control rfvcorreoContacto.
@@ -2391,13 +2391,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox edadContacto1;
 
         /// <summary>
-        /// Control tpoContacto1.
+        /// Control ddlListaTpoContacto1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContacto1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaTpoContacto1;
 
         /// <summary>
         /// Control correoContacto1.
@@ -2454,13 +2454,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox edadContacto2;
 
         /// <summary>
-        /// Control tpoContacto2.
+        /// Control ddlListaTpoContacto2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContacto2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaTpoContacto2;
 
         /// <summary>
         /// Control correoContacto2.
@@ -2517,13 +2517,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox edadContacto3;
 
         /// <summary>
-        /// Control tpoContacto3.
+        /// Control ddlListaTpoContacto3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContacto3;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaTpoContacto3;
 
         /// <summary>
         /// Control correoContacto3.
@@ -2580,13 +2580,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox edadContacto4;
 
         /// <summary>
-        /// Control tpoContacto4.
+        /// Control ddlListaTpoContacto4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContacto4;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaTpoContacto4;
 
         /// <summary>
         /// Control correoContacto4.
@@ -2614,6 +2614,69 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox observacionesContacto4;
+
+        /// <summary>
+        /// Control nombreContacto5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nombreContacto5;
+
+        /// <summary>
+        /// Control sexoContacto5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList sexoContacto5;
+
+        /// <summary>
+        /// Control edadContacto5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox edadContacto5;
+
+        /// <summary>
+        /// Control ddlListaTpoContacto5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaTpoContacto5;
+
+        /// <summary>
+        /// Control correoContacto5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox correoContacto5;
+
+        /// <summary>
+        /// Control sintomasContacto5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox sintomasContacto5;
+
+        /// <summary>
+        /// Control observacionesContacto5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox observacionesContacto5;
 
         /// <summary>
         /// Control btnSubmitForm.
