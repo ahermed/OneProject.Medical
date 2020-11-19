@@ -29,6 +29,9 @@ namespace OneProject.Medical.WebUI
             if (!Page.IsPostBack)
             {
 
+                fechaIngreso.Value = DateTime.Now.ToString("yyyy-MM-dd");
+
+
                 using (var context = new Models.EstudioEpidemiologicoEntities())
                 {
                     Models.DatosNotificante notificante = new Models.DatosNotificante();
@@ -233,15 +236,15 @@ namespace OneProject.Medical.WebUI
                             ResidenteChina = ConvertBool(residenteChina.SelectedValue),
                             FechaViajeChina = fechaViaje.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaViaje.Value),
                             AerolineaVueloLlegadaMexico = vuelo.Text,
-                            FechaLlegadaMexico = DateTime.Now,
+                            FechaLlegadaMexico = fechallegada.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechallegada.Value),
                             ContactoPersonaSintomasRespiratorios = contactoPersona.SelectedValue,
-                            LugarContactoPersonas = 1,
+                            LugarContactoPersonas = ddlListaContactoPersona.SelectedValue == String.Empty ? (short?)null : short.Parse(ddlListaContactoPersona.SelectedValue),
                             ContactoAnimales = ConvertBool(contactoAnimal.SelectedValue),
                             CualAnimal = tipoAnimal.Text,
-                            TipoContactoAnimal = 1,
+                            TipoContactoAnimal = ddlListaContactoAnimal.SelectedValue == String.Empty ? (short?)null : short.Parse(ddlListaContactoAnimal.SelectedValue),
                             VisitoMercadoVentaAnimales = ConvertBool(visitaMercado.SelectedValue),
                             LugarMercadoVentaAnimales = lugarMercado.Text,
-                            FechaVisitaMercado = DateTime.Now,
+                            FechaVisitaMercado = fechaVisitaMercado.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaVisitaMercado.Value),
                             Ult14dContacCercanoPersSospCoV = ConvertBool(contactoPersonaSospecha.SelectedValue),
                             Ult14dContacCercanoPersCorfiLabCoV = ConvertBool(contactoPersonaConfirmada.SelectedValue),
                             ContacPersViajChina14dPrevIniSintomas = ConvertBool(contactoPersonaChina.SelectedValue)
@@ -266,7 +269,7 @@ namespace OneProject.Medical.WebUI
 
 
                             IdPersona = generales.IdPersona,
-                            FechaInicioSintomas = DateTime.Now,
+                            FechaInicioSintomas = fechaSintomas.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaSintomas.Value),
                             Fiebre = ConvertBool(fiebre.SelectedValue),
                             Tos = ConvertBool(tos.SelectedValue),
                             //Dolor Toraxico no toracico
@@ -299,7 +302,7 @@ namespace OneProject.Medical.WebUI
                             InsuficienciaRenalCronica = ConvertBool(insufRenal.SelectedValue),
                             InsuficienciaHepaticaCronica = ConvertBool(insufHepatica.SelectedValue),
                             Tabaquismo = ConvertBool(tabaquismo.SelectedValue),
-                            OtroCoMorbilidad = "otrt"
+                            OtroCoMorbilidad = otroDatoClinico.Text
 
                         };
 
@@ -313,7 +316,7 @@ namespace OneProject.Medical.WebUI
                             IdPersona = generales.IdPersona,
                             ServicioIngreso = servicioIngreso.Text,
                             TipPaciente = tpoPaciente.SelectedValue,
-                            FechaIngresoUnidad = DateTime.Now,
+                            FechaIngresoUnidad = fechaIngresoUnidad.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaIngresoUnidad.Value),
                             CasoIngresadoUCI = ConvertBool(casoUCI.SelectedValue),
                             CasoIntubado = ConvertBool(intubado.SelectedValue),
                             CasoDiagnostNeumoniaClinica = ConvertBool(neumonia.SelectedValue),
@@ -327,7 +330,7 @@ namespace OneProject.Medical.WebUI
 
                             IdPersona = generales.IdPersona,
                             RecibioTrataAntipireticoAnalgesico = tratamientoAnalgesico.SelectedValue,
-                            FechaInicioTrataAntipireticoAnalgesico = DateTime.Now,
+                            FechaInicioTrataAntipireticoAnalgesico = fechaTratamientoAnalgesico.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaTratamientoAnalgesico.Value),
                             Paracetamol = paracetamol.Checked,
                             Ibuprofeno = ibuprofeno.Checked,
                             AcidoAcetilsalicilico = acetilsalicilico.Checked,
@@ -337,18 +340,18 @@ namespace OneProject.Medical.WebUI
                             MetamizolSodico = metamizol.Checked,
                             Diclofenaco = diclofenaco.Checked,
                             Ketorolaco = ketorolaco.Checked,
-                            OtroAntipireticoAnalgesico = true,
+                            OtroAntipireticoAnalgesico = otroanalgesico.Checked,
                             RecibioTrataAntiviral = tratamientoAntiviral.SelectedValue,
-                            FechaInicioTrataAntiviral = DateTime.Now,
+                            FechaInicioTrataAntiviral = fechaTratamientoAntiviral.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaTratamientoAntiviral.Value),
                             Amantadina = amantadina.Checked,
                             Rimantadina = rimantadina.Checked,
                             Oseltamivir = oseltamivir.Checked,
                             Zanamivir = zanamivir.Checked,
                             Peramivir = paramivir.Checked,
                             Ribavirina = ribavirina.Checked,
-                            OtroAntiviral = "asdasd",
+                            OtroAntiviral = otroAntiviral.Text,
                             RecibioTrataAntibiotico = tratamientoAntibiotico.SelectedValue,
-                            FechaInicioTrataAntibiotico = DateTime.Now,
+                            FechaInicioTrataAntibiotico = fechaTratamientoAntibiotico.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaTratamientoAntibiotico.Value),
                             Penicilina = penicilina.Checked,
                             Dicloxacilina = dicloxacilina.Checked,
                             Ampicilina = ampicilina.Checked,
@@ -361,7 +364,7 @@ namespace OneProject.Medical.WebUI
                             Meropenem = meropenem.Checked,
                             Vancomicina = vancomicina.Checked,
                             AmoxicilinaAcClauvulanico = amoxicilina.Checked,
-                            OtrosAntibioticos = true
+                            OtrosAntibioticos = otroAntibiotico.Checked
                         };
                         context.Tratamiento.Add(tratamiento);
                         context.SaveChanges();
@@ -377,10 +380,10 @@ namespace OneProject.Medical.WebUI
                             ExudadoNasofaringeo = exudadoNasoferingeo.Checked,
                             LavadoBronquial = lavadoBronquial.Checked,
                             BiopsiaPulmon = biopsiaPulmon.Checked,
-                            FechaTomaMuestra = DateTime.Now,
-                            FechaEnvioMuestra = DateTime.Now,
-                            FechaRecepcionMuestra = DateTime.Now,
-                            FechaResultado = DateTime.Now,
+                            FechaTomaMuestra = fechaTomaMuestra.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaTomaMuestra.Value),
+                            FechaEnvioMuestra = fechaEnvioMuestra.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaEnvioMuestra.Value),
+                            FechaRecepcionMuestra = fechaRecepMuestra.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaRecepMuestra.Value),
+                            FechaResultado = fechaResultado.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaResultado.Value),
                             Resultado = resultado.Text
                         };
                         context.Laboratorio.Add(laboratorio);
@@ -389,9 +392,9 @@ namespace OneProject.Medical.WebUI
                         Models.Evolucion evolucion = new Models.Evolucion()
                         {
                             IdPersona = generales.IdPersona,
-                            Evolucion1 = 1,
-                            FechaEgreso = DateTime.Now,
-                            FechaDefunción = DateTime.Now,
+                            Evolucion1 = ddlListaEvolucion.SelectedValue == String.Empty ? (short?)null : short.Parse(ddlListaEvolucion.SelectedValue),
+                            FechaEgreso = fechaEgreso.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaEgreso.Value),
+                            FechaDefunción = fechaDefuncion.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaDefuncion.Value),
                             FolioCertificadoDefunción = folioCertificado.Text,
                             Defuncion2019nCoV = ConvertBool(defuncionCOVID.SelectedValue)
                         };
@@ -448,40 +451,47 @@ namespace OneProject.Medical.WebUI
                 case 1:
                     viaje.Pais = paisViaje.Text;
                     viaje.Ciudad = ciudadViaje.Text;
-                    viaje.FechaLlegada = DateTime.Now;
-                    viaje.FechaSalida = DateTime.Now;
+                    viaje.FechaLlegada = fechaLlegadaViaje.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaLlegadaViaje.Value);
+                    viaje.FechaSalida = fechaSalidaViaje.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaSalidaViaje.Value);
                     viaje.AerolineaVuelo = aerolineaViaje.Text;
                     break;
 
                 case 2:
                     viaje.Pais = paisViaje1.Text;
                     viaje.Ciudad = ciudadViaje1.Text;
-                    viaje.FechaLlegada = DateTime.Now;
-                    viaje.FechaSalida = DateTime.Now;
+                    viaje.FechaLlegada = fechaLlegadaViaje1.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaLlegadaViaje1.Value);
+                    viaje.FechaSalida = fechaSalidaViaje1.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaSalidaViaje1.Value);
                     viaje.AerolineaVuelo = aerolineaViaje1.Text;
                     break;
                 case 3:
 
                     viaje.Pais = paisViaje2.Text;
                     viaje.Ciudad = ciudadViaje2.Text;
-                    viaje.FechaLlegada = DateTime.Now;
-                    viaje.FechaSalida = DateTime.Now;
+                    viaje.FechaLlegada = fechaLlegadaViaje2.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaLlegadaViaje2.Value);
+                    viaje.FechaSalida = fechaSalidaViaje2.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaSalidaViaje2.Value);
                     viaje.AerolineaVuelo = aerolineaViaje2.Text;
                     break;
                 case 4:
                     viaje.Pais = paisViaje3.Text;
                     viaje.Ciudad = ciudadViaje3.Text;
-                    viaje.FechaLlegada = DateTime.Now;
-                    viaje.FechaSalida = DateTime.Now;
+                    viaje.FechaLlegada = fechaLlegadaViaje3.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaLlegadaViaje3.Value);
+                    viaje.FechaSalida = fechaSalidaViaje3.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaSalidaViaje3.Value);
                     viaje.AerolineaVuelo = aerolineaViaje3.Text;
                     break;
                 case 5:
                     viaje.Pais = paisViaje4.Text;
                     viaje.Ciudad = ciudadViaje4.Text;
+                    viaje.FechaLlegada = fechaLlegadaViaje4.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaLlegadaViaje4.Value);
+                    viaje.FechaSalida = fechaSalidaViaje4.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaSalidaViaje4.Value);
+                    viaje.AerolineaVuelo = aerolineaViaje4.Text;
+                    break;
+              /*  case 6:
+                    viaje.Pais = paisViaje5.Text;
+                    viaje.Ciudad = ciudadViaje5.Text;
                     viaje.FechaLlegada = DateTime.Now;
                     viaje.FechaSalida = DateTime.Now;
                     viaje.AerolineaVuelo = aerolineaViaje4.Text;
-                    break;
+                    break;*/
             }
             return viaje;
         }
