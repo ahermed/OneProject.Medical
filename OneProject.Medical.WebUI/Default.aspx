@@ -660,7 +660,7 @@
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="fiebre" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
 
                             </div>
@@ -672,7 +672,7 @@
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="cefalea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;"> 
@@ -690,7 +690,7 @@
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="tos" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -701,7 +701,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="irritabilidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -712,7 +712,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="diabetes" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -726,7 +726,7 @@
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="dolorToraxico" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -737,7 +737,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="diarrea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -747,7 +747,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="epoc" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -761,7 +761,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="difRespiratoria" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -772,7 +772,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="vomito" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -783,7 +783,7 @@
                             <div class="form-group col-md-2">
                                 <asp:RadioButtonList ID="asma" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -797,7 +797,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="calosfrios" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -808,7 +808,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="inmunosupresion" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -822,7 +822,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="dolorAbdominal" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -833,7 +833,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="hipertension" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -847,7 +847,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="mialgias" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -858,7 +858,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="sida" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -872,7 +872,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="artralgias" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -883,7 +883,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="enfCardiovascular" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -897,7 +897,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="ataqueEdoGeneral" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -908,7 +908,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="obesidad" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -922,7 +922,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="rinorrea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -933,7 +933,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="insufRenal" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -947,7 +947,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="polipnea" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -958,7 +958,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="insufHepatica" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -972,7 +972,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="odinofagia" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -983,7 +983,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="tabaquismo" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -997,7 +997,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="conjuntivitis" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -1018,7 +1018,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="cianosis" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -1032,7 +1032,7 @@
                             <div class="form-group col-md-2 ">
                                 <asp:RadioButtonList ID="convulsiones" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
+                                    <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
                         </div>
@@ -1904,21 +1904,39 @@
                     </div>
                 </div>
 
-                <div id="dialog" style="display: none">
-                    This is a sample dialog content.
-                </div>
             </form>         
         </div>
 
     </div>    
 
-          <!-- Modal content-->
+          <!-- Modal content
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
-      <!-- Modal content-->
+    
       <div class="modal-content">
         <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>-->
+
+       <!-- Modal content-->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+    
+      <div class="modal-content">
+        <div class="modal-header text-center">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Modal Header</h4>
         </div>
