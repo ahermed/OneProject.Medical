@@ -3,7 +3,19 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
- 
+  <script type="text/javascript">
+      function OpenDialog(dialogTitle, message) {
+          $("#dialog").dialog({
+              autoOpen: false,
+              modal: true,
+              title: dialogTitle,
+              hide: { effect: "explode", duration: 500 },
+              show: { effect: "bounce", duration: 500 }
+          });
+          $("#dialog").html(message);
+          $("#dialog").dialog("open");
+      }
+  </script>
   
    <div class="container">
         <div class="form-horizontal">
@@ -65,7 +77,7 @@
                             <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="pApellido" class="control-label"><span class="required">*</span>Primer Apellido:  </asp:Label>
                                 <asp:TextBox runat="server" class=" form-control" ID="pApellido" name="pApellido" type="text" placeholder="Primer Apellido" MaxLength="50"/>
-                           <asp:RequiredFieldValidator ID="rfvpApellido" runat="server" ControlToValidate="pApellido" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator> 
+                           <asp:RequiredFieldValidator ID="rfvpApellido" runat="server" ControlToValidate="pApellido" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator> 
 
                             </div>
                             <div class="form-group col-md-3">
@@ -75,7 +87,7 @@
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="nombre" class="control-label"><span class="required">*</span>Nombre(s): </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="nombre" name="nombre" type="text" placeholder="Nombre(s)" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvnombre" runat="server" ControlToValidate="nombre" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvnombre" runat="server" ControlToValidate="nombre" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -90,23 +102,23 @@
                             <div class="form-group col-md-1">
                                 <asp:Label runat="server" for="ddlDia" class="control-label "><span class="required">*</span>Día: </asp:Label>
                                 <asp:DropDownList runat="server" ID="ddlDia" class="form-control" name="ddlDia" type="text" />
-                                <asp:RequiredFieldValidator ID="rfvddlDia" runat="server" ControlToValidate="ddlDia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvddlDia" runat="server" ControlToValidate="ddlDia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="ddlMes" class="control-label "> <span class="required">*</span>Mes:</asp:Label>
                                 <asp:DropDownList runat="server" ID="ddlMes" class="form-control " name="ddlMes" type="text" />
-                                <asp:RequiredFieldValidator ID="rfcMes" runat="server" ControlToValidate="ddlMes" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfcMes" runat="server" ControlToValidate="ddlMes" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="anio" class="control-label "><span class="required">*</span>Año: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="anio" name="anio" placeholder="Año" type="number" />
-                                <asp:RequiredFieldValidator ID="rfvanio" runat="server" ControlToValidate="anio" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvanio" runat="server" ControlToValidate="anio" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="edad" class="control-label "><span class="required">*</span>Edad: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="edad" name="edad" type="number" placeholder="Edad"  />
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="edad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="edad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-5">
                                 <asp:Label runat="server" for="curp" class="control-label ">CURP:</asp:Label>
@@ -121,7 +133,7 @@
                                     <asp:ListItem Value="H">Hombre</asp:ListItem>
                                     <asp:ListItem Value="M">Mujer</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvsexo" runat="server" ControlToValidate="sexo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvsexo" runat="server" ControlToValidate="sexo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-2">
@@ -155,7 +167,7 @@
                                     <asp:ListItem Value="M">Mexicana</asp:ListItem>
                                     <asp:ListItem Value="E">Extranjera</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvnacionalidad" runat="server" ControlToValidate="nacionalidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvnacionalidad" runat="server" ControlToValidate="nacionalidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
 
@@ -175,12 +187,12 @@
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="entidadNacimiento" class="control-label ">Entidad de Nacimiento:</asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="entidadNacimiento" name="entidadNacimiento" type="text" placeholder="Entidad de Nacimiento" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfventidadNacimiento" runat="server" ControlToValidate="entidadNacimiento" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfventidadNacimiento" runat="server" ControlToValidate="entidadNacimiento" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="entidadResidencia" class="control-label "> <span class="required">*</span>Delegación de Residencia:</asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="entidadResidencia" name="entidadResidencia" type="text" placeholder="Entidad/Delegación de Residencia" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfventidadResidencia" runat="server" ControlToValidate="entidadResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfventidadResidencia" runat="server" ControlToValidate="entidadResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -189,12 +201,12 @@
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="municipioResidencia" class="control-label "><span class="required">*</span>Municipio de residencia: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="municipioResidencia" name="municipioResidencia" type="text" placeholder="Municipio de residencia" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvmunicipioResidencia" runat="server" ControlToValidate="municipioResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvmunicipioResidencia" runat="server" ControlToValidate="municipioResidencia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="localidad" class="control-label "> <span class="required">*</span>Localidad:</asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="localidad" name="localidad" type="text" placeholder="Localidad" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvlocalidad" runat="server" ControlToValidate="localidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvlocalidad" runat="server" ControlToValidate="localidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -203,13 +215,13 @@
                             <div class="form-group col-md-8">
                                 <asp:Label runat="server" for="calle" class="control-label "> <span class="required">*</span>Calle: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="calle" name="calle" type="text" placeholder="Calle" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvcalle" runat="server" ControlToValidate="calle" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcalle" runat="server" ControlToValidate="calle" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="numeroExterno" class="control-label "><span class="required">*</span> Número externo: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="numeroExterno" name="numeroExterno" type="text" placeholder="Número ext." MaxLength="20" />
-                                <asp:RequiredFieldValidator ID="rfvnumeroExterno" runat="server" ControlToValidate="numeroExterno" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvnumeroExterno" runat="server" ControlToValidate="numeroExterno" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"> </asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-2">
@@ -240,7 +252,7 @@
                             <div class="form-group col-md-7">
                                 <asp:Label runat="server" for="colonia" class="control-label ">  <span class="required">*</span>Colonia:</asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="colonia" name="colonia" type="text" placeholder="Colonia" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvcolonia" runat="server" ControlToValidate="colonia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcolonia" runat="server" ControlToValidate="colonia" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-2">
@@ -250,7 +262,7 @@
                             <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="telefono" class="control-label "><span class="required">*</span>  Teléfono: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="telefono" name="telefono" type="text" placeholder="Teléfono" MaxLength="30" />
-                                <asp:RequiredFieldValidator ID="rfvtelefono" runat="server" ControlToValidate="telefono" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvtelefono" runat="server" ControlToValidate="telefono" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -262,7 +274,7 @@
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvindigena" runat="server" ControlToValidate="indigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvindigena" runat="server" ControlToValidate="indigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-3">
@@ -271,13 +283,13 @@
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvlengua" runat="server" ControlToValidate="lenguaIndigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvlengua" runat="server" ControlToValidate="lenguaIndigena" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="correo" class="control-label "><span class="required">*</span>Correo electrónico: </asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="correo" name="correo" type="email" placeholder="Correo electrónico" MaxLength="30" />
-                                <asp:RequiredFieldValidator ID="rfvcorreo" runat="server" ControlToValidate="correo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcorreo" runat="server" ControlToValidate="correo" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                             </div>
                         </div>
 
@@ -285,7 +297,7 @@
                             <div class="form-group col-md-10">
                                 <asp:Label runat="server" for="ocupacion" class="control-label ">  <span class="required">*</span>Ocupación:</asp:Label>
                                 <asp:TextBox runat="server" class="form-control " ID="ocupacion" name="ocupacion" type="text" placeholder="Ocupación" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvocupacion" runat="server" ControlToValidate="ocupacion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvocupacion" runat="server" ControlToValidate="ocupacion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-2">
@@ -294,7 +306,7 @@
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvmigrante" runat="server" ControlToValidate="migrante" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvmigrante" runat="server" ControlToValidate="migrante" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -318,7 +330,7 @@
                                         <asp:ListItem Value="1">Si</asp:ListItem>
                                         <asp:ListItem Value="0">No</asp:ListItem>
                                     </asp:RadioButtonList>
-                                    <asp:RequiredFieldValidator ID="rfvviajeChina" runat="server" ControlToValidate="viajeChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvviajeChina" runat="server" ControlToValidate="viajeChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 </div>
 
@@ -329,7 +341,7 @@
                                         <asp:ListItem Value="1">Si</asp:ListItem>
                                         <asp:ListItem Value="0">No</asp:ListItem>
                                     </asp:RadioButtonList>
-                                    <asp:RequiredFieldValidator ID="rfvresidenteChina" runat="server" ControlToValidate="residenteChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvresidenteChina" runat="server" ControlToValidate="residenteChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 </div>
                             </div>
@@ -364,7 +376,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <asp:Label runat="server" for="contactoPersona" class="control-label "> <span class="required">*</span>¿Tuvo contacto con alguna persona con sintomatología respiratoria?</asp:Label>
-                                    <asp:RequiredFieldValidator ID="rfvcontactoPersona" runat="server" ControlToValidate="contactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvcontactoPersona" runat="server" ControlToValidate="contactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 </div>
                                 <div class="form-group col-md-6">
@@ -383,7 +395,7 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                  <asp:DropDownList runat="server" ID="ddlListaContactoPersona" class="form-control" name="ddlListaContactoPersona" />  
-                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoPersona" runat="server" ControlToValidate="ddlListaContactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoPersona" runat="server" ControlToValidate="ddlListaContactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 </div>
 
@@ -392,7 +404,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <asp:Label runat="server" for="contactoAnimal" class="control-label "> <span class="required">*</span> ¿Tuvo contacto con animales?</asp:Label>
-                                    <asp:RequiredFieldValidator ID="rfvcontactoAnimal" runat="server" ControlToValidate="contactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvcontactoAnimal" runat="server" ControlToValidate="contactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 </div>
                                 <div class="form-group col-md-1">
@@ -416,14 +428,14 @@
                                 </div>
                                 <div class="form-group col-md-4">
                               <asp:DropDownList runat="server" ID="ddlListaContactoAnimal" class="form-control" name="ddlListaContactoAnimal" />  
-                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoAnimal" runat="server" ControlToValidate="ddlListaContactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoAnimal" runat="server" ControlToValidate="ddlListaContactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <asp:Label runat="server" for="visitaMercado" class="control-label "><span class="required">*</span> ¿Visitó algún mercado, donde hubiera venta de animales?</asp:Label>
-                                    <asp:RequiredFieldValidator ID="rfvvisitaMercado" runat="server" ControlToValidate="visitaMercado" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvvisitaMercado" runat="server" ControlToValidate="visitaMercado" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="form-group col-md-2">
@@ -554,7 +566,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <asp:Label runat="server" for="contactoPersonaSospecha" class="control-label "> <span class="required">*</span>  ¿En los últimos 14 días, ha tenido contacto cercano con una persona con sospecha de 2019-nCoV?</asp:Label>
-                                    <asp:RequiredFieldValidator ID="rfvcontactoPersonaSospecha" runat="server" ControlToValidate="contactoPersonaSospecha" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvcontactoPersonaSospecha" runat="server" ControlToValidate="contactoPersonaSospecha" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 </div>
                                 <div class="form-group col-md-1">
@@ -569,7 +581,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <asp:Label runat="server" for="contactoPersonaConfirmada" class="control-label ">  <span class="required">*</span>¿En los últimos 14 días, ha tenido contacto  cercano con una persona confirmada por laboratorio para 2019-nCoV? </asp:Label>
-                                    <asp:RequiredFieldValidator ID="rfvcontactoPersonaConfirmada" runat="server" ControlToValidate="contactoPersonaConfirmada" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvcontactoPersonaConfirmada" runat="server" ControlToValidate="contactoPersonaConfirmada" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group col-md-1 ">
                                     <asp:RadioButtonList ID="contactoPersonaConfirmada" runat="server" RepeatDirection="Horizontal">
@@ -583,7 +595,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <asp:Label runat="server" for="contactoPersonaChina" class="control-label "> <span class="required">*</span>¿Tuvo contacto con otras personas ofamiliares que hayan viajado a China, en los 14 días previos al inicio de síntomas?  </asp:Label>
-                                    <asp:RequiredFieldValidator ID="rfvcontactoPersonaChina" runat="server" ControlToValidate="contactoPersonaChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="rfvcontactoPersonaChina" runat="server" ControlToValidate="contactoPersonaChina" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 </div>
                                 <div class="form-group col-md-1 ">
@@ -642,7 +654,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvfiebre" runat="server" ControlToValidate="fiebre" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvfiebre" runat="server" ControlToValidate="fiebre" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                                 <asp:Label runat="server" for="fiebre" class="control-label ">Fiebre</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
@@ -653,7 +665,7 @@
 
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvcefalea" runat="server" ControlToValidate="cefalea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcefalea" runat="server" ControlToValidate="cefalea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="cefalea" class="control-label ">Cefalea</asp:Label>
                             </div>
@@ -663,22 +675,15 @@
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>
-                            <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvmorbilidad" runat="server" ControlToValidate="morbilidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
+                            <div class="form-group col-md-2" style="text-align: right;"> 
                                 <asp:Label runat="server" for="morbilidad" class="control-label ">Co-morbilidad</asp:Label>
                             </div>
-                            <div class="form-group col-md-2">
-                                <asp:RadioButtonList ID="morbilidad" runat="server" RepeatDirection="Horizontal">
-                                    <asp:ListItem Value="1">Si</asp:ListItem>
-                                    <asp:ListItem Value="0">No</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
+        
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvtos" runat="server" ControlToValidate="tos" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvtos" runat="server" ControlToValidate="tos" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="tos" class="control-label ">Tos</asp:Label>
                             </div>
@@ -689,7 +694,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvirritabilidad" runat="server" ControlToValidate="irritabilidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvirritabilidad" runat="server" ControlToValidate="irritabilidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="irritabilidad" class="control-label ">Irritabilidad</asp:Label>
                             </div>
@@ -700,7 +705,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvdiabetes" runat="server" ControlToValidate="diabetes" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvdiabetes" runat="server" ControlToValidate="diabetes" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="diabetes" class="control-label ">Diabetes</asp:Label>
                             </div>
@@ -714,7 +719,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvdolorToraxico" runat="server" ControlToValidate="dolorToraxico" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvdolorToraxico" runat="server" ControlToValidate="dolorToraxico" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="dolorToraxico" class="control-label ">Dolor torácico</asp:Label>
                             </div>
@@ -725,7 +730,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvdiarrea" runat="server" ControlToValidate="diarrea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvdiarrea" runat="server" ControlToValidate="diarrea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="diarrea" class="control-label ">Diarrea</asp:Label>
                             </div>
@@ -736,7 +741,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvepoc" runat="server" ControlToValidate="epoc" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvepoc" runat="server" ControlToValidate="epoc" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                                 <asp:Label runat="server" for="epoc" class="control-label ">EPOC</asp:Label>
                             </div>
                             <div class="form-group col-md-2 ">
@@ -749,7 +754,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvdifRespiratoria" runat="server" ControlToValidate="difRespiratoria" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvdifRespiratoria" runat="server" ControlToValidate="difRespiratoria" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="difRespiratoria" class="control-label ">Dificultad respiratoria</asp:Label>
                             </div>
@@ -760,7 +765,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvvomito" runat="server" ControlToValidate="vomito" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvvomito" runat="server" ControlToValidate="vomito" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="vomito" class="control-label ">Vómito</asp:Label>
                             </div>
@@ -771,7 +776,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvasma" runat="server" ControlToValidate="asma" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvasma" runat="server" ControlToValidate="asma" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="asma" class="control-label ">Asma</asp:Label>
                             </div>
@@ -785,7 +790,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvcalosfrios" runat="server" ControlToValidate="calosfrios" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcalosfrios" runat="server" ControlToValidate="calosfrios" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="calosfrios" class="control-label ">Calosfríos</asp:Label>
                             </div>
@@ -796,7 +801,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvinmunosupresion" runat="server" ControlToValidate="inmunosupresion" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvinmunosupresion" runat="server" ControlToValidate="inmunosupresion" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="inmunosupresion" class="control-label ">Inmunosupresión</asp:Label>
                             </div>
@@ -810,7 +815,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvdolorAbdominal" runat="server" ControlToValidate="dolorAbdominal" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvdolorAbdominal" runat="server" ControlToValidate="dolorAbdominal" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="dolorAbdominal" class="control-label ">Dolor abdominal</asp:Label>
                             </div>
@@ -821,7 +826,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvhipertension" runat="server" ControlToValidate="hipertension" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvhipertension" runat="server" ControlToValidate="hipertension" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="hipertension" class="control-label ">Hipertensión</asp:Label>
                             </div>
@@ -835,7 +840,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvmialgias" runat="server" ControlToValidate="mialgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvmialgias" runat="server" ControlToValidate="mialgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="mialgias" class="control-label ">Mialgias</asp:Label>
                             </div>
@@ -846,7 +851,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvsida" runat="server" ControlToValidate="sida" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvsida" runat="server" ControlToValidate="sida" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="sida" class="control-label ">VIH/Sida</asp:Label>
                             </div>
@@ -860,7 +865,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvartralgias" runat="server" ControlToValidate="artralgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvartralgias" runat="server" ControlToValidate="artralgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="artralgias" class="control-label ">Artralgias</asp:Label>
                             </div>
@@ -871,7 +876,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvenfCardiovascular" runat="server" ControlToValidate="enfCardiovascular" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvenfCardiovascular" runat="server" ControlToValidate="enfCardiovascular" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="enfCardiovascular" class="control-label ">Enfermedad cardiovasvular</asp:Label>
                             </div>
@@ -885,7 +890,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvataqueEdoGeneral" runat="server" ControlToValidate="ataqueEdoGeneral" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvataqueEdoGeneral" runat="server" ControlToValidate="ataqueEdoGeneral" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="ataqueEdoGeneral" class="control-label ">Ataque al estado general</asp:Label>
                             </div>
@@ -896,7 +901,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvobesidad" runat="server" ControlToValidate="obesidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvobesidad" runat="server" ControlToValidate="obesidad" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="obesidad" class="control-label ">Obesidad</asp:Label>
                             </div>
@@ -910,7 +915,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvrinorrea" runat="server" ControlToValidate="rinorrea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvrinorrea" runat="server" ControlToValidate="rinorrea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="rinorrea" class="control-label ">Rinorrea</asp:Label>
                             </div>
@@ -921,7 +926,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvinsufRenal" runat="server" ControlToValidate="insufRenal" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvinsufRenal" runat="server" ControlToValidate="insufRenal" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="insufRenal" class="control-label ">Insuficiencia renal crónica</asp:Label>
                             </div>
@@ -935,7 +940,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvpolipnea" runat="server" ControlToValidate="polipnea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvpolipnea" runat="server" ControlToValidate="polipnea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="polipnea" class="control-label ">Polipnea</asp:Label>
                             </div>
@@ -946,7 +951,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvinsufHepatica" runat="server" ControlToValidate="insufHepatica" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvinsufHepatica" runat="server" ControlToValidate="insufHepatica" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="insufHepatica" class="control-label ">Insuficiencia hepática crónica</asp:Label>
                             </div>
@@ -960,7 +965,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvodinofagia" runat="server" ControlToValidate="odinofagia" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvodinofagia" runat="server" ControlToValidate="odinofagia" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="odinofagia" class="control-label ">Odinofagia</asp:Label>
                             </div>
@@ -971,7 +976,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvtabaquismo" runat="server" ControlToValidate="tabaquismo" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvtabaquismo" runat="server" ControlToValidate="tabaquismo" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="tabaquismo" class="control-label ">Tabaquismo</asp:Label>
                             </div>
@@ -985,7 +990,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvconjuntivitis" runat="server" ControlToValidate="conjuntivitis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvconjuntivitis" runat="server" ControlToValidate="conjuntivitis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="conjuntivitis" class="control-label ">Conjuntivitis</asp:Label>
                             </div>
@@ -1006,7 +1011,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvcianosis" runat="server" ControlToValidate="cianosis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcianosis" runat="server" ControlToValidate="cianosis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="cianosis" class="control-label ">Cianosis</asp:Label>
                             </div>
@@ -1020,7 +1025,7 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-6" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvconvulsiones" runat="server" ControlToValidate="convulsiones" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvconvulsiones" runat="server" ControlToValidate="convulsiones" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="convulsiones" class="control-label ">Convulsiones</asp:Label>
                             </div>
@@ -1056,7 +1061,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <asp:TextBox runat="server" class="form-control " ID="servicioIngreso" name="servicioIngreso" type="text" placeholder="Servicio de ingreso" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvservicioIngreso" runat="server" ControlToValidate="servicioIngreso" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvservicioIngreso" runat="server" ControlToValidate="servicioIngreso" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-2" style="text-align: right;">
@@ -1069,7 +1074,7 @@
                                     <asp:ListItem Value="A">Ambulatorio</asp:ListItem>
                                     <asp:ListItem Value="H">Hospitalizado</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvtpoPaciente" runat="server" ControlToValidate="tpoPaciente" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvtpoPaciente" runat="server" ControlToValidate="tpoPaciente" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -1092,7 +1097,7 @@
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvcasoUCI" runat="server" ControlToValidate="casoUCI" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcasoUCI" runat="server" ControlToValidate="casoUCI" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -1108,7 +1113,7 @@
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvintubado" runat="server" ControlToValidate="intubado" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvintubado" runat="server" ControlToValidate="intubado" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -1120,7 +1125,7 @@
                                 </asp:Label>
                             </div>
                             <div class="form-group col-md-1" style="text-align: right;">
-                                <asp:RequiredFieldValidator ID="rfvneumonia" runat="server" ControlToValidate="neumonia" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvneumonia" runat="server" ControlToValidate="neumonia" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                                 <asp:Label runat="server" for="neumonia" class="control-label ">Clínica:</asp:Label>
                             </div>
                             <div class="form-group col-md-1 ">
@@ -1141,7 +1146,7 @@
                                     <asp:ListItem Value="1">Si</asp:ListItem>
                                     <asp:ListItem Value="0">No</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvradiologica" runat="server" ControlToValidate="radiologica" Display="Dynamic" ErrorMessage="Datos obligatorios." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvradiologica" runat="server" ControlToValidate="radiologica" Display="Dynamic" ErrorMessage="Datos obligatorios." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -1167,7 +1172,7 @@
                                     <asp:ListItem Value="N">No</asp:ListItem>
                                     <asp:ListItem Value="I">Se ignora</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvtratamientoAnalgesico" runat="server" ControlToValidate="tratamientoAnalgesico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvtratamientoAnalgesico" runat="server" ControlToValidate="tratamientoAnalgesico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-3">
@@ -1254,7 +1259,7 @@
                                     <asp:ListItem Value="N">No</asp:ListItem>
                                     <asp:ListItem Value="I">Se ignora</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvtratamientoAntiviral" runat="server" ControlToValidate="tratamientoAntiviral" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvtratamientoAntiviral" runat="server" ControlToValidate="tratamientoAntiviral" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
 
@@ -1327,7 +1332,7 @@
                                     <asp:ListItem Value="N">No</asp:ListItem>
                                     <asp:ListItem Value="I">Se ignora</asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator ID="rfvtratamientoAntibiotico" runat="server" ControlToValidate="tratamientoAntibiotico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvtratamientoAntibiotico" runat="server" ControlToValidate="tratamientoAntibiotico" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
 
@@ -1433,7 +1438,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="muestraPaciente" class="control-label "> <span class="required">*</span>¿Se le tomó muestra al paciente?</asp:Label>
-                                <asp:RequiredFieldValidator ID="rfvmuestraPaciente" runat="server" ControlToValidate="muestraPaciente" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvmuestraPaciente" runat="server" ControlToValidate="muestraPaciente" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-1 ">
@@ -1549,7 +1554,7 @@
                                 <asp:Label runat="server" for="evolucion" class="control-label "> <span class="required">*</span>
                                                     Evolución:
                                 </asp:Label>   
-                               <asp:RequiredFieldValidator ID="rfvddlListaEvolucion" runat="server" ControlToValidate="ddlListaEvolucion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                               <asp:RequiredFieldValidator ID="rfvddlListaEvolucion" runat="server" ControlToValidate="ddlListaEvolucion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-3">
@@ -1629,7 +1634,7 @@
                             </div>
 
                             <div class="form-group col-md-4">
-                                <asp:RequiredFieldValidator ID="rfvsexoContacto" runat="server" ControlToValidate="sexoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvsexoContacto" runat="server" ControlToValidate="sexoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:RadioButtonList ID="sexoContacto" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="F">Femenino</asp:ListItem>
@@ -1638,28 +1643,28 @@
 
                             </div>
                             <div class="form-group col-md-1 ">
-                                <asp:RequiredFieldValidator ID="rfvedadContacto" runat="server" ControlToValidate="edadContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvedadContacto" runat="server" ControlToValidate="edadContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:TextBox runat="server" class=" form-control" ID="edadContacto" name="edadContacto" type="number" placeholder="Edad" />
 
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:RequiredFieldValidator ID="rfvddlListaTpoContacto" runat="server" ControlToValidate="ddlListaTpoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvddlListaTpoContacto" runat="server" ControlToValidate="ddlListaTpoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
                                 <asp:DropDownList runat="server" ID="ddlListaTpoContacto" class="form-control" name="ddlListaTpoContacto" />   
                             </div>
                             <div class="form-group col-md-3 ">
-                                <asp:RequiredFieldValidator ID="rfvcorreoContacto" runat="server" ControlToValidate="correoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvcorreoContacto" runat="server" ControlToValidate="correoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:TextBox runat="server" class=" form-control" ID="correoContacto" name="correoContacto" type="text" placeholder="Correo electrónico" MaxLength="50" />
                             </div>
                             <div class="form-group col-md-3 ">
-                                <asp:RequiredFieldValidator ID="rfvsintomasContacto" runat="server" ControlToValidate="sintomasContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvsintomasContacto" runat="server" ControlToValidate="sintomasContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto" name="sintomasContacto" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
 
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:RequiredFieldValidator ID="rfvobservacionesContacto" runat="server" ControlToValidate="observacionesContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvobservacionesContacto" runat="server" ControlToValidate="observacionesContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                                 <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto" name="observacionesContacto" type="text" placeholder="Observaciones" MaxLength="50" />
 
