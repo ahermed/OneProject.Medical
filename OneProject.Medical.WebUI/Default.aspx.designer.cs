@@ -2220,15 +2220,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList defuncionCOVID;
 
         /// <summary>
-        /// Control rfvnombreContacto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnombreContacto;
-
-        /// <summary>
         /// Control nombreContacto.
         /// </summary>
         /// <remarks>
@@ -2238,13 +2229,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox nombreContacto;
 
         /// <summary>
-        /// Control rfvsexoContacto.
+        /// Control rfvnombreContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvsexoContacto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnombreContacto;
 
         /// <summary>
         /// Control sexoContacto.
@@ -2256,13 +2247,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList sexoContacto;
 
         /// <summary>
-        /// Control rfvedadContacto.
+        /// Control rfvsexoContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvedadContacto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvsexoContacto;
 
         /// <summary>
         /// Control edadContacto.
@@ -2274,13 +2265,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox edadContacto;
 
         /// <summary>
-        /// Control rfvddlListaTpoContacto.
+        /// Control rfvedadContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlListaTpoContacto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvedadContacto;
 
         /// <summary>
         /// Control ddlListaTpoContacto.
@@ -2292,13 +2283,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.DropDownList ddlListaTpoContacto;
 
         /// <summary>
-        /// Control rfvcorreoContacto.
+        /// Control rfvddlListaTpoContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcorreoContacto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlListaTpoContacto;
 
         /// <summary>
         /// Control correoContacto.
@@ -2310,13 +2301,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox correoContacto;
 
         /// <summary>
-        /// Control rfvsintomasContacto.
+        /// Control rfvcorreoContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvsintomasContacto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcorreoContacto;
 
         /// <summary>
         /// Control sintomasContacto.
@@ -2328,13 +2319,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox sintomasContacto;
 
         /// <summary>
-        /// Control rfvobservacionesContacto.
+        /// Control rfvsintomasContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvobservacionesContacto;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvsintomasContacto;
 
         /// <summary>
         /// Control observacionesContacto.
@@ -2344,6 +2335,15 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox observacionesContacto;
+
+        /// <summary>
+        /// Control rfvobservacionesContacto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvobservacionesContacto;
 
         /// <summary>
         /// Control nombreContacto1.

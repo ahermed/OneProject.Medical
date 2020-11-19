@@ -1628,45 +1628,50 @@
                         <hr />
                         <div class="form-row">
                             <div class="form-group col-md-8">
-                                <asp:RequiredFieldValidator ID="rfvnombreContacto" runat="server" ControlToValidate="nombreContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                                              <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto" name="nombreContacto" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
+  
+                                <asp:RequiredFieldValidator ID="rfvnombreContacto" runat="server" ControlToValidate="nombreContacto" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
-                                <asp:TextBox runat="server" type="text" class="form-control" ID="nombreContacto" name="nombreContacto" placeholder="Nombre (Apellido paterno, materno, nombre)" MaxLength="200" />
                             </div>
 
                             <div class="form-group col-md-4">
-                                <asp:RequiredFieldValidator ID="rfvsexoContacto" runat="server" ControlToValidate="sexoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
-
+ 
                                 <asp:RadioButtonList ID="sexoContacto" runat="server" RepeatDirection="Horizontal">
                                     <asp:ListItem Value="F">Femenino</asp:ListItem>
                                     <asp:ListItem Value="M">Masculino</asp:ListItem>
                                 </asp:RadioButtonList>
+                                                               <asp:RequiredFieldValidator ID="rfvsexoContacto" runat="server" ControlToValidate="sexoContacto" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
+
 
                             </div>
-                            <div class="form-group col-md-1 ">
-                                <asp:RequiredFieldValidator ID="rfvedadContacto" runat="server" ControlToValidate="edadContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
+                            <div class="form-group col-md-2 ">
+                                                             <asp:TextBox runat="server" class=" form-control" ID="edadContacto" name="edadContacto" type="number" placeholder="Edad" />
 
-                                <asp:TextBox runat="server" class=" form-control" ID="edadContacto" name="edadContacto" type="number" placeholder="Edad" />
+                                <asp:RequiredFieldValidator ID="rfvedadContacto" runat="server" ControlToValidate="edadContacto" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
+   
                             </div>
-                            <div class="form-group col-md-2">
-                                <asp:RequiredFieldValidator ID="rfvddlListaTpoContacto" runat="server" ControlToValidate="ddlListaTpoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
-                                <asp:DropDownList runat="server" ID="ddlListaTpoContacto" class="form-control" name="ddlListaTpoContacto" />   
+                            <div class="form-group col-md-1">
+                                 <asp:DropDownList runat="server" ID="ddlListaTpoContacto" class="form-control" name="ddlListaTpoContacto" />  
+                                                              <asp:RequiredFieldValidator ID="rfvddlListaTpoContacto" runat="server" ControlToValidate="ddlListaTpoContacto" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
+ 
                             </div>
                             <div class="form-group col-md-3 ">
-                                <asp:RequiredFieldValidator ID="rfvcorreoContacto" runat="server" ControlToValidate="correoContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
-                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto" name="correoContacto" type="text" placeholder="Correo electrónico" MaxLength="50" />
-                            </div>
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto" name="correoContacto" type="email" placeholder="Correo electrónico" MaxLength="50" />
+                                                           <asp:RequiredFieldValidator ID="rfvcorreoContacto" runat="server" ControlToValidate="correoContacto" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
+
+                                </div>
                             <div class="form-group col-md-3 ">
-                                <asp:RequiredFieldValidator ID="rfvsintomasContacto" runat="server" ControlToValidate="sintomasContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
-
+  
                                 <asp:TextBox runat="server" class=" form-control" ID="sintomasContacto" name="sintomasContacto" type="text" placeholder="(Fiebre, tos, dolor torácico, dificultad respiratoria, otros)" MaxLength="50" />
+                              <asp:RequiredFieldValidator ID="rfvsintomasContacto" runat="server" ControlToValidate="sintomasContacto" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:RequiredFieldValidator ID="rfvobservacionesContacto" runat="server" ControlToValidate="observacionesContacto" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
-
+  
                                 <asp:TextBox runat="server" class=" form-control" ID="observacionesContacto" name="observacionesContacto" type="text" placeholder="Observaciones" MaxLength="50" />
+                              <asp:RequiredFieldValidator ID="rfvobservacionesContacto" runat="server" ControlToValidate="observacionesContacto" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true" CssClass="rfv"></asp:RequiredFieldValidator>
 
                             </div>
                         </div>
@@ -1688,12 +1693,12 @@
                                 </asp:RadioButtonList>
 
                             </div>
-                            <div class="form-group col-md-1 ">
+                            <div class="form-group col-md-2 ">
 
                                 <asp:TextBox runat="server" class=" form-control" ID="edadContacto1" name="edadContacto" type="number" placeholder="Edad" />
 
                             </div>
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-1">
 
                             <asp:DropDownList runat="server" ID="ddlListaTpoContacto1" class="form-control" name="ddlListaTpoContacto1" />   
  
@@ -1701,7 +1706,7 @@
                             </div>
                             <div class="form-group col-md-3 ">
 
-                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto1" name="correoContacto1" type="text" placeholder="Correo electrónico" MaxLength="50" />
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto1" name="correoContacto1" type="email" placeholder="Correo electrónico" MaxLength="50" />
 
                             </div>
                             <div class="form-group col-md-3 ">
@@ -1733,12 +1738,12 @@
                                 </asp:RadioButtonList>
 
                             </div>
-                            <div class="form-group col-md-1 ">
+                            <div class="form-group col-md-2 ">
 
                                 <asp:TextBox runat="server" class=" form-control" ID="edadContacto2" name="edadContacto2" type="number" placeholder="Edad" />
 
                             </div>
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-1">
 
                             <asp:DropDownList runat="server" ID="ddlListaTpoContacto2" class="form-control" name="ddlListaTpoContacto2" />   
  
@@ -1746,7 +1751,7 @@
                             </div>
                             <div class="form-group col-md-3 ">
 
-                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto2" name="correoContacto2" type="text" placeholder="Correo electrónico" MaxLength="50" />
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto2" name="correoContacto2" type="email" placeholder="Correo electrónico" MaxLength="50" />
 
                             </div>
                             <div class="form-group col-md-3 ">
@@ -1777,18 +1782,18 @@
                                 </asp:RadioButtonList>
 
                             </div>
-                            <div class="form-group col-md-1 ">
+                            <div class="form-group col-md-2 ">
 
                                 <asp:TextBox runat="server" class=" form-control" ID="edadContacto3" name="edadContacto3" type="number" placeholder="Edad" />
 
                             </div>
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-1">
 
                             <asp:DropDownList runat="server" ID="ddlListaTpoContacto3" class="form-control" name="ddlListaTpoContacto3" />   
                              </div>
                             <div class="form-group col-md-3 ">
 
-                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto3" name="correoContacto3" type="text" placeholder="Correo electrónico" MaxLength="50" />
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto3" name="correoContacto3" type="email" placeholder="Correo electrónico" MaxLength="50" />
 
                             </div>
                             <div class="form-group col-md-3 ">
@@ -1819,19 +1824,19 @@
                                 </asp:RadioButtonList>
 
                             </div>
-                            <div class="form-group col-md-1 ">
+                            <div class="form-group col-md-2 ">
 
                                 <asp:TextBox runat="server" class=" form-control" ID="edadContacto4" name="edadContacto4" type="number" placeholder="Edad" />
 
                             </div>
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-1">
 
                            <asp:DropDownList runat="server" ID="ddlListaTpoContacto4" class="form-control" name="ddlListaTpoContacto4" />   
  
                             </div>
                             <div class="form-group col-md-3 ">
 
-                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto4" name="correoContacto4" type="text" placeholder="Correo electrónico" MaxLength="50" />
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto4" name="correoContacto4" type="email" placeholder="Correo electrónico" MaxLength="50" />
 
                             </div>
                             <div class="form-group col-md-3 ">
@@ -1863,19 +1868,19 @@
                                 </asp:RadioButtonList>
 
                             </div>
-                            <div class="form-group col-md-1 ">
+                            <div class="form-group col-md-2 ">
 
                                 <asp:TextBox runat="server" class=" form-control" ID="edadContacto5" name="edadContacto5" type="number" placeholder="Edad" />
 
                             </div>
-                            <div class="form-group col-md-2">
+                            <div class="form-group col-md-1">
 
                            <asp:DropDownList runat="server" ID="ddlListaTpoContacto5" class="form-control" name="ddlListaTpoContacto5" />   
  
                             </div>
                             <div class="form-group col-md-3 ">
 
-                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto5" name="correoContacto5" type="text" placeholder="Correo electrónico" MaxLength="50" />
+                                <asp:TextBox runat="server" class=" form-control" ID="correoContacto5" name="correoContacto5" type="email" placeholder="Correo electrónico" MaxLength="50" />
 
                             </div>
                             <div class="form-group col-md-3 ">
