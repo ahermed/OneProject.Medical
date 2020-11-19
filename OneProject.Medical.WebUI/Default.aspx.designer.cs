@@ -33,15 +33,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox entidadUnidad;
 
         /// <summary>
-        /// Control rfventidadUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfventidadUnidad;
-
-        /// <summary>
         /// Control jurisdiccionUnidad.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox jurisdiccionUnidad;
-
-        /// <summary>
-        /// Control rfvjurisdiccionUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvjurisdiccionUnidad;
 
         /// <summary>
         /// Control municipioUnidad.
@@ -69,15 +51,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox municipioUnidad;
 
         /// <summary>
-        /// Control rfvmunicipioUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvmunicipioUnidad;
-
-        /// <summary>
         /// Control nombreUnidad.
         /// </summary>
         /// <remarks>
@@ -85,15 +58,6 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nombreUnidad;
-
-        /// <summary>
-        /// Control rfvnombreUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvnombreUnidad;
 
         /// <summary>
         /// Control institucionUnidad.
@@ -105,15 +69,6 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox institucionUnidad;
 
         /// <summary>
-        /// Control rfvinstitucionUnidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvinstitucionUnidad;
-
-        /// <summary>
         /// Control clues.
         /// </summary>
         /// <remarks>
@@ -121,15 +76,6 @@ namespace OneProject.Medical.WebUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox clues;
-
-        /// <summary>
-        /// Control rfvclues.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvclues;
 
         /// <summary>
         /// Control fechaIngreso.
@@ -708,13 +654,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.RadioButtonList contactoPersona;
 
         /// <summary>
-        /// Control lugarContactoPersona.
+        /// Control ddlListaContactoPersona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lugarContactoPersona;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaContactoPersona;
+
+        /// <summary>
+        /// Control rfvddlListaContactoPersona.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlListaContactoPersona;
 
         /// <summary>
         /// Control rfvcontactoAnimal.
@@ -744,13 +699,22 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.TextBox tipoAnimal;
 
         /// <summary>
-        /// Control tpoContactoAnimal.
+        /// Control ddlListaContactoAnimal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tpoContactoAnimal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlListaContactoAnimal;
+
+        /// <summary>
+        /// Control rfvddlListaContactoAnimal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlListaContactoAnimal;
 
         /// <summary>
         /// Control rfvvisitaMercado.
@@ -1869,13 +1833,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox metamizol;
 
         /// <summary>
-        /// Control otro2.
+        /// Control otroanalgesico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox otro2;
+        protected global::System.Web.UI.WebControls.CheckBox otroanalgesico;
 
         /// <summary>
         /// Control lisina.
@@ -1959,13 +1923,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox paramivir;
 
         /// <summary>
-        /// Control otro4.
+        /// Control otroAntiviral.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox otro4;
+        protected global::System.Web.UI.WebControls.TextBox otroAntiviral;
 
         /// <summary>
         /// Control oseltamivir.
@@ -2049,13 +2013,13 @@ namespace OneProject.Medical.WebUI
         protected global::System.Web.UI.WebControls.CheckBox claritromicina;
 
         /// <summary>
-        /// Control otros.
+        /// Control otroAntibiotico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox otros;
+        protected global::System.Web.UI.WebControls.CheckBox otroAntibiotico;
 
         /// <summary>
         /// Control ampicilina.

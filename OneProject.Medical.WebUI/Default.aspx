@@ -2,8 +2,8 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="container">
+  
+   <div class="container">
         <div class="form-horizontal">
 
             <div class="col-md-12">
@@ -18,38 +18,32 @@
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="entidadUnidad" class="control-label"> <span class="required">*</span>Entidad:</asp:Label>
-                                <asp:TextBox runat="server" type="text" class="form-control" ID="entidadUnidad" name="entidadUnidad" placeholder="Entidad" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfventidadUnidad" runat="server" ControlToValidate="entidadUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            </div>
+                                <asp:Label runat="server" for="entidadUnidad" class="control-label">Entidad:</asp:Label>
+                                <asp:TextBox runat="server" type="text" class="form-control" ID="entidadUnidad" name="entidadUnidad" placeholder="Entidad" MaxLength="50" readonly="true" />
+                             </div>
                             <div class="form-group col-md-2">
-                                <asp:Label runat="server" for="jurisdiccionUnidad" class="control-label"><span class="required">*</span>Jurisdicción: </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="jurisdiccionUnidad" name="jurisdiccionUnidad" type="text" placeholder="Jurisdicción" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvjurisdiccionUnidad" runat="server" ControlToValidate="jurisdiccionUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:Label runat="server" for="jurisdiccionUnidad" class="control-label">Jurisdicción: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="jurisdiccionUnidad" name="jurisdiccionUnidad" type="text" placeholder="Jurisdicción" MaxLength="50" readonly="true"/>
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:Label runat="server" for="municipioUnidad" class="control-label "><span class="required">*</span>Municipio: </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="municipioUnidad" name="municipioUnidad" type="text" placeholder="Municipio" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvmunicipioUnidad" runat="server" ControlToValidate="municipioUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:Label runat="server" for="municipioUnidad" class="control-label ">Municipio: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="municipioUnidad" name="municipioUnidad" type="text" placeholder="Municipio" MaxLength="50" readonly="true"/>
                             </div>
                             <div class="form-group col-md-5">
-                                <asp:Label runat="server" for="nombreUnidad" class="control-label"><span class="required">*</span>Nombre de la Unidad Médica: </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="nombreUnidad" name="nombreUnidad" type="text" placeholder="Nombre de la Unidad Médica" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvnombreUnidad" runat="server" ControlToValidate="nombreUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                <asp:Label runat="server" for="nombreUnidad" class="control-label">Nombre de la Unidad Médica: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="nombreUnidad" name="nombreUnidad" type="text" placeholder="Nombre de la Unidad Médica" MaxLength="50" readonly="true"/>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="institucionUnidad" class="control-label"><span class="required">*</span>Institución: </asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="institucionUnidad" name="institucionUnidad" type="text" placeholder="institucionUnidad" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvinstitucionUnidad" runat="server" ControlToValidate="institucionUnidad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            </div>
+                                <asp:Label runat="server" for="institucionUnidad" class="control-label">Institución: </asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="institucionUnidad" name="institucionUnidad" type="text" placeholder="institucionUnidad" MaxLength="50" readonly="true"/>
+                             </div>
                             <div class="form-group col-md-6">
-                                <asp:Label runat="server" for="clues" class="control-label"> <span class="required">*</span>CLUES:</asp:Label>
-                                <asp:TextBox runat="server" class=" form-control" ID="clues" name="clues" type="text" placeholder="CLUES" MaxLength="50" />
-                                <asp:RequiredFieldValidator ID="rfvclues" runat="server" ControlToValidate="clues" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
-
+                                <asp:Label runat="server" for="clues" class="control-label">CLUES:</asp:Label>
+                                <asp:TextBox runat="server" class=" form-control" ID="clues" name="clues" type="text" placeholder="CLUES" MaxLength="50" readonly="true"/>
+  
                             </div>
                         </div>
                     </div>
@@ -63,7 +57,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <asp:Label runat="server" for="fechaIngreso" class="control-label "><span class="required">*</span>Fecha de ingreso a la unidad:  </asp:Label>
-                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaIngreso" name="fechaIngreso" runat="server">
+                                <input type="date" min="2020-01-01" max="2022-12-31" class=" form-control" id="fechaIngreso" name="fechaIngreso" runat="server">   
                             </div>
                         </div>
 
@@ -384,15 +378,15 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-2">
-                                    <asp:Label runat="server" for="lugarContactoPersona" class="control-label ">Lugar de contacto: </asp:Label>
-                                </div>
                                 <div class="form-group col-md-3">
-                                    <asp:TextBox runat="server" class="form-control " ID="lugarContactoPersona" name="lugarContactoPersona" type="number" placeholder="Lugar de contacto" />
+                                    <asp:Label runat="server" for="ddlListaContactoPersona" class="control-label ">Lugar de contacto: </asp:Label>
                                 </div>
-                                <div class="form-group col-md-7">
-                                    <asp:Label runat="server" for="mes" class="control-label "> 1=Hogar 2=Área de trabajo 3=Área de entretenimientosocial 4=Unidad médica </asp:Label>
+                                <div class="form-group col-md-4">
+                                 <asp:DropDownList runat="server" ID="ddlListaContactoPersona" class="form-control" name="ddlListaContactoPersona" />  
+                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoPersona" runat="server" ControlToValidate="ddlListaContactoPersona" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+
                                 </div>
+
                             </div>
 
                             <div class="form-row">
@@ -417,14 +411,12 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group col-md-2">
-                                    <asp:Label runat="server" for="tpoContactoAnimal" class="control-label "> ¿Qué tipo de contacto tuvo?</asp:Label>
-                                </div>
                                 <div class="form-group col-md-3">
-                                    <asp:TextBox runat="server" class="form-control " ID="tpoContactoAnimal" name="tpoContactoAnimal" type="number" placeholder="Tipo contacto" />
+                                    <asp:Label runat="server" for="ddlListaContactoAnimal" class="control-label "> ¿Qué tipo de contacto tuvo?</asp:Label>
                                 </div>
-                                <div class="form-group col-md-7">
-                                    <asp:Label runat="server" for="mes" class="control-label "> 1=Animales vivos 2=Animales muertos 3=Sangre 4=Heces 5=Huevo 6=Vísceras </asp:Label>
+                                <div class="form-group col-md-4">
+                              <asp:DropDownList runat="server" ID="ddlListaContactoAnimal" class="form-control" name="ddlListaContactoAnimal" />  
+                                 <asp:RequiredFieldValidator ID="rfvddlListaContactoAnimal" runat="server" ControlToValidate="ddlListaContactoAnimal" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
 
@@ -1232,13 +1224,13 @@
                                 <asp:CheckBox ID="acetilsalicilico" runat="server"
                                     Text="Ácido acetilsalicílico" />
                             </div>
-                            <div class="form-group col-md-3">
+                           <div class="form-group col-md-3">
                                 <asp:CheckBox ID="metamizol" runat="server"
                                     Text="Metamizol sódico" />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:CheckBox ID="otro2" runat="server"
-                                    Text="otro" />
+                                <asp:CheckBox ID="otroanalgesico" runat="server"
+                                    Text="Otro" />
                             </div>
                         </div>
 
@@ -1310,9 +1302,8 @@
                                 <asp:CheckBox ID="paramivir" runat="server"
                                     Text="Paramivir" />
                             </div>
-                            <div class="form-group col-md-3">
-                                <asp:CheckBox ID="otro4" runat="server"
-                                    Text="Otro" />
+                             <div class="form-group col-md-3">
+                             <asp:TextBox runat="server" class="form-control " ID="otroAntiviral" name="otroAntiviral" type="text" placeholder="Otro" MaxLength="50" />
                             </div>
                         </div>
 
@@ -1385,7 +1376,7 @@
                                     Text="Claritrimicina" />
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:CheckBox ID="otros" runat="server"
+                                <asp:CheckBox ID="otroAntibiotico" runat="server"
                                     Text="Otros" />
                             </div>
                         </div>
@@ -1864,13 +1855,13 @@
                             </div>
                         </div>
                         <div class="form-row justify-content-center">
-                            <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="submit" ID="btnSubmitForm" />
+                            <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="" ID="btnSubmitForm" OnClick="guardar_Click" />
+
                         </div>
                     </div>
-                </div>
-
-
-            </form>
+                </div>                   
+            </form>         
         </div>
-    </div>
+
+    </div>    
 </asp:Content>

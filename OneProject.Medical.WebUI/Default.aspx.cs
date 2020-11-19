@@ -13,9 +13,6 @@ namespace OneProject.Medical.WebUI
     public partial class _Default : System.Web.UI.Page
     {
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Page.ClientScript.RegisterOnSubmitStatement(this.GetType(), "val", "validateAndHighlight();");
 
 
 
@@ -54,6 +51,33 @@ namespace OneProject.Medical.WebUI
                     ddlMes.Items.Add(lstmes);
                 }
             }
+
+
+            i = new ListItem("Seleccionar...", "0");
+            ddlListaContactoPersona.Items.Add(i);
+            i = new ListItem("Hogar", "1");
+            ddlListaContactoPersona.Items.Add(i);
+            i = new ListItem("Área de trabajo", "2");
+            ddlListaContactoPersona.Items.Add(i);
+            i = new ListItem("Área de entretenimiento social", "3");
+            ddlListaContactoPersona.Items.Add(i);
+            i = new ListItem("Unidad médica", "4");
+            ddlListaContactoPersona.Items.Add(i);
+
+            j = new ListItem("Seleccionar...", "0");
+            ddlListaContactoAnimal.Items.Add(j);
+            j = new ListItem("Animales vivos", "1");
+            ddlListaContactoAnimal.Items.Add(j);
+            j = new ListItem("Animales muertos", "2");
+            ddlListaContactoAnimal.Items.Add(j);
+            j = new ListItem("Sangre", "3");
+            ddlListaContactoAnimal.Items.Add(j);
+            j = new ListItem("Heces", "4");
+            ddlListaContactoAnimal.Items.Add(j);
+            j = new ListItem("Huevo", "5");
+            ddlListaContactoAnimal.Items.Add(j);
+            j = new ListItem("Víseras", "6");
+            ddlListaContactoAnimal.Items.Add(j);
 
 
 
@@ -369,6 +393,14 @@ namespace OneProject.Medical.WebUI
                 convert = true;
 
             return convert;
+        }
+
+        protected void guardar_Click(object sender, EventArgs e) {
+
+
+            Console.WriteLine("GUARDA");
+        
+        
         }
 
 
