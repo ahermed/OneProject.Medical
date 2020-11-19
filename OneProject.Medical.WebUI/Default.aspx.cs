@@ -21,6 +21,7 @@ namespace OneProject.Medical.WebUI
             ListItem j;
             ListItem evolucion;
 
+            Page.ClientScript.RegisterOnSubmitStatement(this.GetType(), "val", "validateAndHighlight();");
 
             if (!Page.IsPostBack)
             {
@@ -54,63 +55,65 @@ namespace OneProject.Medical.WebUI
                     lstmes.Text = mesinyear[mes];
                     ddlMes.Items.Add(lstmes);
                 }
+
+                i = new ListItem("Seleccionar...", "0");
+                ddlListaContactoPersona.Items.Add(i);
+                i = new ListItem("Hogar", "1");
+                ddlListaContactoPersona.Items.Add(i);
+                i = new ListItem("Área de trabajo", "2");
+                ddlListaContactoPersona.Items.Add(i);
+                i = new ListItem("Área de entretenimiento social", "3");
+                ddlListaContactoPersona.Items.Add(i);
+                i = new ListItem("Unidad médica", "4");
+                ddlListaContactoPersona.Items.Add(i);
+
+                j = new ListItem("Seleccionar...", "0");
+                ddlListaContactoAnimal.Items.Add(j);
+                j = new ListItem("Animales vivos", "1");
+                ddlListaContactoAnimal.Items.Add(j);
+                j = new ListItem("Animales muertos", "2");
+                ddlListaContactoAnimal.Items.Add(j);
+                j = new ListItem("Sangre", "3");
+                ddlListaContactoAnimal.Items.Add(j);
+                j = new ListItem("Heces", "4");
+                ddlListaContactoAnimal.Items.Add(j);
+                j = new ListItem("Huevo", "5");
+                ddlListaContactoAnimal.Items.Add(j);
+                j = new ListItem("Víseras", "6");
+                ddlListaContactoAnimal.Items.Add(j);
+
+                evolucion = new ListItem("Seleccionar...", "0");
+                ddlListaEvolucion.Items.Add(evolucion);
+                evolucion = new ListItem("Alta por mejoría", "1");
+                ddlListaEvolucion.Items.Add(evolucion);
+                evolucion = new ListItem("En tratamiento", "2");
+                ddlListaEvolucion.Items.Add(evolucion);
+                evolucion = new ListItem("Caso grave", "3");
+                ddlListaEvolucion.Items.Add(evolucion);
+                evolucion = new ListItem("Caso no grave", "4");
+                ddlListaEvolucion.Items.Add(evolucion);
+                evolucion = new ListItem("Defunción", "5");
+                ddlListaEvolucion.Items.Add(evolucion);
+
+
+                ListItem lstTipos = new ListItem();
+                string[] tipos = { "ID", "ED" };
+
+                for (int tpo = 0; tpo < tipos.Count(); tpo++)
+                {
+                    lstTipos = new ListItem(tipos[tpo], tipos[tpo]);
+                    ddlListaTpoContacto.Items.Add(lstTipos);
+                    ddlListaTpoContacto1.Items.Add(lstTipos);
+                    ddlListaTpoContacto2.Items.Add(lstTipos);
+                    ddlListaTpoContacto3.Items.Add(lstTipos);
+                    ddlListaTpoContacto4.Items.Add(lstTipos);
+                    ddlListaTpoContacto5.Items.Add(lstTipos);
+
+
+                }
             }
 
-
-            i = new ListItem("Seleccionar...", "0");
-            ddlListaContactoPersona.Items.Add(i);
-            i = new ListItem("Hogar", "1");
-            ddlListaContactoPersona.Items.Add(i);
-            i = new ListItem("Área de trabajo", "2");
-            ddlListaContactoPersona.Items.Add(i);
-            i = new ListItem("Área de entretenimiento social", "3");
-            ddlListaContactoPersona.Items.Add(i);
-            i = new ListItem("Unidad médica", "4");
-            ddlListaContactoPersona.Items.Add(i);
-
-            j = new ListItem("Seleccionar...", "0");
-            ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Animales vivos", "1");
-            ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Animales muertos", "2");
-            ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Sangre", "3");
-            ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Heces", "4");
-            ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Huevo", "5");
-            ddlListaContactoAnimal.Items.Add(j);
-            j = new ListItem("Víseras", "6");
-            ddlListaContactoAnimal.Items.Add(j);
-
-            evolucion = new ListItem("Seleccionar...", "0");
-            ddlListaEvolucion.Items.Add(evolucion);
-            evolucion = new ListItem("Alta por mejoría", "1");
-            ddlListaEvolucion.Items.Add(evolucion);
-            evolucion = new ListItem("En tratamiento", "2");
-            ddlListaEvolucion.Items.Add(evolucion);
-            evolucion = new ListItem("Caso grave", "3");
-            ddlListaEvolucion.Items.Add(evolucion);
-            evolucion = new ListItem("Caso no grave", "4");
-            ddlListaEvolucion.Items.Add(evolucion);
-            evolucion = new ListItem("Defunción", "5");
-            ddlListaEvolucion.Items.Add(evolucion);
-
-
-            ListItem lstTipos = new ListItem();
-            string[] tipos = { "ID", "ED" };
-
-            for (int tpo = 0; tpo < tipos.Count(); tpo++) {
-                lstTipos = new ListItem(tipos[tpo], tipos[tpo]);
-                ddlListaTpoContacto.Items.Add(lstTipos);
-                ddlListaTpoContacto1.Items.Add(lstTipos);
-                ddlListaTpoContacto2.Items.Add(lstTipos);
-                ddlListaTpoContacto3.Items.Add(lstTipos);
-                ddlListaTpoContacto4.Items.Add(lstTipos);
-                ddlListaTpoContacto5.Items.Add(lstTipos);
-
-
-            }              
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
