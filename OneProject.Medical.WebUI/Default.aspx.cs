@@ -19,6 +19,8 @@ namespace OneProject.Medical.WebUI
         {
             ListItem i;
             ListItem j;
+            ListItem evolucion;
+
             if (!Page.IsPostBack)
             {
 
@@ -80,6 +82,18 @@ namespace OneProject.Medical.WebUI
             j = new ListItem("Víseras", "6");
             ddlListaContactoAnimal.Items.Add(j);
 
+            evolucion = new ListItem("Seleccionar...", "0");
+            ddlListaEvolucion.Items.Add(evolucion);
+            evolucion = new ListItem("Alta por mejoría", "1");
+            ddlListaEvolucion.Items.Add(evolucion);
+            evolucion = new ListItem("En tratamiento", "2");
+            ddlListaEvolucion.Items.Add(evolucion);
+            evolucion = new ListItem("Caso grave", "3");
+            ddlListaEvolucion.Items.Add(evolucion);
+            evolucion = new ListItem("Caso no grave", "4");
+            ddlListaEvolucion.Items.Add(evolucion);
+            evolucion = new ListItem("Defunción", "5");
+            ddlListaEvolucion.Items.Add(evolucion);
 
 
         }

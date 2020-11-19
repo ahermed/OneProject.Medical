@@ -1546,20 +1546,14 @@
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="evolucion" class="control-label "> <span class="required">*</span>
                                                     Evolución:
-                                </asp:Label>
-                                <asp:RequiredFieldValidator ID="rfvevolucion" runat="server" ControlToValidate="evolucion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                </asp:Label>   
+                               <asp:RequiredFieldValidator ID="rfvddlListaEvolucion" runat="server" ControlToValidate="ddlListaEvolucion" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                             </div>
                             <div class="form-group col-md-3">
-                                <asp:TextBox runat="server" class=" form-control" ID="evolucion" name="evolucion" type="number" placeholder="Evolución " />
+                                 <asp:DropDownList runat="server" ID="ddlListaEvolucion" class="form-control" name="ddlListaEvolucion" type="text" />
+                             </div>
 
-                            </div>
-                            <div class="form-group col-md-7">
-                                <asp:Label runat="server" for="mes" class="control-label ">
-                                                    1=Alta por mejoría  2=En tratamiento  3=Caso grave
-                                                    4=Caso no grave  5=Defunción
-                                </asp:Label>
-                            </div>
                         </div>
 
                         <div class="form-row">
