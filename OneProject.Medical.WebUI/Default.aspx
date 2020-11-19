@@ -1854,7 +1854,6 @@
                         </div>
                         <div class="form-row justify-content-center">
                             <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="" ID="btnSubmitForm" OnClick="guardar_Click" />
-
                         </div>
                     </div>
                 </div>                   
