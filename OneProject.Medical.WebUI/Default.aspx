@@ -13,7 +13,6 @@
                 <div class="card">
                     <div class="card-header text-info">
                         DATOS DE LA UNIDAD NOTIFICANTE                         
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Button" />
                     </div>
                     <div class="card-body">
                         <div class="form-row">
