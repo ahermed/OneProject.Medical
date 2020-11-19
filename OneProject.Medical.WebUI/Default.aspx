@@ -1909,17 +1909,13 @@
                             <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="" ID="btnSubmitForm" OnClick="guardar_Click" />
                         </div>
                     </div>
-                </div>     
-                
-                   <div id="dialog" style="display: none">
-            This is a sample dialog content.
-        </div>
+                </div>
+
+                <div id="dialog" style="display: none">
+                    This is a sample dialog content.
+                </div>
             </form>         
         </div>
-
-    
-
-
 
     </div>    
 </asp:Content>
