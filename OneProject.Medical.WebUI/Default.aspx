@@ -33,7 +33,6 @@
                                 <asp:TextBox runat="server" class=" form-control" ID="nombreUnidad" name="nombreUnidad" type="text" placeholder="Nombre de la Unidad Médica" MaxLength="50" readonly="true"/>
                             </div>
                         </div>
-
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <asp:Label runat="server" for="institucionUnidad" class="control-label">Institución: </asp:Label>
