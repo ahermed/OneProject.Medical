@@ -24,7 +24,6 @@ namespace OneProject.Medical.WebUI
 
                 using (var context = new Models.EstudioEpidemiologicoEntities())
                 {
-
                     Models.DatosNotificante notificante = new Models.DatosNotificante();
                     notificante = context.DatosNotificante.ToList()[0];
                     entidadUnidad.Text = notificante.Entidad;
@@ -35,12 +34,11 @@ namespace OneProject.Medical.WebUI
                     clues.Text = notificante.CLUES;
                 }
 
-
-                for (int i = 1; i <= 31; i++)
+                for (int x = 1; x <= 31; x++)
                 {
                     ListItem lst = new ListItem();
-                    lst.Value = i.ToString();
-                    lst.Text = i.ToString();
+                    lst.Value = x.ToString();
+                    lst.Text = x.ToString();
                     ddlDia.Items.Add(lst);
                 }
 
@@ -398,13 +396,6 @@ namespace OneProject.Medical.WebUI
             return convert;
         }
 
-        protected void guardar_Click(object sender, EventArgs e) {
-
-
-            Console.WriteLine("GUARDA");
-        
-        
-        }
 
 
         protected Models.Viaje AntecedentesViaje(int rowViaje, int IdPersona)
