@@ -34,13 +34,13 @@
           </Key>
           <Property Name="IdContacto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdPersona" Type="int" Nullable="false" />
-          <Property Name="NombreCompleto" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Sexo" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="Edad" Type="smallint" Nullable="false" />
-          <Property Name="TipoContactoIDoED" Type="char" MaxLength="2" Nullable="false" />
-          <Property Name="CorreoElectronico" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="SignosSintomas" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Observaciones" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreCompleto" Type="varchar" MaxLength="50" />
+          <Property Name="Sexo" Type="char" MaxLength="1" />
+          <Property Name="Edad" Type="smallint" />
+          <Property Name="TipoContactoIDoED" Type="char" MaxLength="2" />
+          <Property Name="CorreoElectronico" Type="varchar" MaxLength="50" />
+          <Property Name="SignosSintomas" Type="varchar" MaxLength="50" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="DatosClinicos">
           <Key>
@@ -467,13 +467,13 @@
           </Key>
           <Property Name="IdContacto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdPersona" Type="Int32" Nullable="false" />
-          <Property Name="NombreCompleto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Edad" Type="Int16" Nullable="false" />
-          <Property Name="TipoContactoIDoED" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="SignosSintomas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NombreCompleto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Edad" Type="Int16" />
+          <Property Name="TipoContactoIDoED" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SignosSintomas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DatosGenerales" Relationship="Self.FK_Contactos_DatosGenerales" FromRole="Contactos" ToRole="DatosGenerales" />
         </EntityType>
         <EntityType Name="DatosClinicos">

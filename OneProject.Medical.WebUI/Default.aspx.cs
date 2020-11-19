@@ -6,38 +6,53 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
-
+using System.Data;
 
 namespace OneProject.Medical.WebUI
 {
     public partial class _Default : System.Web.UI.Page
     {
 
-
-
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.ClientScript.RegisterOnSubmitStatement(this.GetType(), "val", "validateAndHighlight();");
 
 
-            for (int i = 1; i <= 31; i++)
+
+            if (!Page.IsPostBack)
             {
-                ListItem lst = new ListItem();
-                lst.Value = i.ToString();
-                lst.Text = i.ToString();
-                ddlDia.Items.Add(lst);
-            }
+
+                using (var context = new Models.EstudioEpidemiologicoEntities())
+                {
+
+                    Models.DatosNotificante notificante = new Models.DatosNotificante();
+                    notificante = context.DatosNotificante.ToList()[0];
+                    entidadUnidad.Text = notificante.Entidad;
+                    jurisdiccionUnidad.Text = notificante.Jurisdiccion;
+                    municipioUnidad.Text = notificante.Municipio;
+                    nombreUnidad.Text = notificante.NombreUnidadMedica;
+                    institucionUnidad.Text = notificante.Institucion;
+                    clues.Text = notificante.CLUES;
+                }
 
 
-            for (int mes = DateTime.MinValue.Month; mes <= DateTime.MaxValue.Month; mes++)
-            {
-                ListItem lstmes = new ListItem();
-                string[] mesinyear = { "seleccione", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
-                lstmes.Value = mes.ToString();
-                lstmes.Text = mesinyear[mes];
-                ddlMes.Items.Add(lstmes);
+                for (int i = 1; i <= 31; i++)
+                {
+                    ListItem lst = new ListItem();
+                    lst.Value = i.ToString();
+                    lst.Text = i.ToString();
+                    ddlDia.Items.Add(lst);
+                }
+
+
+                for (int mes = DateTime.MinValue.Month; mes <= DateTime.MaxValue.Month; mes++)
+                {
+                    ListItem lstmes = new ListItem();
+                    string[] mesinyear = { "seleccione", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+                    lstmes.Value = mes.ToString();
+                    lstmes.Text = mesinyear[mes];
+                    ddlMes.Items.Add(lstmes);
+                }
             }
 
 
@@ -104,7 +119,7 @@ namespace OneProject.Medical.WebUI
                         Models.DatosGenerales generales = new Models.DatosGenerales()
                         {
 
-                            FechaIngresoUnidad = DateTime.Now,
+                            FechaIngresoUnidad = DateTime.Parse(fechaIngreso.Value),
                             PrimerApellido = pApellido.Text,
                             SegundoApellido = sApellido.Text,
                             Nombres = nombre.Text,
@@ -115,13 +130,13 @@ namespace OneProject.Medical.WebUI
                             CURP = curp.Text,
                             Sexo = sexo.SelectedValue,
                             Embarazada = ConvertBool(embarazada.SelectedValue),
-                            MesesEmbarazo = short.Parse(mesesEmbarazo.Text),
+                            MesesEmbarazo = mesesEmbarazo.Text == String.Empty ? (short?)null : short.Parse(mesesEmbarazo.Text),
                             EnPeriodoPuerperio = ConvertBool(periodoPuerperio.SelectedValue),
-                            DiasPuerperio = short.Parse(diasPuerperio.Text),
+                            DiasPuerperio = diasPuerperio.Text == String.Empty ? (short?)null : short.Parse(diasPuerperio.Text),
                             Nacionalidad = nacionalidad.SelectedValue,
                             PaisOrigen = paisOrigen.Text,
                             NoExpedienteSeguridadSocial = seguroSocial.Text,
-                            EntidadNacimiento = "d",
+                            EntidadNacimiento = entidadNacimiento.Text,
                             EntidadDelegacionResidencia = entidadResidencia.Text,
                             MunicipioResidencia = municipioResidencia.Text,
                             Localidad = localidad.Text,
@@ -157,7 +172,7 @@ namespace OneProject.Medical.WebUI
                             IdPersona = generales.IdPersona,
                             ViajoChina14dPrevInicioSintomas = ConvertBool(viajeChina.SelectedValue),
                             ResidenteChina = ConvertBool(residenteChina.SelectedValue),
-                            FechaViajeChina = DateTime.Parse(fechaViaje.Value),
+                            FechaViajeChina = fechaViaje.Value == String.Empty ? (DateTime?)null : DateTime.Parse(fechaViaje.Value),
                             AerolineaVueloLlegadaMexico = vuelo.Text,
                             FechaLlegadaMexico = DateTime.Now,
                             ContactoPersonaSintomasRespiratorios = contactoPersona.SelectedValue,
@@ -179,22 +194,11 @@ namespace OneProject.Medical.WebUI
                         context.SaveChanges();
 
 
-                        Models.Viaje viaje = new Models.Viaje()
-                        {
-
-
-                            IdPersona = generales.IdPersona,
-                            Pais = paisViaje.Text,
-                            Ciudad = ciudadViaje.Text,
-                            FechaLlegada = DateTime.Now,
-                            FechaSalida = DateTime.Now,
-                            AerolineaVuelo = aerolineaViaje.Text
-
-
-                        };
-
-
-                        context.Viaje.Add(viaje);
+                        context.Viaje.Add(AntecedentesViaje(1, generales.IdPersona));
+                        context.Viaje.Add(AntecedentesViaje(2, generales.IdPersona));
+                        context.Viaje.Add(AntecedentesViaje(3, generales.IdPersona));
+                        context.Viaje.Add(AntecedentesViaje(4, generales.IdPersona));
+                        context.Viaje.Add(AntecedentesViaje(5, generales.IdPersona));
                         context.SaveChanges();
 
 
@@ -336,6 +340,14 @@ namespace OneProject.Medical.WebUI
                         context.Evolucion.Add(evolucion);
                         context.SaveChanges();
 
+
+                        context.Contactos.Add(Contacto(1, generales.IdPersona));
+                        context.Contactos.Add(Contacto(2, generales.IdPersona));
+                        context.Contactos.Add(Contacto(3, generales.IdPersona));
+                        context.Contactos.Add(Contacto(4, generales.IdPersona));
+                        context.Contactos.Add(Contacto(5, generales.IdPersona));
+                        context.SaveChanges();
+
                         dbContextTransaction.Commit();
 
                     }
@@ -358,6 +370,131 @@ namespace OneProject.Medical.WebUI
 
             return convert;
         }
+
+
+        protected Models.Viaje AntecedentesViaje(int rowViaje, int IdPersona)
+        {
+            Models.Viaje viaje = new Models.Viaje();
+
+
+            viaje.IdPersona = IdPersona;
+
+            switch (rowViaje)
+            {
+                case 1:
+                    viaje.Pais = paisViaje.Text;
+                    viaje.Ciudad = ciudadViaje.Text;
+                    viaje.FechaLlegada = DateTime.Now;
+                    viaje.FechaSalida = DateTime.Now;
+                    viaje.AerolineaVuelo = aerolineaViaje.Text;
+                    break;
+
+                case 2:
+                    viaje.Pais = paisViaje1.Text;
+                    viaje.Ciudad = ciudadViaje1.Text;
+                    viaje.FechaLlegada = DateTime.Now;
+                    viaje.FechaSalida = DateTime.Now;
+                    viaje.AerolineaVuelo = aerolineaViaje1.Text;
+                    break;
+                case 3:
+
+                    viaje.Pais = paisViaje2.Text;
+                    viaje.Ciudad = ciudadViaje2.Text;
+                    viaje.FechaLlegada = DateTime.Now;
+                    viaje.FechaSalida = DateTime.Now;
+                    viaje.AerolineaVuelo = aerolineaViaje2.Text;
+                    break;
+                case 4:
+                    viaje.Pais = paisViaje3.Text;
+                    viaje.Ciudad = ciudadViaje3.Text;
+                    viaje.FechaLlegada = DateTime.Now;
+                    viaje.FechaSalida = DateTime.Now;
+                    viaje.AerolineaVuelo = aerolineaViaje3.Text;
+                    break;
+                case 5:
+                    viaje.Pais = paisViaje4.Text;
+                    viaje.Ciudad = ciudadViaje4.Text;
+                    viaje.FechaLlegada = DateTime.Now;
+                    viaje.FechaSalida = DateTime.Now;
+                    viaje.AerolineaVuelo = aerolineaViaje4.Text;
+                    break;
+            }
+            return viaje;
+        }
+
+
+
+        protected Models.Contactos Contacto(int rowContacto, int IdPersona)
+        {
+            Models.Contactos contacto = new Models.Contactos();
+
+
+            contacto.IdPersona = IdPersona;
+
+            switch (rowContacto)
+            {
+                case 1:
+                    contacto.NombreCompleto = nombreContacto.Text;
+                    contacto.Sexo = sexoContacto.SelectedValue;
+                    contacto.Edad = edadContacto.Text == String.Empty ? (short?)null : short.Parse(edadContacto.Text);
+                    contacto.TipoContactoIDoED = tpoContacto.Text;
+                    contacto.CorreoElectronico = correoContacto.Text;
+                    contacto.SignosSintomas = sintomasContacto.Text;
+                    contacto.Observaciones = observacionesContacto.Text;
+
+
+                    break;
+    
+                case 2:
+                    contacto.NombreCompleto = nombreContacto1.Text;
+                    contacto.Sexo = sexoContacto1.SelectedValue;
+                    contacto.Edad = edadContacto1.Text == String.Empty ? (short?)null : short.Parse(edadContacto1.Text);
+                    contacto.TipoContactoIDoED = tpoContacto1.Text;
+                    contacto.CorreoElectronico = correoContacto1.Text;
+                    contacto.SignosSintomas = sintomasContacto1.Text;
+                    contacto.Observaciones = observacionesContacto1.Text;
+                    break;
+                case 3:
+
+                    contacto.NombreCompleto = nombreContacto2.Text;
+                    contacto.Sexo = sexoContacto2.SelectedValue;
+                    contacto.Edad = edadContacto2.Text == String.Empty ? (short?)null : short.Parse(edadContacto2.Text);
+                    contacto.TipoContactoIDoED = tpoContacto2.Text;
+                    contacto.CorreoElectronico = correoContacto2.Text;
+                    contacto.SignosSintomas = sintomasContacto2.Text;
+                    contacto.Observaciones = observacionesContacto2.Text;
+                    break;
+                case 4:
+                    contacto.NombreCompleto = nombreContacto3.Text;
+                    contacto.Sexo = sexoContacto3.SelectedValue;
+                    contacto.Edad = edadContacto3.Text == String.Empty ? (short?)null : short.Parse(edadContacto3.Text);
+                    contacto.TipoContactoIDoED = tpoContacto3.Text;
+                    contacto.CorreoElectronico = correoContacto3.Text;
+                    contacto.SignosSintomas = sintomasContacto3.Text;
+                    contacto.Observaciones = observacionesContacto3.Text;
+                    break;
+                case 5:
+                    contacto.NombreCompleto = nombreContacto4.Text;
+                    contacto.Sexo = sexoContacto4.SelectedValue;
+                    contacto.Edad = edadContacto4.Text == String.Empty ? (short?)null : short.Parse(edadContacto4.Text);
+                    contacto.TipoContactoIDoED = tpoContacto4.Text;
+                    contacto.CorreoElectronico = correoContacto4.Text;
+                    contacto.SignosSintomas = sintomasContacto4.Text;
+                    contacto.Observaciones = observacionesContacto4.Text;
+                    break;
+                case 6:
+                 /*   contacto.NombreCompleto = nombreContacto5.Text;
+                    contacto.Sexo = sexoContacto.SelectedValue;
+                    contacto.Edad = edadContacto.Text == String.Empty ? (short?)null : short.Parse(edadContacto.Text);
+                    contacto.TipoContactoIDoED = tpoContacto.Text;
+                    contacto.CorreoElectronico = correoContacto.Text;
+                    contacto.SignosSintomas = sintomasContacto.Text;
+                    contacto.Observaciones = observacionesContacto.Text;*/
+                    break;
+            }
+            return contacto;
+        }
+
 
 
     }
