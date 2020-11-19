@@ -15,7 +15,10 @@ namespace OneProject.Medical.WebUI
 
 
 
-
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            ListItem i;
+            ListItem j;
             if (!Page.IsPostBack)
             {
 
@@ -130,7 +133,7 @@ namespace OneProject.Medical.WebUI
             }
         }
 
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void guardar_Click(object sender, EventArgs e)
         {
 
             try
