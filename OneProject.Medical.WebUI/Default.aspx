@@ -782,7 +782,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvcalosfrios" runat="server" ControlToValidate="calosfrios" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="calosfrios" class="control-label ">Calosfríos</asp:Label>
@@ -807,7 +807,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvdolorAbdominal" runat="server" ControlToValidate="dolorAbdominal" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="dolorAbdominal" class="control-label ">Dolor abdominal</asp:Label>
@@ -832,7 +832,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvmialgias" runat="server" ControlToValidate="mialgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="mialgias" class="control-label ">Mialgias</asp:Label>
@@ -857,7 +857,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvartralgias" runat="server" ControlToValidate="artralgias" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="artralgias" class="control-label ">Artralgias</asp:Label>
@@ -882,7 +882,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvataqueEdoGeneral" runat="server" ControlToValidate="ataqueEdoGeneral" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="ataqueEdoGeneral" class="control-label ">Ataque al estado general</asp:Label>
@@ -907,7 +907,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvrinorrea" runat="server" ControlToValidate="rinorrea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="rinorrea" class="control-label ">Rinorrea</asp:Label>
@@ -932,7 +932,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvpolipnea" runat="server" ControlToValidate="polipnea" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="polipnea" class="control-label ">Polipnea</asp:Label>
@@ -957,7 +957,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvodinofagia" runat="server" ControlToValidate="odinofagia" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="odinofagia" class="control-label ">Odinofagia</asp:Label>
@@ -982,7 +982,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvconjuntivitis" runat="server" ControlToValidate="conjuntivitis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="conjuntivitis" class="control-label ">Conjuntivitis</asp:Label>
@@ -998,12 +998,12 @@
                                 <asp:Label runat="server" for="otroDatoClinico" class="control-label ">Otro</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
-                                <asp:TextBox runat="server" class="form-control " ID="otroDatoClinico" name="otroDatoClinico" type="text" placeholder="otro" MaxLength="50" />
+                                <asp:TextBox runat="server" class="form-control " ID="otroDatoClinico" name="otroDatoClinico" type="text" placeholder="Otro" MaxLength="50" />
                             </div>
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvcianosis" runat="server" ControlToValidate="cianosis" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="cianosis" class="control-label ">Cianosis</asp:Label>
@@ -1017,7 +1017,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:RequiredFieldValidator ID="rfvconvulsiones" runat="server" ControlToValidate="convulsiones" Display="Dynamic" ErrorMessage="*" ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
 
                                 <asp:Label runat="server" for="convulsiones" class="control-label ">Convulsiones</asp:Label>
@@ -1031,12 +1031,12 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-2" style="text-align: right;">
+                            <div class="form-group col-md-6" style="text-align: right;">
                                 <asp:Label runat="server" for="otroSintoma" class="control-label ">Otro</asp:Label>
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:TextBox runat="server" class="form-control " ID="otroSintoma" name="otroSintoma" type="text"
-                                    placeholder="otro" MaxLength="50" />
+                                    placeholder="Otro" MaxLength="50" />
                             </div>
                         </div>
 
