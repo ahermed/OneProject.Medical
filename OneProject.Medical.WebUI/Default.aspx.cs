@@ -17,6 +17,9 @@ namespace OneProject.Medical.WebUI
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+
             ListItem i;
             ListItem j;
             ListItem evolucion;
@@ -109,8 +112,9 @@ namespace OneProject.Medical.WebUI
                 ddlListaTpoContacto4.Items.Add(lstTipos);
                 ddlListaTpoContacto5.Items.Add(lstTipos);
 
+            }
 
-            }              
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -403,6 +407,10 @@ namespace OneProject.Medical.WebUI
                         context.SaveChanges();
 
                         dbContextTransaction.Commit();
+
+                        string msgTitle = "Operación exitosa!!";
+                        string message = "Todos la información se guardó de forma correcta";
+                        ScriptManager.RegisterClientScriptBlock(this, typeof(string), "msgDialog", "OpenDialog('" + msgTitle + "','" + message + "')", true);
 
                     }
                 }

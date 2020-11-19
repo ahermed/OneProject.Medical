@@ -2,6 +2,20 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+  <script type="text/javascript">
+      function OpenDialog(dialogTitle, message) {
+          $("#dialog").dialog({
+              autoOpen: false,
+              modal: true,
+              title: dialogTitle,
+              hide: { effect: "explode", duration: 500 },
+              show: { effect: "bounce", duration: 500 }
+          });
+          $("#dialog").html(message);
+          $("#dialog").dialog("open");
+      }
+  </script>
   
    <div class="container">
         <div class="form-horizontal">
@@ -103,7 +117,7 @@
                             </div>
                             <div class="form-group col-md-2">
                                 <asp:Label runat="server" for="edad" class="control-label "><span class="required">*</span>Edad: </asp:Label>
-                                <asp:TextBox runat="server" class="form-control " ID="edad" name="edad" type="number" placeholder="Edad" />
+                                <asp:TextBox runat="server" class="form-control " ID="edad" name="edad" type="number" placeholder="Edad"  />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="edad" Display="Dynamic" ErrorMessage="Dato obligatorio." ForeColor="Red" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             </div>
                             <div class="form-group col-md-5">
@@ -1895,9 +1909,17 @@
                             <asp:Button runat="server" Text="Guardar información" CssClass="btn btn-primary" type="" ID="btnSubmitForm" OnClick="guardar_Click" />
                         </div>
                     </div>
-                </div>                   
+                </div>     
+                
+                   <div id="dialog" style="display: none">
+            This is a sample dialog content.
+        </div>
             </form>         
         </div>
+
+    
+
+
 
     </div>    
 </asp:Content>
