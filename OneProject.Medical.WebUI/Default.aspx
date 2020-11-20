@@ -5,21 +5,6 @@
 
     <asp:Label runat="server" ID="mensaje" class="control-label" Text="mensaje" ></asp:Label>
  
-
-  <script type="text/javascript">
-      function OpenDialog(dialogTitle, message) {
-          $("#dialog").dialog({
-              autoOpen: false,
-              modal: true,
-              title: dialogTitle,
-              hide: { effect: "explode", duration: 500 },
-              show: { effect: "bounce", duration: 500 }
-          });
-          $("#dialog").html(message);
-          $("#dialog").dialog("open");
-      }
-  </script>
-  
    <div class="container">
         <div class="form-horizontal">
 
@@ -1948,16 +1933,13 @@
      <div class="modal-content">
        <!--Header-->
        <div class="modal-header">
-         <p class="heading lead">Operación exitosa!</p>
-
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true" class="white-text">&times;</span>
-         </button>
+         <p class="heading lead">!Operación exitosa!</p>
        </div>
 
        <!--Body-->
        <div class="modal-body">
          <div class="text-center">
+             <img src="Content/img/ok.png" style="height: 70px;"/>
            <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
            <p>Todos la información se registró de forma correcta,<br /> favor de confirmar pago.</p>
          </div>
@@ -1965,7 +1947,8 @@
 
        <!--Footer-->
        <div class="modal-footer justify-content-center">
-         <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Cerrar</a>
+         
+           <asp:Button runat="server" Text="Aceptar" CssClass="btn btn-outline-success waves-effect" type="" ID="btnAceptar" OnClick="aceptar_Click" />
        </div>
      </div>
      <!--/.Content-->

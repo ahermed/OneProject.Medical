@@ -168,7 +168,11 @@ namespace OneProject.Medical.WebUI
             }
         }
 
-        protected void guardar_Click(object sender, EventArgs e)
+        protected void aceptar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default", true);
+        }
+            protected void guardar_Click(object sender, EventArgs e)
         {
 
             try
@@ -412,9 +416,8 @@ namespace OneProject.Medical.WebUI
 
                         dbContextTransaction.Commit();
 
-                        string msgTitle = "Operación exitosa!!";
-                        string message = "Todos la información se guardó de forma correcta";
-                        ScriptManager.RegisterStartupScript(this, typeof(string), "msgDialog", "$('#myModal').modal()", true);
+                        
+                        ScriptManager.RegisterStartupScript(this, typeof(string), "msgDialog", "$('#myModal').modal({ backdrop: 'static', keyboard: false });", true);
 
                     }
                 }
