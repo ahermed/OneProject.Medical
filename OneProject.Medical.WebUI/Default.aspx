@@ -3,7 +3,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:Label runat="server" ID="mensaje" class="control-label" Text="mensaje" ></asp:Label>
+    <asp:Label runat="server" ID="mensaje" class="control-label" Text="mensaje" Visible="false" ></asp:Label>
  
    <div class="container">
         <div class="form-horizontal">
