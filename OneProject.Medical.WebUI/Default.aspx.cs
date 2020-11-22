@@ -219,7 +219,7 @@ namespace OneProject.Medical.WebUI
                             HablaAlgunaLenguaIndigena = ConvertBool(lenguaIndigena.SelectedValue),
                             Ocupacion = ocupacion.Text,
                             EsMigrante = ConvertBool(migrante.SelectedValue),
-                            PagoRealizado = false,
+                            
                             FechaPago = null,
                             FechaImpresion = null,
                             FechaPrueba = null,

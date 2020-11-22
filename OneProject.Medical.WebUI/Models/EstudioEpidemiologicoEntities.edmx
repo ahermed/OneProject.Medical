@@ -121,7 +121,7 @@
           <Property Name="HablaAlgunaLenguaIndigena" Type="bit" Nullable="false" />
           <Property Name="Ocupacion" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="EsMigrante" Type="bit" Nullable="false" />
-          <Property Name="PagoRealizado" Type="bit" />
+          <Property Name="FolioPago" Type="varchar" MaxLength="20" />
           <Property Name="FechaPago" Type="datetime" />
           <Property Name="FechaImpresion" Type="datetime" />
           <Property Name="FechaPrueba" Type="datetime" />
@@ -556,7 +556,7 @@
           <Property Name="HablaAlgunaLenguaIndigena" Type="Boolean" Nullable="false" />
           <Property Name="Ocupacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EsMigrante" Type="Boolean" Nullable="false" />
-          <Property Name="PagoRealizado" Type="Boolean" />
+          <Property Name="FolioPago" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="FechaPago" Type="DateTime" Precision="3" />
           <Property Name="FechaImpresion" Type="DateTime" Precision="3" />
           <Property Name="FechaPrueba" Type="DateTime" Precision="3" />
@@ -1008,7 +1008,7 @@
                 <ScalarProperty Name="HablaAlgunaLenguaIndigena" ColumnName="HablaAlgunaLenguaIndigena" />
                 <ScalarProperty Name="Ocupacion" ColumnName="Ocupacion" />
                 <ScalarProperty Name="EsMigrante" ColumnName="EsMigrante" />
-                <ScalarProperty Name="PagoRealizado" ColumnName="PagoRealizado" />
+                <ScalarProperty Name="FolioPago" ColumnName="FolioPago" />
                 <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
                 <ScalarProperty Name="FechaImpresion" ColumnName="FechaImpresion" />
                 <ScalarProperty Name="FechaPrueba" ColumnName="FechaPrueba" />
